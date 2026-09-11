@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Team: Ali · Partner | Assignment #1 HTML & CSS Basics | Astana IT University -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spider-Man | Home</title>
+    <meta
+      name="description"
+      content="A fan site about Spider-Man — powers, movies, New York City, and photo gallery."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="nav-inner">
+        <a class="logo" href="index.html">Spider<span>-Man</span></a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About &amp; Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Hero">
+        <img
+          class="hero__media"
+          src="images/hero.jpg"
+          alt="Close-up of Spider-Man in the red Stark suit against a dark background"
+        />
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="eyebrow">Friendly neighborhood hero</p>
+          <h1>Spider-Man</h1>
+          <p class="lede">
+            With great power comes great responsibility. Explore the story, powers,
+            films, and photos of Marvel’s web-slinger.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#powers">See his powers</a>
+            <a class="btn btn-ghost" href="about.html">Meet the team</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="story">
+        <div class="container split">
+          <div class="fade-up">
+            <p class="eyebrow">Origin</p>
+            <h2>Who is Spider-Man?</h2>
+            <p class="lede">
+              Peter Parker is a student from Queens who was bitten by a radioactive
+              spider. That bite gave him the strength, speed, and senses of a spider —
+              and a duty to protect New York City.
+            </p>
+            <p>
+              Behind the mask he is still a kid with homework, rent, and a sense of
+              humor. On the rooftops he becomes the hero who swings between skyscrapers
+              and stops crime before the city even knows it started.
+            </p>
+            <h3>What makes him different</h3>
+            <ul>
+              <li>Science nerd who builds his own web-shooters</li>
+              <li>Protects ordinary people, not just famous landmarks</li>
+              <li>Never gives up — even when the suit is torn</li>
+            </ul>
+          </div>
+          <figure class="fade-up delay-1">
+            <img
+              class="feature-img"
+              src="images/gallery2.jpg"
+              alt="Spider-Man in a battle-worn red and blue suit reaching toward the camera"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="powers" style="background: rgba(225, 29, 46, 0.04)">
+        <div class="container">
+          <div class="section-head fade-up">
+            <p class="eyebrow">Abilities</p>
+            <h2>Powers &amp; toolkit</h2>
+            <p class="lede">
+              Classic spider abilities plus homemade gadgets. Here is a quick list of
+              what he brings to a fight.
+            </p>
+          </div>
+
+          <div class="split">
+            <ul class="power-list fade-up">
+              <li><strong>Super strength</strong> — lifts cars and punches above his weight</li>
+              <li><strong>Wall-crawling</strong> — sticks to glass, brick, and steel</li>
+              <li><strong>Spider-sense</strong> — danger warning before the hit lands</li>
+              <li><strong>Web-shooters</strong> — swing, trap, and zip across the city</li>
+            </ul>
+
+            <div class="panel fade-up delay-1">
+              <h3>Story timeline</h3>
+              <ol class="timeline">
+                <li>Radioactive spider bite changes everything</li>
+                <li>Uncle Ben’s lesson: great power, great responsibility</li>
+                <li>First nights as a masked crime-fighter in Queens</li>
+                <li>Facing villains like Green Goblin and Doc Ock</li>
+                <li>Becoming New York’s most trusted street-level hero</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="movies">
+        <div class="container">
+          <div class="section-head fade-up">
+            <p class="eyebrow">On screen</p>
+            <h2>Spider-Man film highlights</h2>
+            <p class="lede">
+              A simple table of popular film eras — title, year, and main actor.
+            </p>
+          </div>
+
+          <div class="table-wrap fade-up delay-1">
+            <table>
+              <thead>
+                <tr>
+                  <th>Film / Era</th>
+                  <th>Year</th>
+                  <th>Spider-Man Actor</th>
+                  <th>Tone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Spider-Man (Sam Raimi)</td>
+                  <td>2002</td>
+                  <td>Tobey Maguire</td>
+                  <td>Classic origin drama</td>
+                </tr>
+                <tr>
+                  <td>The Amazing Spider-Man</td>
+                  <td>2012</td>
+                  <td>Andrew Garfield</td>
+                  <td>Gritty &amp; emotional</td>
+                </tr>
+                <tr>
+                  <td><span class="highlight">Spider-Man: Homecoming</span></td>
+                  <td>2017</td>
+                  <td>Tom Holland</td>
+                  <td>MCU high-school hero</td>
+                </tr>
+                <tr>
+                  <td>Spider-Man: Across the Spider-Verse</td>
+                  <td>2023</td>
+                  <td>Shameik Moore (voice)</td>
+                  <td>Animated multiverse</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery" style="background: rgba(30, 58, 138, 0.05)">
+        <div class="container">
+          <div class="section-head fade-up">
+            <p class="eyebrow">Photos</p>
+            <h2>Web gallery</h2>
+            <p class="lede">
+              Cosplay, comics, and New York energy — hover the photos for a simple
+              zoom animation.
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-item fade-up">
+              <img src="images/hero.jpg" alt="Spider-Man mask close-up with glowing white lenses" />
+              <figcaption>Mask close-up</figcaption>
+            </figure>
+            <figure class="gallery-item fade-up delay-1">
+              <img src="images/comics.jpg" alt="Stack of vintage Marvel comic book covers including Spider-Man 2099" />
+              <figcaption>Comic covers</figcaption>
+            </figure>
+            <figure class="gallery-item fade-up delay-2">
+              <img src="images/swing.jpg" alt="Children smiling in Spider-Man and Captain America costumes" />
+              <figcaption>Next-gen fans</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="city-band" aria-label="New York City">
+        <img src="images/city.jpg" alt="Times Square in New York City at dusk with tall buildings and bright billboards" />
+        <div class="container">
+          <h2>Home turf: New York City</h2>
+          <p>
+            From Queens rooftops to Manhattan glass towers — the city is his playground
+            and his responsibility.
+          </p>
+          <div class="cta-row" style="justify-content: center">
+            <a class="btn btn-primary" href="about.html">About the project</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="names">Team members: Ali · Partner Name</p>
+      <p>Front-End Assignment #1 · HTML &amp; CSS Basics · Astana IT University</p>
+      <p><a href="about.html">Contact page</a> · <a href="#main-header">Back to top</a></p>
+    </footer>
+  </body>
+</html>
