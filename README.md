@@ -11,3 +11,6 @@ Assignment #1 for Web Development (Astana IT University).
 2. `movies.html` — Filmography Table & Media Overview
 3. `about.html` — Team Information & Spider-Man Bio
 4. `contact.html` — Signal Form (Inputs, Dropdown, Textarea)
+
+
+link https://spider-man-front.netlify.app/#powers
