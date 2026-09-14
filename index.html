@@ -27,12 +27,14 @@
     </header>
 
     <main>
-      <section class="hero" aria-label="Hero">
-        <img
-          class="hero__media"
-          src="images/hero.jpg"
-          alt="Close-up of Spider-Man in the red Stark suit against a dark background"
-        />
+      <section class="hero hero--home" aria-label="Hero">
+        <div class="hero__parallax" data-parallax>
+          <img
+            class="hero__media"
+            src="images/hero.jpg"
+            alt="Close-up of Spider-Man in the red Stark suit against a dark background"
+          />
+        </div>
         <div class="hero__veil" aria-hidden="true"></div>
         <div class="hero__content">
           <p class="eyebrow">Friendly neighborhood hero</p>
@@ -212,5 +214,31 @@
       <p>Front-End Assignment #1 · HTML &amp; CSS Basics · Astana IT University</p>
       <p><a href="contact.html">Contact page</a> · <a href="#main-header">Back to top</a></p>
     </footer>
+    <script>
+      (function () {
+        var layer = document.querySelector("[data-parallax]");
+        if (!layer) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        var ticking = false;
+        function update() {
+          var y = window.scrollY || 0;
+          var limit = layer.parentElement.offsetHeight;
+          layer.style.transform = y > limit ? "" : "translate3d(0," + y * 0.22 + "px,0)";
+          ticking = false;
+        }
+
+        window.addEventListener(
+          "scroll",
+          function () {
+            if (!ticking) {
+              ticking = true;
+              requestAnimationFrame(update);
+            }
+          },
+          { passive: true }
+        );
+      })();
+    </script>
   </body>
 </html>

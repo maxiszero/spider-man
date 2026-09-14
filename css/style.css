@@ -205,6 +205,15 @@ li {
   background: var(--blue-deep);
 }
 
+.hero__parallax {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -18%;
+  height: 136%;
+  will-change: transform;
+}
+
 .hero__media {
   position: absolute;
   inset: 0;
