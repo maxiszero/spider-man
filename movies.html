@@ -1,72 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spider-Man - Movies & Media</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header id="main-header">
-    <h1>Spider-Man Cinematic Universe</h1>
-    <nav aria-label="Main navigation">
-        <ul class="nav-menu">
+  <head>
+    <!-- Team: Ali · Arlan | Assignment #1 HTML & CSS Basics | Astana IT University -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spider-Man | Movies</title>
+    <meta
+      name="description"
+      content="Spider-Man movies across the Raimi, Amazing, MCU, and Spider-Verse eras."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="nav-inner">
+        <a class="logo" href="index.html">Spider<span>-Man</span></a>
+        <nav aria-label="Main navigation">
+          <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a class="active" href="movies.html">Movies</a></li>
             <li><a href="about.html">About Team</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-<main class="container">
-    <section class="content-section">
-        <h2>Featured Filmography</h2>
-        <p>Explore the iconic movies featuring your friendly neighborhood Spider-Man across different generations.</p>
+    <main>
+      <section class="hero hero--page" aria-label="Movies hero">
+        <img
+          class="hero__media"
+          src="images/comics.jpg"
+          alt="Stack of vintage Marvel comic covers with Spider-Man 2099 in the center"
+        />
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="eyebrow">On the big screen</p>
+          <h1>Every Spider, one web</h1>
+          <p class="lede">
+            From Raimi’s first swing to the animated multiverse — four eras, one
+            neighborhood hero.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#filmography">Open the film table</a>
+            <a class="btn btn-ghost" href="contact.html">Pick a favorite suit</a>
+          </div>
+        </div>
+      </section>
 
-        <table class="styled-table">
-            <thead>
-            <tr>
-                <th>Movie Title</th>
-                <th>Release Year</th>
-                <th>Lead Actor</th>
-                <th>Director</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Spider-Man</td>
-                <td>2002</td>
-                <td>Tobey Maguire</td>
-                <td>Sam Raimi</td>
-            </tr>
-            <tr>
-                <td>The Amazing Spider-Man</td>
-                <td>2012</td>
-                <td>Andrew Garfield</td>
-                <td>Marc Webb</td>
-            </tr>
-            <tr>
-                <td>Spider-Man: Homecoming</td>
-                <td>2017</td>
-                <td>Tom Holland</td>
-                <td>Jon Watts</td>
-            </tr>
-            <tr>
-                <td>Spider-Man: Into the Spider-Verse</td>
-                <td>2018</td>
-                <td>Shameik Moore (Voice)</td>
-                <td>Bob Persichetti</td>
-            </tr>
-            </tbody>
-        </table>
-    </section>
-</main>
+      <section class="section" id="eras">
+        <div class="container">
+          <div class="section-head fade-up">
+            <p class="eyebrow">Eras</p>
+            <h2>Featured filmography</h2>
+            <p class="lede">
+              Four landmark films that reset the mask, the actor, and the tone —
+              without losing Queens.
+            </p>
+          </div>
 
-<footer>
-    <p class="names">Team members: Ali · Arlan</p>
-    <p>Front-End Assignment #1 · HTML &amp; CSS Basics · Astana IT University</p>
-    <p><a href="index.html">Back to Home</a> · <a href="#main-header">Back to top</a></p>
-</footer>
-</body>
+          <div class="movie-grid">
+            <article class="movie-card fade-up">
+              <img src="images/spider-tobey.jpg" alt="Theatrical poster for Sam Raimi's Spider-Man, 2002" />
+              <div class="movie-card__body">
+                <span class="year-badge">2002</span>
+                <h3>Spider-Man</h3>
+                <p>
+                  Tobey Maguire hangs above the city in Sam Raimi’s origin — the
+                  poster that taught a generation to look up.
+                </p>
+              </div>
+            </article>
+
+            <article class="movie-card fade-up delay-1">
+              <img src="images/spider-andrew.jpg" alt="Poster for The Amazing Spider-Man 2 with Andrew Garfield" />
+              <div class="movie-card__body">
+                <span class="year-badge">2014</span>
+                <h3>The Amazing Spider-Man 2</h3>
+                <p>
+                  Andrew Garfield between Gwen and Electro. Marc Webb’s sequel
+                  turns the suit electric blue and the fight personal.
+                </p>
+              </div>
+            </article>
+
+            <article class="movie-card fade-up">
+              <img src="images/spider-tom.jpg" alt="Poster for Spider-Man: Brand New Day with Tom Holland" />
+              <div class="movie-card__body">
+                <span class="year-badge">2026</span>
+                <h3>Spider-Man: Brand New Day</h3>
+                <p>
+                  Tom Holland’s mask fills the frame. A new day in the MCU — same
+                  Queens kid, a heavier city behind the lenses.
+                </p>
+              </div>
+            </article>
+
+            <article class="movie-card fade-up delay-1">
+              <img src="images/spider-miles.jpg" alt="Poster for Spider-Man: Across the Spider-Verse featuring Miles Morales" />
+              <div class="movie-card__body">
+                <span class="year-badge">2023</span>
+                <h3>Across the Spider-Verse</h3>
+                <p>
+                  Miles Morales painted into a crowd of Spider-people. Shameik
+                  Moore’s Brooklyn hero has to choose his own path.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="filmography" style="background: rgba(225, 29, 46, 0.04)">
+        <div class="container">
+          <div class="section-head fade-up">
+            <p class="eyebrow">Data</p>
+            <h2>Film credits</h2>
+            <p class="lede">Title, year, lead, and director — one table, three generations of the suit.</p>
+          </div>
+
+          <div class="table-wrap fade-up delay-1">
+            <table>
+              <thead>
+                <tr>
+                  <th>Movie Title</th>
+                  <th>Release Year</th>
+                  <th>Lead Actor</th>
+                  <th>Director</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Spider-Man</td>
+                  <td>2002</td>
+                  <td>Tobey Maguire</td>
+                  <td>Sam Raimi</td>
+                </tr>
+                <tr>
+                  <td>The Amazing Spider-Man 2</td>
+                  <td>2014</td>
+                  <td>Andrew Garfield</td>
+                  <td>Marc Webb</td>
+                </tr>
+                <tr>
+                  <td><span class="highlight">Spider-Man: Brand New Day</span></td>
+                  <td>2026</td>
+                  <td>Tom Holland</td>
+                  <td>Destin Daniel Cretton</td>
+                </tr>
+                <tr>
+                  <td>Spider-Man: Across the Spider-Verse</td>
+                  <td>2023</td>
+                  <td>Shameik Moore (voice)</td>
+                  <td>Joaquim Dos Santos</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="watch">
+        <div class="container split">
+          <div class="fade-up">
+            <p class="eyebrow">How to watch</p>
+            <h2>A clean starting order</h2>
+            <p class="lede">
+              You do not need every sequel on night one. Start with an origin, then
+              jump universes.
+            </p>
+            <ol class="timeline">
+              <li>Spider-Man (2002) — the responsibility lesson</li>
+              <li>The Amazing Spider-Man 2 (2014) — a different Peter, same city</li>
+              <li>Across the Spider-Verse (2023) — Miles and the multiverse</li>
+              <li>Brand New Day (2026) — Tom Holland’s next swing</li>
+            </ol>
+          </div>
+
+          <ul class="power-list fade-up delay-1">
+            <li><strong>Raimi era</strong> — classic drama, practical New York</li>
+            <li><strong>Amazing era</strong> — romance, science, and a lonely hero</li>
+            <li><strong>MCU era</strong> — team-ups, high school, Iron Spider tech</li>
+            <li><strong>Spider-Verse</strong> — animation that looks like printed comics</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="city-band" aria-label="New York City">
+        <img src="images/city.jpg" alt="Times Square in New York City at dusk" />
+        <div class="container">
+          <h2>Same city. Different masks.</h2>
+          <p>
+            Every version still swings through New York. Tell us which Spider-Man you
+            grew up with.
+          </p>
+          <div class="cta-row cta-row--center">
+            <a class="btn btn-primary" href="contact.html">Send a signal</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="names">Team members: Ali · Arlan</p>
+      <p>Front-End Assignment #1 · HTML &amp; CSS Basics · Astana IT University</p>
+      <p><a href="index.html">Back to Home</a> · <a href="#main-header">Back to top</a></p>
+    </footer>
+  </body>
 </html>

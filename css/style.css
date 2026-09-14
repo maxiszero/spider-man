@@ -235,7 +235,15 @@ li {
 .hero h1 {
   color: #fff;
   text-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
-  max-width: 10ch;
+  max-width: 12ch;
+}
+
+.hero--page {
+  min-height: 70vh;
+}
+
+.hero--page h1 {
+  max-width: 14ch;
 }
 
 .hero .lede {
@@ -468,6 +476,59 @@ tbody tr:hover {
   margin-bottom: 0.35rem;
 }
 
+.team-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.25s ease;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.movie-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 460px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--blue-deep);
+  transition: transform 0.4s ease;
+}
+
+.movie-card:hover img {
+  transform: scale(1.05);
+}
+
+.movie-card__body {
+  padding: 1.2rem 1.3rem 1.4rem;
+}
+
+.year-badge {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.7rem;
+}
+
 .role {
   color: var(--blue);
   font-weight: 600;
@@ -648,15 +709,18 @@ textarea {
 @media (max-width: 900px) {
   .split,
   .gallery-grid,
-  .team-grid {
+  .team-grid,
+  .movie-grid {
     grid-template-columns: 1fr;
   }
 
-  .feature-img {
+  .feature-img,
+  .movie-card img {
     height: 300px;
   }
 
-  .hero {
+  .hero,
+  .hero--page {
     min-height: 78vh;
   }
 }
@@ -670,6 +734,10 @@ textarea {
   .gallery-item img {
     height: 200px;
   }
+}
+
+.cta-row--center {
+  justify-content: center;
 }
 
 @media (prefers-reduced-motion: reduce) {

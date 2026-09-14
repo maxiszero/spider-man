@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Team: Ali · Partner | Assignment #1 HTML & CSS Basics | Astana IT University -->
+    <!-- Team: Ali · Arlan | Assignment #1 HTML & CSS Basics | Astana IT University -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spider-Man | About &amp; Contact</title>
+    <title>Spider-Man | About Team</title>
     <meta
       name="description"
-      content="About the Spider-Man fan site team, character bio, and contact form."
+      content="About the Spider-Man fan site team — Ali, Arlan, and a short Peter Parker bio."
     />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -27,6 +27,27 @@
     </header>
 
     <main>
+      <section class="hero hero--page" aria-label="About hero">
+        <img
+          class="hero__media"
+          src="images/gallery2.jpg"
+          alt="Spider-Man in a battle-worn suit reaching toward the camera"
+        />
+        <div class="hero__veil" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="eyebrow">The people behind the mask</p>
+          <h1>About the team</h1>
+          <p class="lede">
+            Ali and Arlan built this fan site for Assignment #1 — two pages each,
+            one shared Spider-Man theme.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#team">Meet the members</a>
+            <a class="btn btn-ghost" href="contact.html">Write to us</a>
+          </div>
+        </div>
+      </section>
+
       <section class="section">
         <div class="container split">
           <div class="panel profile-wrap fade-up">
@@ -74,8 +95,8 @@
             <p class="eyebrow">Creators</p>
             <h2>About the team members</h2>
             <p class="lede">
-              Each student styles at least two pages for Assignment #1. Update the names
-              below with your real team.
+              Two students, four pages. Each person owns a pair of pages and the
+              shared look of the site.
             </p>
           </div>
 
@@ -97,10 +118,10 @@
 
             <article class="team-card fade-up delay-1">
               <h3>Arlan</h3>
-              <p class="role">Teammate · Content &amp; review</p>
+              <p class="role">Page author · Movies &amp; Contact</p>
               <p>
-                Helps with page content, copy checks, and keeps navigation / footer
-                credits accurate for the LMS submission.
+                Built the filmography page and the contact signal form, and keeps
+                navigation and footer credits accurate for the LMS submission.
               </p>
               <h3>Hobbies</h3>
               <ul>
@@ -137,79 +158,16 @@
         </div>
       </section>
 
-      <section class="section" id="contact" style="background: rgba(30, 58, 138, 0.05)">
-        <div class="container split">
-          <div class="fade-up">
-            <p class="eyebrow">Write to us</p>
-            <h2>Contact the team</h2>
-            <p class="lede">
-              Send feedback about the site, suggest a new gallery photo, or ask about
-              the assignment pages.
-            </p>
-            <ul>
-              <li>We reply during practice lesson hours</li>
-              <li>Choose your favorite suit color in the form</li>
-              <li>All fields help us practice HTML forms</li>
-            </ul>
+      <section class="city-band" aria-label="Contact the team">
+        <img src="images/city.jpg" alt="Times Square in New York City at dusk" />
+        <div class="container">
+          <h2>Got a note for the team?</h2>
+          <p>
+            The contact page has the form — name, email, suit color, and a message.
+          </p>
+          <div class="cta-row cta-row--center">
+            <a class="btn btn-primary" href="contact.html">Open contact</a>
           </div>
-
-          <form id="contact-form" class="fade-up delay-1" action="#" method="post">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="you@example.com"
-                required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="suit-color">Favorite suit color</label>
-              <select id="suit-color" name="suit-color">
-                <option value="classic-red">Classic red &amp; blue</option>
-                <option value="black">Black symbiote</option>
-                <option value="iron-spider">Iron Spider gold</option>
-                <option value="2099">Spider-Man 2099 blue</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <span class="form-label" style="display: block; font-weight: 600; margin-bottom: 0.4rem"
-                >How did you find this site?</span
-              >
-              <div class="radio-row">
-                <label
-                  ><input type="radio" name="source" value="classmate" checked />
-                  Classmate</label
-                >
-                <label
-                  ><input type="radio" name="source" value="lms" /> LMS</label
-                >
-                <label
-                  ><input type="radio" name="source" value="social" /> Social</label
-                >
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Tell us what you liked or what to improve…"
-                required
-              ></textarea>
-            </div>
-
-            <button class="btn btn-primary" type="submit">Send message</button>
-          </form>
         </div>
       </section>
     </main>
