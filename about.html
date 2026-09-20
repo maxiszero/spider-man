@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Team: Ali · Arlan | Assignment #1 HTML & CSS Basics | Astana IT University -->
+    <!-- Team: Ali · Arlan | Assignment #2 Flexbox & Grid | Astana IT University -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spider-Man | About Team</title>
@@ -12,170 +12,174 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header id="main-header">
-      <div class="nav-inner">
-        <a class="logo" href="index.html">Spider<span>-Man</span></a>
-        <nav aria-label="Main navigation">
-          <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a class="active" href="about.html">About Team</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero hero--page" aria-label="About hero">
-        <img
-          class="hero__media"
-          src="images/gallery2.jpg"
-          alt="Spider-Man in a battle-worn suit reaching toward the camera"
-        />
-        <div class="hero__veil" aria-hidden="true"></div>
-        <div class="hero__content">
-          <p class="eyebrow">The people behind the mask</p>
-          <h1>About the team</h1>
-          <p class="lede">
-            Ali and Arlan built this fan site for Assignment #1 — two pages each,
-            one shared Spider-Man theme.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#team">Meet the members</a>
-            <a class="btn btn-ghost" href="contact.html">Write to us</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container split">
-          <div class="panel profile-wrap fade-up">
-            <img
-              class="profile-img"
-              src="images/profile.jpg"
-              alt="Circular portrait of Spider-Man in the red suit"
-            />
-            <h1>About Spider-Man</h1>
-            <p class="lede">
-              Student by day. Web-slinger by night. This page covers a short bio and
-              the people behind this fan website.
-            </p>
-          </div>
-
-          <div class="fade-up delay-1">
-            <p class="eyebrow">Biography</p>
-            <h2>Peter Parker</h2>
-            <p>
-              After the spider bite, Peter learned the hard way that power without
-              responsibility can hurt the people he loves. He fights crime in New York
-              while trying to keep his identity secret from friends, teachers, and
-              villains.
-            </p>
-            <h3>Quick facts</h3>
-            <ul>
-              <li>Hometown: Queens, New York</li>
-              <li>Alias: Spider-Man</li>
-              <li>Allies: Aunt May, MJ, Ned, the Avengers</li>
-              <li>Motto: With great power comes great responsibility</li>
+    <!-- Assignment 2 · Task 3: CSS Grid areas — header / sidebar / main / footer -->
+    <div class="site-layout">
+      <header id="main-header" class="layout-header">
+        <div class="nav-inner">
+          <a class="logo" href="index.html">Spider<span>-Man</span></a>
+          <nav aria-label="Main navigation">
+            <ul class="nav-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="movies.html">Movies</a></li>
+              <li><a class="active" href="about.html">About Team</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <h3>Why we built this site</h3>
-            <ol>
-              <li>Practice semantic HTML structure</li>
-              <li>Style a full theme with external CSS only</li>
-              <li>Share a fun Spider-Man fan experience</li>
-            </ol>
-          </div>
+          </nav>
         </div>
-      </section>
+      </header>
 
-      <section class="section" id="team" style="background: rgba(225, 29, 46, 0.04)">
-        <div class="container">
-          <div class="section-head fade-up">
-            <p class="eyebrow">Creators</p>
-            <h2>About the team members</h2>
+      <aside class="layout-sidebar" aria-label="About sidebar">
+        <p class="eyebrow">Sidebar</p>
+        <h2>Jump links</h2>
+        <ul>
+          <li><a href="#bio">Peter Parker</a></li>
+          <li><a class="active" href="#team">Team members</a></li>
+          <li><a href="#gallery">Photo strip</a></li>
+          <li><a href="contact.html">Contact form</a></li>
+        </ul>
+        <div class="side-note">
+          This page uses CSS Grid areas: header across the top, sidebar on the left,
+          main content on the right, footer across the bottom.
+        </div>
+      </aside>
+
+      <main class="layout-main">
+        <section class="hero hero--page" aria-label="About hero">
+          <img
+            class="hero__media"
+            src="images/gallery2.jpg"
+            alt="Spider-Man in a battle-worn suit reaching toward the camera"
+          />
+          <div class="hero__veil" aria-hidden="true"></div>
+          <div class="hero__content">
+            <p class="eyebrow">The people behind the mask</p>
+            <h1>About the team</h1>
             <p class="lede">
-              Two students, four pages. Each person owns a pair of pages and the
-              shared look of the site.
+              Ali and Arlan built this fan site — Flexbox navigation, Grid layout,
+              and a shared Spider-Man theme.
             </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#team">Meet the members</a>
+              <a class="btn btn-ghost" href="contact.html">Write to us</a>
+            </div>
           </div>
+        </section>
 
-          <div class="team-grid">
-            <article class="team-card fade-up">
-              <h3>Ali</h3>
-              <p class="role">Page author · Home &amp; About</p>
-              <p>
-                Designed the Spider-Man color palette, hero layout, photo gallery, and
-                shared CSS file for consistent branding.
+        <section class="section" id="bio">
+          <div class="container split">
+            <div class="panel profile-wrap fade-up">
+              <img
+                class="profile-img"
+                src="images/profile.jpg"
+                alt="Circular portrait of Spider-Man in the red suit"
+              />
+              <h2>About Spider-Man</h2>
+              <p class="lede">
+                Student by day. Web-slinger by night. A short bio and the people
+                behind this fan website.
               </p>
-              <h3>Hobbies</h3>
-              <ul>
-                <li>Web design &amp; front-end experiments</li>
-                <li>Marvel movies and comics</li>
-                <li>Photography</li>
-              </ul>
-            </article>
+            </div>
 
-            <article class="team-card fade-up delay-1">
-              <h3>Arlan</h3>
-              <p class="role">Page author · Movies &amp; Contact</p>
+            <div class="fade-up delay-1">
+              <p class="eyebrow">Biography</p>
+              <h2>Peter Parker</h2>
               <p>
-                Built the filmography page and the contact signal form, and keeps
-                navigation and footer credits accurate for the LMS submission.
+                After the spider bite, Peter learned the hard way that power without
+                responsibility can hurt the people he loves. He fights crime in New York
+                while trying to keep his identity secret from friends, teachers, and
+                villains.
               </p>
-              <h3>Hobbies</h3>
+              <h3>Quick facts</h3>
               <ul>
-                <li>Gaming</li>
-                <li>Team projects</li>
-                <li>City photography</li>
+                <li>Hometown: Queens, New York</li>
+                <li>Alias: Spider-Man</li>
+                <li>Allies: Aunt May, MJ, Ned, the Avengers</li>
+                <li>Motto: With great power comes great responsibility</li>
               </ul>
-            </article>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="section" id="gallery">
-        <div class="container">
-          <div class="section-head fade-up">
-            <p class="eyebrow">More photos</p>
-            <h2>Behind the mask</h2>
-            <p class="lede">Extra images for the About page — comics energy and NYC streets.</p>
-          </div>
-          <div class="gallery-grid">
-            <figure class="gallery-item fade-up">
-              <img src="images/gallery1.jpg" alt="Vintage comic book covers with Spider-Man 2099 in the center" />
-              <figcaption>Comic stack</figcaption>
-            </figure>
-            <figure class="gallery-item fade-up delay-1">
-              <img src="images/gallery2.jpg" alt="Spider-Man cosplay posing on a city structure" />
-              <figcaption>Street-level Spidey</figcaption>
-            </figure>
-            <figure class="gallery-item fade-up delay-2">
-              <img src="images/city.jpg" alt="Busy New York City street canyon with glowing billboards" />
-              <figcaption>New York playground</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
+        <section class="section" id="team" style="background: rgba(225, 29, 46, 0.04)">
+          <div class="container">
+            <div class="section-head fade-up">
+              <p class="eyebrow">Flexbox cards</p>
+              <h2>About the team members</h2>
+              <p class="lede">
+                Equal-height Flexbox cards with a photo, role, and a button to their pages.
+              </p>
+            </div>
 
-      <section class="city-band" aria-label="Contact the team">
-        <img src="images/city.jpg" alt="Times Square in New York City at dusk" />
-        <div class="container">
-          <h2>Got a note for the team?</h2>
-          <p>
-            The contact page has the form — name, email, suit color, and a message.
-          </p>
-          <div class="cta-row cta-row--center">
-            <a class="btn btn-primary" href="contact.html">Open contact</a>
-          </div>
-        </div>
-      </section>
-    </main>
+            <div class="card-row fade-up">
+              <article class="flex-card">
+                <img src="images/hero.jpg" alt="Spider-Man mask representing Ali's pages" />
+                <div class="flex-card__body">
+                  <h3>Ali</h3>
+                  <p>
+                    Home &amp; About — color palette, hero, gallery Grid, and shared
+                    CSS for Assignment 2 Flexbox &amp; Grid.
+                  </p>
+                  <a class="btn btn-primary" href="index.html">Open Home</a>
+                </div>
+              </article>
 
-    <footer class="site-footer">
-      <p class="names">Team members: Ali · Arlan</p>
-      <p>Front-End Assignment #1 · HTML &amp; CSS Basics · Astana IT University</p>
-      <p><a href="contact.html">Contact page</a> · <a href="#main-header">Back to top</a></p>
-    </footer>
+              <article class="flex-card">
+                <img src="images/spider-miles.jpg" alt="Spider-Verse poster representing Arlan's pages" />
+                <div class="flex-card__body">
+                  <h3>Arlan</h3>
+                  <p>
+                    Movies &amp; Contact — filmography Flex cards, form layout, and
+                    grid sidebar pages for the LMS defense.
+                  </p>
+                  <a class="btn btn-primary" href="movies.html">Open Movies</a>
+                </div>
+              </article>
+
+              <article class="flex-card">
+                <img src="images/city.jpg" alt="New York City skyline" />
+                <div class="flex-card__body">
+                  <h3>Send feedback</h3>
+                  <p>
+                    Questions about the layout, a missing poster, or a class note —
+                    use the contact signal form.
+                  </p>
+                  <a class="btn btn-primary" href="contact.html">Contact us</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="gallery">
+          <div class="container">
+            <div class="section-head fade-up">
+              <p class="eyebrow">Photo strip</p>
+              <h2>Behind the mask</h2>
+              <p class="lede">Hover for captions — same Grid gallery pattern as Home.</p>
+            </div>
+            <div class="gallery-grid">
+              <figure class="gallery-item">
+                <img src="images/gallery1.jpg" alt="Vintage comic book covers" />
+                <figcaption>Comic stack</figcaption>
+              </figure>
+              <figure class="gallery-item">
+                <img src="images/gallery2.jpg" alt="Spider-Man cosplay" />
+                <figcaption>Street-level Spidey</figcaption>
+              </figure>
+              <figure class="gallery-item">
+                <img src="images/city.jpg" alt="New York City street" />
+                <figcaption>New York playground</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer layout-footer">
+        <p class="names">Team members: Ali · Arlan</p>
+        <p>Front-End Assignment #2 · Flexbox &amp; Grid · Astana IT University</p>
+        <p><a href="contact.html">Contact page</a> · <a href="#main-header">Back to top</a></p>
+      </footer>
+    </div>
   </body>
 </html>

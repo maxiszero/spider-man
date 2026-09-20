@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Team: Ali · Arlan | Assignment #1 HTML & CSS Basics | Astana IT University -->
+    <!-- Team: Ali · Arlan | Assignment #2 Flexbox & Grid | Astana IT University -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spider-Man | Home</title>
@@ -166,29 +166,104 @@
         </div>
       </section>
 
-      <section class="section" id="gallery" style="background: rgba(30, 58, 138, 0.05)">
+      <section class="section" id="explore" style="background: rgba(225, 29, 46, 0.04)">
         <div class="container">
           <div class="section-head fade-up">
-            <p class="eyebrow">Photos</p>
-            <h2>Web gallery</h2>
+            <p class="eyebrow">Flexbox cards</p>
+            <h2>Pick your next swing</h2>
             <p class="lede">
-              Cosplay, comics, and New York energy — hover the photos for a simple
-              zoom animation.
+              Three equal-height cards in a Flexbox row — image, title, text, and a
+              button on each.
             </p>
           </div>
 
-          <div class="gallery-grid">
-            <figure class="gallery-item fade-up">
-              <img src="images/hero.jpg" alt="Spider-Man mask close-up with glowing white lenses" />
-              <figcaption>Mask close-up</figcaption>
+          <div class="card-row fade-up delay-1">
+            <article class="flex-card">
+              <img src="images/spider-tobey.jpg" alt="Poster for Spider-Man 2002" />
+              <div class="flex-card__body">
+                <h3>Classic films</h3>
+                <p>
+                  Start with Tobey’s first swing and see how the Raimi era built the
+                  friendly neighborhood hero.
+                </p>
+                <a class="btn btn-primary" href="movies.html">Browse movies</a>
+              </div>
+            </article>
+
+            <article class="flex-card">
+              <img src="images/gallery2.jpg" alt="Spider-Man cosplay in a red and blue suit" />
+              <div class="flex-card__body">
+                <h3>Meet the team</h3>
+                <p>
+                  Ali and Arlan built this fan site — bios, hobbies, and how we split
+                  the Assignment pages.
+                </p>
+                <a class="btn btn-primary" href="about.html">About team</a>
+              </div>
+            </article>
+
+            <article class="flex-card">
+              <img src="images/city.jpg" alt="New York City street at dusk" />
+              <div class="flex-card__body">
+                <h3>Send a signal</h3>
+                <p>
+                  Drop a note about a favorite suit, a missing film, or a gallery
+                  photo idea for the next update.
+                </p>
+                <a class="btn btn-primary" href="contact.html">Contact us</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery" style="background: rgba(30, 58, 138, 0.05)">
+        <div class="container">
+          <div class="section-head fade-up">
+            <p class="eyebrow">CSS Grid gallery</p>
+            <h2>Web gallery · 9 frames</h2>
+            <p class="lede">
+              Nine images in equal Grid columns. Hover a tile to reveal the caption
+              overlay.
+            </p>
+          </div>
+
+          <div class="gallery-grid gallery-grid--nine">
+            <figure class="gallery-item">
+              <img src="images/hero.jpg" alt="Spider-Man mask close-up" />
+              <figcaption>Stark suit mask</figcaption>
             </figure>
-            <figure class="gallery-item fade-up delay-1">
-              <img src="images/comics.jpg" alt="Stack of vintage Marvel comic book covers including Spider-Man 2099" />
-              <figcaption>Comic covers</figcaption>
+            <figure class="gallery-item">
+              <img src="images/comics.jpg" alt="Vintage Marvel comic covers" />
+              <figcaption>Comic stack</figcaption>
             </figure>
-            <figure class="gallery-item fade-up delay-2">
-              <img src="images/swing.jpg" alt="Children smiling in Spider-Man and Captain America costumes" />
+            <figure class="gallery-item">
+              <img src="images/swing.jpg" alt="Kids in Spider-Man costumes" />
               <figcaption>Next-gen fans</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/gallery1.jpg" alt="Spider-Man 2099 comic cover collage" />
+              <figcaption>Spider-Man 2099</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/gallery2.jpg" alt="Spider-Man cosplay reaching forward" />
+              <figcaption>Street-level Spidey</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/city.jpg" alt="Times Square New York City" />
+              <figcaption>New York playground</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/spider-tobey.jpg" alt="Spider-Man 2002 movie poster" />
+              <figcaption>Tobey · 2002</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/spider-miles.jpg" alt="Across the Spider-Verse poster" />
+              <figcaption>Miles · Spider-Verse</figcaption>
+            </figure>
+            <figure class="gallery-item">
+              <img src="images/spider-tom.jpg" alt="Spider-Man Brand New Day poster" />
+              <figcaption>Tom · Brand New Day</figcaption>
             </figure>
           </div>
         </div>
@@ -211,7 +286,7 @@
 
     <footer class="site-footer">
       <p class="names">Team members: Ali · Arlan</p>
-      <p>Front-End Assignment #1 · HTML &amp; CSS Basics · Astana IT University</p>
+      <p>Front-End Assignment #2 · Flexbox &amp; Grid · Astana IT University</p>
       <p><a href="contact.html">Contact page</a> · <a href="#main-header">Back to top</a></p>
     </footer>
     <script>

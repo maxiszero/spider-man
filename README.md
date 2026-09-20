@@ -1,16 +1,21 @@
 ﻿# Spider-Man Fan Website
 
-Assignment #1 for Web Development (Astana IT University).
+Assignments #1–#2 for Web Development (Astana IT University).
 
 ## Team Members & Responsibilities
-- **Ali** — Created `index.html` (Home) and `movies.html` (Media & Filmography table), designed main CSS styling and responsive grid.
-- **Arlan** — Created `about.html` (Team Biography) and `contact.html` (Interactive Form), added `js/script.js` features (lightbox & form validation), finalized documentation.
+- **Ali** — `index.html` (Home), shared CSS, Flexbox card row, 9-image Grid gallery
+- **Arlan** — `movies.html`, `about.html`, `contact.html`, Grid areas layout (sidebar + main)
 
-## Pages Overview (4 Pages Total)
-1. `index.html` — Main Homepage & Gallery
-2. `movies.html` — Filmography Table & Media Overview
-3. `about.html` — Team Information & Spider-Man Bio
-4. `contact.html` — Signal Form (Inputs, Dropdown, Textarea)
+## Pages
+1. `index.html` — Hero, Flexbox cards, table, 9-frame Grid gallery
+2. `movies.html` — Flexbox film cards with buttons + credits table
+3. `about.html` — CSS Grid areas (header / sidebar / main / footer) + team cards
+4. `contact.html` — Grid areas + contact form
 
+## Assignment 2 features
+- **Flexbox nav** — logo left, links right, vertically centered
+- **Flexbox cards** — equal height, gaps, hover lift, button on each
+- **CSS Grid layout** — named areas on About & Contact
+- **Grid gallery** — 9 images, equal columns, hover captions
 
-link https://spider-man-front.netlify.app/#powers
+Live: https://spider-man-front.netlify.app/
