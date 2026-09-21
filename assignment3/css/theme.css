@@ -1,0 +1,165 @@
+/* =========================================================
+   Assignment #3 — Spider-Man theme overrides for Bootstrap 5
+   ========================================================= */
+
+:root {
+  --spidey-red: #e11d2e;
+  --spidey-navy: #0f172a;
+  --spidey-paper: #f7f4f0;
+}
+
+body {
+  font-family: "Chakra Petch", system-ui, sans-serif;
+  background: var(--spidey-paper);
+  color: #1a1523;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: "Russo One", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Task 5 — customized Bootstrap navbar */
+.navbar-spidey {
+  background-color: var(--spidey-navy) !important;
+  border-bottom: 3px solid var(--spidey-red);
+}
+
+.navbar-spidey .navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-spidey .navbar-brand span {
+  color: var(--spidey-red);
+}
+
+.navbar-spidey .nav-link {
+  color: #e2e8f0 !important;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem !important;
+}
+
+.navbar-spidey .nav-link:hover,
+.navbar-spidey .nav-link.active {
+  background: var(--spidey-red);
+  color: #fff !important;
+}
+
+.navbar-spidey .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.navbar-spidey .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Hero band */
+.hero-band {
+  position: relative;
+  min-height: 58vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  background: var(--spidey-navy);
+}
+
+.hero-band img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.45);
+}
+
+.hero-band .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-band .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fca5a5;
+}
+
+/* Carousel */
+#spideyCarousel .carousel-item img {
+  height: 420px;
+  object-fit: cover;
+  width: 100%;
+}
+
+#spideyCarousel .carousel-caption {
+  background: rgba(15, 23, 42, 0.55);
+  border-radius: 0.5rem;
+  padding: 0.6rem 1rem;
+}
+
+/* Cards */
+.card-spidey {
+  border: 1px solid #d6cfc7;
+  border-top: 4px solid var(--spidey-red);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.card-spidey .card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--spidey-navy);
+  color: #cbd5e1;
+  border-top: 4px solid var(--spidey-red);
+}
+
+.site-footer .names {
+  color: #fff;
+  font-weight: 700;
+}
+
+.site-footer a {
+  color: #fca5a5;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #fff;
+}
+
+/* Contrast helpers for accessibility */
+.bg-spidey-navy {
+  background-color: var(--spidey-navy) !important;
+}
+
+.text-spidey-red {
+  color: var(--spidey-red) !important;
+}
+
+.btn-spidey {
+  --bs-btn-bg: #e11d2e;
+  --bs-btn-border-color: #e11d2e;
+  --bs-btn-hover-bg: #9f1239;
+  --bs-btn-hover-border-color: #9f1239;
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  #spideyCarousel .carousel-item img {
+    height: 260px;
+  }
+
+  .hero-band {
+    min-height: 48vh;
+  }
+}
