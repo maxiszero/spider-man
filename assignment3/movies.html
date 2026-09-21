@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Team: Ali · Arlan | Assignment #3 Media Queries + Bootstrap | Astana IT University -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spider-Man | Movies (Assignment 3)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-spidey sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Spider<span>-Man</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="movies.html">Movies</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-band">
+      <img src="images/comics.jpg" alt="Marvel comic covers" />
+      <div class="container py-5 px-sm-2">
+        <p class="eyebrow mb-2">On the big screen</p>
+        <h1 class="display-5 fw-bold mb-3">Every Spider, one web</h1>
+        <p class="lead col-lg-8 mb-4">Bootstrap grid + cards for four film eras. Resize to see columns reflow.</p>
+        <div class="btn-group" role="group" aria-label="Movie page actions">
+          <a class="btn btn-spidey btn-lg" href="#posters">Posters</a>
+          <a class="btn btn-outline-light" href="#credits">Credits table</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container py-4 py-lg-5 mq-type" id="intro">
+        <h2 class="mb-3">Responsive type on Movies</h2>
+        <p>
+          Same media-query typography as Home: mobile → tablet → desktop font scaling in
+          <code>media-queries.css</code>.
+        </p>
+      </section>
+
+      <!-- Bootstrap cards in a responsive grid -->
+      <section class="container pb-4 pb-lg-5" id="posters">
+        <p class="text-spidey-red fw-bold text-uppercase small mb-2">Bootstrap Cards + Grid</p>
+        <h2 class="mb-3 mb-lg-4">Film posters</h2>
+        <div class="row g-3 g-lg-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card card-spidey h-100">
+              <img src="images/spider-tobey.jpg" class="card-img-top" alt="Spider-Man 2002" style="height:280px;object-fit:contain;background:#0f172a" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Spider-Man (2002)</h3>
+                <p class="card-text small flex-grow-1">Tobey Maguire · Sam Raimi</p>
+                <a href="#credits" class="btn btn-spidey btn-sm">Credits</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card card-spidey h-100">
+              <img src="images/spider-andrew.jpg" class="card-img-top" alt="Amazing Spider-Man 2" style="height:280px;object-fit:contain;background:#0f172a" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Amazing Spider-Man 2</h3>
+                <p class="card-text small flex-grow-1">Andrew Garfield · Marc Webb</p>
+                <a href="#credits" class="btn btn-outline-danger btn-sm">Credits</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card card-spidey h-100">
+              <img src="images/spider-tom.jpg" class="card-img-top" alt="Brand New Day" style="height:280px;object-fit:contain;background:#0f172a" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Brand New Day</h3>
+                <p class="card-text small flex-grow-1">Tom Holland · 2026</p>
+                <a href="#credits" class="btn btn-secondary btn-sm">Credits</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card card-spidey h-100">
+              <img src="images/spider-miles.jpg" class="card-img-top" alt="Across the Spider-Verse" style="height:280px;object-fit:contain;background:#0f172a" />
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h6">Across the Spider-Verse</h3>
+                <p class="card-text small flex-grow-1">Shameik Moore (voice)</p>
+                <a href="contact.html" class="btn btn-spidey btn-sm">Pick a favorite</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Two-column Bootstrap grid -->
+      <section class="container pb-4">
+        <h2 class="h4 mb-3">Watch tips (<code>col-lg-6</code>)</h2>
+        <div class="row g-3">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="p-3 p-md-4 bg-white border rounded h-100">
+              <h3 class="h6 text-spidey-red">Start here</h3>
+              <ol class="mb-0 small">
+                <li>Spider-Man (2002)</li>
+                <li>Amazing Spider-Man 2 (2014)</li>
+                <li>Across the Spider-Verse (2023)</li>
+                <li>Brand New Day (2026)</li>
+              </ol>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="p-3 p-md-4 bg-spidey-navy text-white rounded h-100">
+              <h3 class="h6 text-danger">Eras</h3>
+              <ul class="mb-0 small">
+                <li>Raimi — classic drama</li>
+                <li>Amazing — grit &amp; romance</li>
+                <li>MCU — high-school hero</li>
+                <li>Spider-Verse — animated multiverse</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container pb-5" id="credits">
+        <h2 class="h4 mb-3">Film credits</h2>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th>Movie Title</th>
+                <th>Year</th>
+                <th>Lead Actor</th>
+                <th>Director</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Spider-Man</td>
+                <td>2002</td>
+                <td>Tobey Maguire</td>
+                <td>Sam Raimi</td>
+              </tr>
+              <tr>
+                <td>The Amazing Spider-Man 2</td>
+                <td>2014</td>
+                <td>Andrew Garfield</td>
+                <td>Marc Webb</td>
+              </tr>
+              <tr>
+                <td>Spider-Man: Brand New Day</td>
+                <td>2026</td>
+                <td>Tom Holland</td>
+                <td>Destin Daniel Cretton</td>
+              </tr>
+              <tr>
+                <td>Spider-Man: Across the Spider-Verse</td>
+                <td>2023</td>
+                <td>Shameik Moore (voice)</td>
+                <td>Joaquim Dos Santos</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btn-group mt-2" role="group" aria-label="After credits">
+          <a class="btn btn-spidey" href="index.html">Home</a>
+          <a class="btn btn-outline-danger" href="contact.html">Contact</a>
+          <a class="btn btn-secondary btn-sm" href="about.html">Team</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer py-4">
+      <div class="container text-center px-sm-2">
+        <p class="names mb-1">Team members: Ali · Arlan</p>
+        <p class="mb-1 small">Assignment #3 · Media Queries + Bootstrap · Astana IT University</p>
+        <p class="mb-0 small"><a href="index.html">Back to Home</a></p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

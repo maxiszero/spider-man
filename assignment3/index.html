@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Team: Ali · Arlan | Assignment #3 Media Queries + Bootstrap | Astana IT University -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spider-Man | Home (Assignment 3)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <!-- Task 5: Bootstrap Navbar (collapses to hamburger) -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-spidey sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Spider<span>-Man</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-band">
+      <img src="images/hero.jpg" alt="Spider-Man mask close-up" />
+      <div class="container py-5 px-sm-2 px-lg-3">
+        <p class="eyebrow mb-2">Assignment #3 · responsive Spidey</p>
+        <h1 class="display-5 fw-bold mb-3">Media Queries + Bootstrap</h1>
+        <p class="lead col-lg-8 mb-4">
+          This copy of the fan site demonstrates Part 1 (custom media queries) and Part 2
+          (Bootstrap grid, navbar, carousel, cards, buttons, and form).
+        </p>
+        <!-- Task 6: Bootstrap buttons + btn-group -->
+        <div class="btn-group" role="group" aria-label="Hero actions">
+          <a class="btn btn-spidey btn-lg" href="#mq-cards">MQ cards</a>
+          <a class="btn btn-outline-light btn-lg" href="#carousel">Carousel</a>
+          <a class="btn btn-secondary btn-sm align-self-center d-none d-md-inline-block" href="#grid">Grid</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Task 1: Responsive typography via media queries -->
+      <section class="container py-4 py-md-5 mq-type" id="typography">
+        <p class="text-spidey-red fw-bold text-uppercase small mb-2">Task 1 · Media Queries</p>
+        <h2 class="mb-3">Responsive typography</h2>
+        <p class="mb-2">
+          Font sizes change with CSS media queries only: smaller on mobile, medium on tablet,
+          larger on desktop. Resize the browser to see headings and paragraphs scale.
+        </p>
+        <p class="mb-0">
+          Breakpoints used: default (mobile), <code>min-width: 768px</code> (tablet),
+          <code>min-width: 992px</code> (desktop) in <code>css/media-queries.css</code>.
+        </p>
+      </section>
+
+      <!-- Task 2: Card group with media queries (NO Bootstrap for layout) -->
+      <section class="container pb-4 pb-md-5" id="mq-cards">
+        <div class="mq-type mb-3 mb-lg-4">
+          <p class="text-spidey-red fw-bold text-uppercase small mb-2">Task 2 · Media Queries</p>
+          <h2>Card group (CSS only)</h2>
+          <p>
+            Three cards. Desktop = 3 in a row · Tablet = 2 · Mobile = stacked. Built with
+            Flexbox + media queries — not Bootstrap columns.
+          </p>
+        </div>
+        <div class="mq-card-row">
+          <article class="mq-card">
+            <img src="images/spider-tobey.jpg" alt="Spider-Man 2002 poster" />
+            <div class="mq-card__body">
+              <h3>Classic films</h3>
+              <p>Tobey’s first swing — the origin that taught a generation to look up.</p>
+              <a class="btn btn-spidey btn-sm" href="movies.html">Browse movies</a>
+            </div>
+          </article>
+          <article class="mq-card">
+            <img src="images/gallery2.jpg" alt="Spider-Man cosplay" />
+            <div class="mq-card__body">
+              <h3>Meet the team</h3>
+              <p>Ali and Arlan — two pages each, one shared Spider-Man theme.</p>
+              <a class="btn btn-outline-danger btn-sm" href="about.html">About team</a>
+            </div>
+          </article>
+          <article class="mq-card">
+            <img src="images/city.jpg" alt="New York City" />
+            <div class="mq-card__body">
+              <h3>Send a signal</h3>
+              <p>Drop feedback or a favorite suit color through the Bootstrap form.</p>
+              <a class="btn btn-secondary btn-sm" href="contact.html">Contact us</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Task 3: Bootstrap Grid — two columns (col-lg-6) -->
+      <section class="container pb-4 pb-lg-5" id="grid">
+        <p class="text-spidey-red fw-bold text-uppercase small mb-2">Task 3 · Bootstrap Grid</p>
+        <h2 class="mb-3 mb-lg-4">Two-column section (<code>col-lg-6</code>)</h2>
+        <div class="row g-3 g-lg-4">
+          <div class="col-12 col-md-6 col-lg-6">
+            <div class="p-3 p-md-4 bg-white border rounded h-100 shadow-sm">
+              <h3 class="h5 text-spidey-red">Who is Spider-Man?</h3>
+              <p class="mb-0">
+                Peter Parker was bitten by a radioactive spider. With great power comes great
+                responsibility — and a duty to protect New York City.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6">
+            <img
+              class="img-fluid rounded w-100 h-100 object-fit-cover"
+              style="max-height: 260px; object-fit: cover"
+              src="images/gallery2.jpg"
+              alt="Spider-Man reaching toward the camera"
+            />
+          </div>
+        </div>
+
+        <!-- Task 3: three columns col-lg-4 -->
+        <h2 class="h4 mt-4 mt-lg-5 mb-3">Three-column section (<code>col-lg-4</code>)</h2>
+        <div class="row g-3">
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="p-3 bg-spidey-navy text-white rounded h-100">
+              <h3 class="h6 text-danger">Super strength</h3>
+              <p class="small mb-0">Lifts cars and punches above his weight class.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="p-3 bg-spidey-navy text-white rounded h-100">
+              <h3 class="h6 text-danger">Spider-sense</h3>
+              <p class="small mb-0">Danger warning before the hit lands.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-lg-4">
+            <div class="p-3 bg-spidey-navy text-white rounded h-100">
+              <h3 class="h6 text-danger">Web-shooters</h3>
+              <p class="small mb-0">Swing, trap, and zip across Manhattan.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Task 7: Bootstrap Carousel — 9 images -->
+      <section class="container-fluid bg-dark py-4 py-lg-5" id="carousel">
+        <div class="container">
+          <p class="text-danger fw-bold text-uppercase small mb-2">Task 7 · Bootstrap Carousel</p>
+          <h2 class="text-white mb-3 mb-lg-4">Web gallery carousel (9 slides)</h2>
+          <div id="spideyCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#spideyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#spideyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#spideyCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#spideyCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#spideyCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#spideyCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#spideyCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#spideyCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#spideyCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            </div>
+            <div class="carousel-inner rounded">
+              <div class="carousel-item active">
+                <img src="images/hero.jpg" class="d-block w-100" alt="Stark suit mask" />
+                <div class="carousel-caption d-none d-md-block"><h5>Stark suit</h5></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/comics.jpg" class="d-block w-100" alt="Comic covers" />
+                <div class="carousel-caption d-none d-md-block"><h5>Comic stack</h5></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/swing.jpg" class="d-block w-100" alt="Fans in costumes" />
+                <div class="carousel-caption d-none d-md-block"><h5>Next-gen fans</h5></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/gallery1.jpg" class="d-block w-100" alt="Spider-Man 2099 comics" />
+                <div class="carousel-caption d-none d-md-block"><h5>2099 era</h5></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/gallery2.jpg" class="d-block w-100" alt="Street-level Spidey" />
+                <div class="carousel-caption d-none d-md-block"><h5>Street level</h5></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/city.jpg" class="d-block w-100" alt="New York City" />
+                <div class="carousel-caption d-none d-md-block"><h5>New York</h5></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/spider-tobey.jpg" class="d-block w-100" alt="Tobey Maguire poster" />
+                <div class="carousel-caption d-none d-md-block"><h5>Tobey · 2002</h5></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/spider-miles.jpg" class="d-block w-100" alt="Miles Morales poster" />
+                <div class="carousel-caption d-none d-md-block"><h5>Miles · Spider-Verse</h5></div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/spider-tom.jpg" class="d-block w-100" alt="Tom Holland poster" />
+                <div class="carousel-caption d-none d-md-block"><h5>Tom · Brand New Day</h5></div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#spideyCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#spideyCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Task 8: Bootstrap Cards in card-group -->
+      <section class="container py-4 py-lg-5" id="bs-cards">
+        <p class="text-spidey-red fw-bold text-uppercase small mb-2">Task 8 · Bootstrap Cards</p>
+        <h2 class="mb-3 mb-lg-4">Card group</h2>
+        <div class="card-group gap-3">
+          <div class="card card-spidey">
+            <img src="images/spider-andrew.jpg" class="card-img-top" alt="Amazing Spider-Man 2 poster" />
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Amazing Spider-Man 2</h3>
+              <p class="card-text flex-grow-1">Andrew Garfield between Gwen and Electro — electric and personal.</p>
+              <a href="movies.html" class="btn btn-spidey btn-sm mt-auto">See films</a>
+            </div>
+          </div>
+          <div class="card card-spidey">
+            <img src="images/spider-miles.jpg" class="card-img-top" alt="Across the Spider-Verse poster" />
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Across the Spider-Verse</h3>
+              <p class="card-text flex-grow-1">Miles Morales painted into a crowd of Spider-people.</p>
+              <a href="movies.html" class="btn btn-outline-danger btn-sm mt-auto">See films</a>
+            </div>
+          </div>
+          <div class="card card-spidey">
+            <img src="images/profile.jpg" class="card-img-top" alt="Spider-Man portrait" />
+            <div class="card-body d-flex flex-column">
+              <h3 class="card-title h5">Friendly neighborhood</h3>
+              <p class="card-text flex-grow-1">Still a kid with homework — and a city to protect.</p>
+              <a href="about.html" class="btn btn-secondary btn-sm mt-auto">About</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer py-4 mt-auto">
+      <div class="container text-center px-sm-2">
+        <p class="names mb-1">Team members: Ali · Arlan</p>
+        <p class="mb-1 small">Assignment #3 · Media Queries + Bootstrap · Astana IT University</p>
+        <p class="mb-0 small">
+          <a href="contact.html">Contact</a> ·
+          <a href="../index.html">Original (no Bootstrap) site</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
