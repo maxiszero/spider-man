@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Team: Ali · Arlan | Assignment #3 Media Queries + Bootstrap | Astana IT University -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spider-Man | About (Assignment 3)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-spidey sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Spider<span>-Man</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+            <li class="nav-item"><a class="nav-link active" href="about.html">About Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-band">
+      <img src="images/gallery2.jpg" alt="Spider-Man cosplay" />
+      <div class="container py-5 px-sm-2">
+        <p class="eyebrow mb-2">The people behind the mask</p>
+        <h1 class="display-5 fw-bold mb-3">About the team</h1>
+        <p class="lead col-lg-8 mb-0">
+          Bootstrap grid replaces the old custom sidebar layout for Assignment #3.
+        </p>
+      </div>
+    </header>
+
+    <main class="container py-4 py-lg-5">
+      <!-- Task 3: Bootstrap grid — sidebar-like + main using columns -->
+      <div class="row g-4">
+        <aside class="col-12 col-lg-3">
+          <div class="p-3 p-md-4 bg-spidey-navy text-white rounded h-100">
+            <p class="text-danger small text-uppercase fw-bold mb-2">Jump links</p>
+            <div class="d-grid gap-2">
+              <a class="btn btn-outline-light btn-sm text-start" href="#bio">Peter Parker</a>
+              <a class="btn btn-spidey btn-sm text-start" href="#team">Team members</a>
+              <a class="btn btn-outline-light btn-sm text-start" href="#mq">MQ demo</a>
+              <a class="btn btn-outline-light btn-sm text-start" href="contact.html">Contact form</a>
+            </div>
+            <p class="small mt-3 mb-0 text-white-50">
+              Uses <code class="text-white">col-lg-3</code> + <code class="text-white">col-lg-9</code>
+              with Bootstrap spacing utilities.
+            </p>
+          </div>
+        </aside>
+
+        <div class="col-12 col-lg-9">
+          <section class="mq-type mb-4 mb-lg-5" id="bio">
+            <div class="row g-3 align-items-center">
+              <div class="col-12 col-md-4 text-center">
+                <img
+                  src="images/profile.jpg"
+                  alt="Circular Spider-Man portrait"
+                  class="rounded-circle border border-3 border-danger"
+                  width="160"
+                  height="160"
+                  style="object-fit: cover"
+                />
+              </div>
+              <div class="col-12 col-md-8">
+                <h2>Peter Parker</h2>
+                <p>
+                  After the spider bite, Peter learned that power without responsibility can hurt
+                  the people he loves. He fights crime in New York while keeping his identity secret.
+                </p>
+                <ul>
+                  <li>Hometown: Queens, New York</li>
+                  <li>Alias: Spider-Man</li>
+                  <li>Motto: With great power comes great responsibility</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="team" class="mb-4 mb-lg-5">
+            <p class="text-spidey-red fw-bold text-uppercase small mb-2">Task 8 · Bootstrap Cards</p>
+            <h2 class="h4 mb-3">Team members</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+              <div class="col">
+                <div class="card card-spidey h-100">
+                  <img src="images/hero.jpg" class="card-img-top" alt="Ali pages visual" />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h5">Ali</h3>
+                    <p class="card-text flex-grow-1">Home · shared CSS · carousel · MQ typography &amp; cards.</p>
+                    <a href="index.html" class="btn btn-spidey btn-sm mt-auto">Open Home</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-spidey h-100">
+                  <img src="images/spider-miles.jpg" class="card-img-top" alt="Arlan pages visual" />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h5">Arlan</h3>
+                    <p class="card-text flex-grow-1">Movies · About · Contact · Bootstrap form &amp; grid.</p>
+                    <a href="movies.html" class="btn btn-outline-danger btn-sm mt-auto">Open Movies</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-spidey h-100">
+                  <img src="images/city.jpg" class="card-img-top" alt="New York" />
+                  <div class="card-body d-flex flex-column">
+                    <h3 class="card-title h5">Feedback</h3>
+                    <p class="card-text flex-grow-1">Questions for practice defense? Use the contact form.</p>
+                    <a href="contact.html" class="btn btn-secondary btn-sm mt-auto">Contact</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Task 2 MQ cards also on About (each member on 2 pages) -->
+          <section id="mq">
+            <p class="text-spidey-red fw-bold text-uppercase small mb-2">Task 2 · Media Query cards</p>
+            <h2 class="h4 mb-3">CSS-only card stacking</h2>
+            <div class="mq-card-row">
+              <article class="mq-card">
+                <img src="images/comics.jpg" alt="Comics" />
+                <div class="mq-card__body">
+                  <h3>Comics</h3>
+                  <p>Printed pages and Spider-Man 2099 energy.</p>
+                  <a class="btn btn-spidey btn-sm" href="index.html#carousel">Carousel</a>
+                </div>
+              </article>
+              <article class="mq-card">
+                <img src="images/swing.jpg" alt="Fans" />
+                <div class="mq-card__body">
+                  <h3>Fans</h3>
+                  <p>Next generation swinging into the suit.</p>
+                  <a class="btn btn-outline-danger btn-sm" href="index.html">Home</a>
+                </div>
+              </article>
+              <article class="mq-card">
+                <img src="images/spider-tobey.jpg" alt="Tobey poster" />
+                <div class="mq-card__body">
+                  <h3>Films</h3>
+                  <p>Four eras — one friendly neighborhood hero.</p>
+                  <a class="btn btn-secondary btn-sm" href="movies.html">Movies</a>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer py-4 mt-4">
+      <div class="container text-center px-sm-2">
+        <p class="names mb-1">Team members: Ali · Arlan</p>
+        <p class="mb-1 small">Assignment #3 · Media Queries + Bootstrap · Astana IT University</p>
+        <p class="mb-0 small"><a href="index.html">Back to Home</a></p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

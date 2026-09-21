@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Team: Ali · Arlan | Assignment #3 Media Queries + Bootstrap | Astana IT University -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spider-Man | Contact (Assignment 3)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-spidey sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Spider<span>-Man</span></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Team</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero-band">
+      <img src="images/city.jpg" alt="New York City at dusk" />
+      <div class="container py-5 px-sm-2">
+        <p class="eyebrow mb-2">Signal from Queens</p>
+        <h1 class="display-5 fw-bold mb-3">Send a web-line</h1>
+        <p class="lead col-lg-8 mb-0">Task 9 — Bootstrap form classes for a responsive contact form.</p>
+      </div>
+    </header>
+
+    <main class="container py-4 py-lg-5">
+      <div class="row g-4">
+        <div class="col-12 col-lg-5">
+          <div class="p-3 p-md-4 bg-white border rounded shadow-sm h-100">
+            <p class="text-spidey-red fw-bold text-uppercase small mb-2">How to reach us</p>
+            <h2 class="h4 mb-3">Get in touch</h2>
+            <p>
+              Use this Bootstrap form for a class note, a site bug, or the Spider-Man movie you
+              think we missed.
+            </p>
+            <ul class="mb-3">
+              <li><strong>Name &amp; email</strong> — so we know who swung by</li>
+              <li><strong>Suit color</strong> — select your favorite</li>
+              <li><strong>Message</strong> — what to fix or celebrate</li>
+            </ul>
+            <div class="btn-group" role="group" aria-label="Quick links">
+              <a class="btn btn-outline-danger btn-sm" href="index.html">Home</a>
+              <a class="btn btn-outline-secondary btn-sm" href="about.html">Team</a>
+              <a class="btn btn-spidey btn-sm" href="movies.html">Movies</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Task 9: Bootstrap form -->
+        <div class="col-12 col-lg-7">
+          <form class="p-3 p-md-4 bg-white border rounded shadow-sm" id="contact-form" action="#" method="post">
+            <p class="text-spidey-red fw-bold text-uppercase small mb-2">Task 9 · Bootstrap Form</p>
+            <h2 class="h4 mb-3">Contact form</h2>
+
+            <div class="mb-3">
+              <label for="name" class="form-label">Your name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Your email</label>
+              <div class="input-group">
+                <span class="input-group-text" id="email-addon">@</span>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  aria-describedby="email-addon"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="suit-color" class="form-label">Favorite Spider-suit color</label>
+              <select class="form-select" id="suit-color" name="suit-color">
+                <option value="classic">Classic red &amp; blue</option>
+                <option value="black">Symbiote black</option>
+                <option value="iron">Iron Spider (gold / red)</option>
+                <option value="stealth">Stealth black</option>
+              </select>
+            </div>
+
+            <fieldset class="mb-3">
+              <legend class="form-label fs-6">Which era do you watch first?</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="era" id="era-raimi" value="raimi" checked />
+                <label class="form-check-label" for="era-raimi">Raimi</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="era" id="era-mcu" value="mcu" />
+                <label class="form-check-label" for="era-mcu">MCU</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="era" id="era-verse" value="verse" />
+                <label class="form-check-label" for="era-verse">Spider-Verse</label>
+              </div>
+            </fieldset>
+
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="1" id="newsletter" />
+              <label class="form-check-label" for="newsletter">
+                Email me when the gallery gets new posters
+              </label>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Your message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required placeholder="Write your message here…"></textarea>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2">
+              <button type="submit" class="btn btn-spidey btn-lg">Send signal</button>
+              <button type="reset" class="btn btn-outline-secondary">Reset</button>
+              <button type="button" class="btn btn-secondary btn-sm">Save draft</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Three-column Bootstrap section -->
+      <section class="mt-4 mt-lg-5">
+        <h2 class="h4 mb-3">Quick paths (<code>col-lg-4</code>)</h2>
+        <div class="row g-3">
+          <div class="col-12 col-md-4 col-lg-4">
+            <div class="card card-spidey h-100">
+              <img src="images/hero.jpg" class="card-img-top" alt="Home" />
+              <div class="card-body">
+                <h3 class="h6 card-title">Home gallery</h3>
+                <p class="card-text small">Carousel + MQ cards + Bootstrap grid demos.</p>
+                <a href="index.html" class="btn btn-spidey btn-sm">Open</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4">
+            <div class="card card-spidey h-100">
+              <img src="images/spider-tobey.jpg" class="card-img-top" alt="Movies" style="object-fit:contain;height:180px;background:#0f172a" />
+              <div class="card-body">
+                <h3 class="h6 card-title">Film cards</h3>
+                <p class="card-text small">Poster grid with Bootstrap columns and buttons.</p>
+                <a href="movies.html" class="btn btn-outline-danger btn-sm">Open</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 col-lg-4">
+            <div class="card card-spidey h-100">
+              <img src="images/gallery2.jpg" class="card-img-top" alt="About" />
+              <div class="card-body">
+                <h3 class="h6 card-title">About team</h3>
+                <p class="card-text small">Grid sidebar + Bootstrap team cards.</p>
+                <a href="about.html" class="btn btn-secondary btn-sm">Open</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer py-4 mt-4">
+      <div class="container text-center px-sm-2">
+        <p class="names mb-1">Team members: Ali · Arlan</p>
+        <p class="mb-1 small">Assignment #3 · Media Queries + Bootstrap · Astana IT University</p>
+        <p class="mb-0 small"><a href="index.html">Back to Home</a></p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
