@@ -1,4 +1,4 @@
-/* Assignment 3 extends the existing site. Loaded after Bootstrap and style.css. */
+
 .site-navbar { padding: .7rem 0; }
 .site-navbar > .container { max-width: 1100px; }
 .site-navbar .navbar-toggler { min-width: 44px; min-height: 44px; }
