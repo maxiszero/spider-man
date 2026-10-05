@@ -1,0 +1,54 @@
+/* Assignment 3 extends the existing site. Loaded after Bootstrap and style.css. */
+.site-navbar { padding: .7rem 0; }
+.site-navbar > .container { max-width: 1100px; }
+.site-navbar .navbar-toggler { min-width: 44px; min-height: 44px; }
+.site-navbar .nav-menu { align-items: center; }
+.hero-actions { gap: 0; max-width: 100%; }
+.hero-actions .btn { white-space: normal; }
+.btn-outline-light { color: white; }
+.btn-primary { --bs-btn-active-bg: #9f1239; --bs-btn-active-border-color: #9f1239; }
+.mq-type h1 { font-size: 2.4rem; }
+.mq-type h2 { font-size: 1.6rem; }
+.mq-type p { font-size: 1rem; }
+.card-row.mq-card-row { flex-direction: row; gap: 1.25rem; }
+.mq-card-row > .mq-card { flex: 0 0 100%; max-width: 100%; min-width: 0; }
+.carousel-section { background: var(--blue-deep); color: white; }
+#spideyCarousel { overflow: hidden; border-radius: 6px; }
+#spideyCarousel .carousel-item img { width: 100%; height: 480px; object-fit: contain; background: #080e1b; }
+#spideyCarousel .carousel-caption { background: rgba(15,23,42,.9); border-radius: 6px; padding: .8rem; bottom: 2.5rem; }
+#spideyCarousel .carousel-caption h5 { color: white; margin: 0; }
+#spideyCarousel .carousel-control-prev, #spideyCarousel .carousel-control-next { min-width: 44px; }
+.bg-spidey-navy { background: var(--blue-deep); }
+.bg-spidey-navy h3 { color: #fca5a5 !important; }
+.site-layout { grid-template-columns: 240px minmax(0, 1fr); }
+.layout-main .container { width: 100%; max-width: 1100px; padding-left: 1.25rem; padding-right: 1.25rem; }
+#contact-form .input-group .form-control { width: 1%; }
+#contact-form .form-check-input { width: 1em; height: 1em; }
+#contact-form .form-check-label { display: inline; }
+#contact-form .btn { width: auto; }
+section[id] { scroll-margin-top: 100px; }
+@media (min-width: 768px) {
+ .mq-type h1 { font-size: 3.3rem; }
+ .mq-type h2 { font-size: 2rem; }
+ .mq-type p { font-size: 1.05rem; }
+ .mq-card-row > .mq-card { flex-basis: calc((100% - 1.25rem) / 2); max-width: calc((100% - 1.25rem) / 2); }
+}
+@media (min-width: 992px) {
+ .mq-type h1 { font-size: 4.4rem; }
+ .mq-type h2 { font-size: 2.4rem; }
+ .mq-type p { font-size: 1.12rem; }
+ .mq-card-row > .mq-card { flex-basis: calc((100% - 2.5rem) / 3); max-width: calc((100% - 2.5rem) / 3); }
+}
+@media (max-width: 991.98px) {
+ .site-navbar .nav-menu { align-items: stretch; padding-top: .75rem; }
+ .site-navbar .nav-link { justify-content: flex-start; }
+ .site-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'header' 'main' 'sidebar' 'footer'; }
+ .layout-sidebar { border-right: 0; }
+}
+@media (max-width: 767.98px) {
+ #spideyCarousel .carousel-item img { height: 330px; }
+ .hero-actions .btn { padding: .75rem; font-size: .95rem; }
+ .gallery-grid--nine { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: 220px; }
+}
+
+.btn.btn-sm { padding: .5rem .9rem; font-size: .875rem; }

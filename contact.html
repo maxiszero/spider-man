@@ -1,223 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Team: Ali · Arlan | Assignment #2 Flexbox & Grid | Astana IT University -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spider-Man | Contact</title>
-    <meta
-      name="description"
-      content="Contact the Spider-Man fan site team — name, email, suit color, and a message."
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- Assignment 2 · Task 3: CSS Grid areas — header / sidebar / main / footer -->
-    <div class="site-layout">
-      <header id="main-header" class="layout-header">
-        <div class="nav-inner">
-          <a class="logo" href="index.html">Spider<span>-Man</span></a>
-          <nav aria-label="Main navigation">
-            <ul class="nav-menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="movies.html">Movies</a></li>
-              <li><a href="about.html">About Team</a></li>
-              <li><a class="active" href="contact.html">Contact Us</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
 
-      <aside class="layout-sidebar" aria-label="Contact sidebar">
-        <p class="eyebrow">Sidebar</p>
-        <h2>Quick paths</h2>
-        <ul>
-          <li><a href="index.html">Home gallery</a></li>
-          <li><a href="movies.html">Film cards</a></li>
-          <li><a href="about.html">Team grid page</a></li>
-          <li><a class="active" href="#contact-form">This form</a></li>
-        </ul>
-        <div class="side-note">
+<html lang="en">
+<head>
+<!-- Team: Ali · Arlan | Assignments 1–3: HTML, Flexbox, Grid and Bootstrap | Astana IT University -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spider-Man | Contact</title>
+<meta content="Contact the Spider-Man fan site team — name, email, suit color, and a message." name="description"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
+<link href="css/responsive.css" rel="stylesheet"/></head>
+<body>
+<!-- Assignment 2 · Task 3: CSS Grid areas — header / sidebar / main / footer -->
+<div class="site-layout">
+<header class="layout-header" id="main-header"><nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark site-navbar" data-bs-theme="dark">
+<div class="container">
+<a class="navbar-brand logo" href="index.html">Spider<span>-Man</span></a>
+<button aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNav">
+<ul class="navbar-nav nav-menu ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About Team</a></li>
+<li class="nav-item"><a aria-current="page" class="nav-link active" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</nav></header>
+<aside aria-label="Contact sidebar" class="layout-sidebar">
+<p class="eyebrow">Sidebar</p>
+<h2>Quick paths</h2>
+<ul>
+<li><a href="index.html">Home gallery</a></li>
+<li><a href="movies.html">Film cards</a></li>
+<li><a href="about.html">Team grid page</a></li>
+<li><a class="active" href="#contact-form">This form</a></li>
+</ul>
+<div class="side-note">
           Grid areas keep this sidebar on the left while the form lives in the main
           column. On small screens the sidebar stacks under the content.
         </div>
-      </aside>
-
-      <main class="layout-main">
-        <section class="hero hero--page" aria-label="Contact hero">
-          <img
-            class="hero__media"
-            src="images/city.jpg"
-            alt="New York City street canyon with glowing billboards at dusk"
-          />
-          <div class="hero__veil" aria-hidden="true"></div>
-          <div class="hero__content">
-            <p class="eyebrow">Signal from Queens</p>
-            <h1>Send a web-line</h1>
-            <p class="lede">
+</aside>
+<main class="layout-main">
+<section aria-label="Contact hero" class="hero hero--page">
+<img alt="New York City street canyon with glowing billboards at dusk" class="hero__media" src="images/city.jpg"/>
+<div aria-hidden="true" class="hero__veil"></div>
+<div class="hero__content mq-type">
+<p class="eyebrow">Signal from Queens</p>
+<h1>Send a web-line</h1>
+<p class="lede">
               Feedback, a favorite film, or a photo idea — the team reads every
               message during practice hours.
             </p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="#contact-form">Open the form</a>
-              <a class="btn btn-ghost" href="about.html">Meet Ali &amp; Arlan</a>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="paths" style="background: rgba(225, 29, 46, 0.04)">
-          <div class="container">
-            <div class="section-head fade-up">
-              <p class="eyebrow">Flexbox cards</p>
-              <h2>Where to go next</h2>
-              <p class="lede">
-                Three equal-height Flexbox cards — image, title, text, and a button.
+<div aria-label="Explore Spider-Man" class="btn-group hero-actions" role="group">
+<a class="btn btn-primary btn-lg" href="#contact-form">Open the form</a>
+<a class="btn btn-ghost btn-lg btn-outline-light" href="about.html">Meet Ali &amp; Arlan</a>
+</div>
+</div>
+</section>
+<section class="section" id="paths" style="background: rgba(225, 29, 46, 0.04)">
+<div class="container">
+<div class="section-head fade-up mq-type">
+<p class="eyebrow">Explore more</p>
+<h2>Where to go next</h2>
+<p class="lede">
+                Three equal-height Explore more — image, title, text, and a button.
               </p>
-            </div>
-            <div class="card-row fade-up delay-1">
-              <article class="flex-card">
-                <img src="images/hero.jpg" alt="Spider-Man mask close-up" />
-                <div class="flex-card__body">
-                  <h3>Home gallery</h3>
-                  <p>Nine Grid frames with hover captions and the full origin story.</p>
-                  <a class="btn btn-primary" href="index.html">Open Home</a>
-                </div>
-              </article>
-              <article class="flex-card">
-                <img src="images/spider-tobey.jpg" alt="Spider-Man 2002 poster" />
-                <div class="flex-card__body">
-                  <h3>Film cards</h3>
-                  <p>Poster Flexbox row, credits table, and a clean watch order.</p>
-                  <a class="btn btn-primary" href="movies.html">Open Movies</a>
-                </div>
-              </article>
-              <article class="flex-card">
-                <img src="images/gallery2.jpg" alt="Spider-Man cosplay" />
-                <div class="flex-card__body">
-                  <h3>Meet the team</h3>
-                  <p>Grid sidebar layout plus Ali &amp; Arlan cards for the defense.</p>
-                  <a class="btn btn-primary" href="about.html">Open About</a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section class="section" id="write">
-          <div class="container split">
-            <div class="fade-up">
-              <div class="panel profile-wrap">
-                <img
-                  class="profile-img"
-                  src="images/profile.jpg"
-                  alt="Circular portrait of Spider-Man in the red suit"
-                />
-                <p class="eyebrow">How to reach us</p>
-                <h2>Get in touch</h2>
-                <p class="lede">
+</div>
+<div class="card-row fade-up delay-1 mq-card-row">
+<article class="flex-card mq-card">
+<img alt="Spider-Man mask close-up" src="images/hero.jpg"/>
+<div class="flex-card__body">
+<h3>Home gallery</h3>
+<p>Nine Grid frames with hover captions and the full origin story.</p>
+<a class="btn btn-primary" href="index.html">Open Home</a>
+</div>
+</article>
+<article class="flex-card mq-card">
+<img alt="Spider-Man 2002 poster" src="images/spider-tobey.jpg"/>
+<div class="flex-card__body">
+<h3>Film cards</h3>
+<p>Poster Flexbox row, credits table, and a clean watch order.</p>
+<a class="btn btn-primary" href="movies.html">Open Movies</a>
+</div>
+</article>
+<article class="flex-card mq-card">
+<img alt="Spider-Man cosplay" src="images/gallery2.jpg"/>
+<div class="flex-card__body">
+<h3>Meet the team</h3>
+<p>Grid sidebar layout plus Ali &amp; Arlan cards for the defense.</p>
+<a class="btn btn-primary" href="about.html">Open About</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="write">
+<div class="container split">
+<div class="fade-up">
+<div class="panel profile-wrap">
+<img alt="Circular portrait of Spider-Man in the red suit" class="profile-img" src="images/profile.jpg"/>
+<p class="eyebrow">How to reach us</p>
+<h2>Get in touch</h2>
+<p class="lede">
                   Use the form for a class note, a site bug, or the Spider-Man movie
                   you think we missed.
                 </p>
-              </div>
-              <ul class="power-list" style="margin-top: 1.25rem">
-                <li><strong>Name &amp; email</strong> — so we know who swung by</li>
-                <li><strong>Suit color</strong> — classic, symbiote, Iron Spider, or stealth</li>
-                <li><strong>Message</strong> — what to fix, add, or celebrate</li>
-              </ul>
-            </div>
+</div>
+<ul class="power-list" style="margin-top: 1.25rem">
+<li><strong>Name &amp; email</strong> — so we know who swung by</li>
+<li><strong>Suit color</strong> — classic, symbiote, Iron Spider, or stealth</li>
+<li><strong>Message</strong> — what to fix, add, or celebrate</li>
+</ul>
+</div>
+<form action="#contact-form" aria-describedby="form-note" class="p-3 p-md-4 bg-white border rounded shadow-sm" id="contact-form" method="get" onsubmit="event.preventDefault(); document.getElementById('form-note').textContent='Demo complete. Your message was not sent.';">
 
-            <form id="contact-form" class="fade-up delay-1" action="#" method="post">
-              <div class="form-group">
-                <label for="name">Your name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required />
-              </div>
+<h2 class="h4 mb-3">Contact form</h2>
+<div class="mb-3">
+<label class="form-label" for="name">Your name</label>
+<input class="form-control" id="name" name="name" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div class="mb-3">
+<label class="form-label" for="email">Your email</label>
+<div class="input-group">
+<span class="input-group-text" id="email-addon">@</span>
+<input aria-describedby="email-addon" class="form-control" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="mb-3">
+<label class="form-label" for="suit-color">Favorite Spider-suit color</label>
+<select class="form-select" id="suit-color" name="suit-color">
+<option value="classic">Classic red &amp; blue</option>
+<option value="black">Symbiote black</option>
+<option value="iron">Iron Spider (gold / red)</option>
+<option value="stealth">Stealth black</option>
+</select>
+</div>
+<fieldset class="mb-3">
+<legend class="form-label fs-6">Which era do you watch first?</legend>
+<div class="form-check">
+<input checked="" class="form-check-input" id="era-raimi" name="era" type="radio" value="raimi"/>
+<label class="form-check-label" for="era-raimi">Raimi</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" id="era-mcu" name="era" type="radio" value="mcu"/>
+<label class="form-check-label" for="era-mcu">MCU</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" id="era-verse" name="era" type="radio" value="verse"/>
+<label class="form-check-label" for="era-verse">Spider-Verse</label>
+</div>
+</fieldset>
 
-              <div class="form-group">
-                <label for="email">Your email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  required
-                />
-              </div>
+<div class="mb-3">
+<label class="form-label" for="message">Your message</label>
+<textarea class="form-control" id="message" name="message" placeholder="Write your message here…" required="" rows="4"></textarea>
+</div>
+<div class="d-flex flex-wrap gap-2">
+<button class="btn btn-primary btn-lg" type="submit">Send signal</button>
+<button class="btn btn-outline-secondary" type="reset">Reset</button>
 
-              <div class="form-group">
-                <label for="suit-color">Favorite Spider-suit color</label>
-                <select id="suit-color" name="suit-color">
-                  <option value="classic">Classic red &amp; blue</option>
-                  <option value="black">Symbiote black</option>
-                  <option value="iron">Iron Spider (gold / red)</option>
-                  <option value="stealth">Stealth black</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <span style="display: block; font-weight: 600; margin-bottom: 0.4rem"
-                  >Which era do you watch first?</span
-                >
-                <div class="radio-row">
-                  <label>
-                    <input type="radio" name="era" value="raimi" checked />
-                    Raimi
-                  </label>
-                  <label>
-                    <input type="radio" name="era" value="mcu" />
-                    MCU
-                  </label>
-                  <label>
-                    <input type="radio" name="era" value="verse" />
-                    Spider-Verse
-                  </label>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Your message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  placeholder="Write your message here…"
-                ></textarea>
-              </div>
-
-              <button class="btn btn-primary" type="submit">Send signal</button>
-            </form>
-          </div>
-        </section>
-
-        <section class="section" id="gallery" style="background: rgba(30, 58, 138, 0.05)">
-          <div class="container">
-            <div class="section-head fade-up">
-              <p class="eyebrow">While you write</p>
-              <h2>A few frames from the site</h2>
-              <p class="lede">Hover a photo — caption overlay from the Grid gallery.</p>
-            </div>
-            <div class="gallery-grid">
-              <figure class="gallery-item">
-                <img src="images/hero.jpg" alt="Spider-Man mask close-up" />
-                <figcaption>The mask</figcaption>
-              </figure>
-              <figure class="gallery-item">
-                <img src="images/comics.jpg" alt="Marvel comic covers" />
-                <figcaption>Printed pages</figcaption>
-              </figure>
-              <figure class="gallery-item">
-                <img src="images/gallery2.jpg" alt="Spider-Man cosplay" />
-                <figcaption>Street level</figcaption>
-              </figure>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer layout-footer">
-        <p class="names">Team members: Ali · Arlan</p>
-        <p>Front-End Assignment #2 · Flexbox &amp; Grid · Astana IT University</p>
-        <p><a href="index.html">Back to Home</a> · <a href="#main-header">Back to top</a></p>
-      </footer>
-    </div>
-  </body>
+</div>
+<p class="small mt-3" id="form-note" role="status">Classroom demo: messages are not sent. Please use sample details.</p></form>
+</div>
+</section>
+<section class="section" id="gallery" style="background: rgba(30, 58, 138, 0.05)">
+<div class="container">
+<div class="section-head fade-up mq-type">
+<p class="eyebrow">While you write</p>
+<h2>A few frames from the site</h2>
+<p class="lede">Hover a photo — caption overlay from the Grid gallery.</p>
+</div>
+<div class="gallery-grid">
+<figure class="gallery-item" tabindex="0">
+<img alt="Spider-Man mask close-up" src="images/hero.jpg"/>
+<figcaption>The mask</figcaption>
+</figure>
+<figure class="gallery-item" tabindex="0">
+<img alt="Marvel comic covers" src="images/comics.jpg"/>
+<figcaption>Printed pages</figcaption>
+</figure>
+<figure class="gallery-item" tabindex="0">
+<img alt="Spider-Man cosplay" src="images/gallery2.jpg"/>
+<figcaption>Street level</figcaption>
+</figure>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer layout-footer">
+<p class="names">Team members: Ali · Arlan</p>
+<p>Front-End Assignments 1–3 · Astana IT University</p>
+<p><a href="index.html">Back to Home</a> · <a href="#main-header">Back to top</a></p>
+</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script></body>
 </html>
