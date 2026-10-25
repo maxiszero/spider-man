@@ -2,7 +2,7 @@
 
 Team: Ali and Arlan. Astana IT University.
 
-Assignments 1, 2, 3 and 4 are integrated into the same four root pages. Each assignment improves the existing website.
+Assignments 1, 2, 3, 4 and 5 are integrated into the same four root pages. Each assignment improves the existing website.
 
 Live site: https://spider-man-front.netlify.app/
 
@@ -52,3 +52,31 @@ Suggested defense ownership (each person must understand and demonstrate their c
 Validation performed in Chromium at 390px and 1280px: invalid/valid forms, empty/whitespace fields, bad email, short/mismatched passwords, all popup close methods, FAQ toggles, clock tick, background change and all-page overflow.
 
 Report/ZIP submission is still required by the assignment; the existing report folder belongs to Assignment 2. No Assignment 4 report has been created.
+
+
+## Assignment 5 — Advanced JavaScript and DOM
+
+The same root website continues Assignments 1–4. No separate Assignment 5 site.
+
+| Requirement | Feature / source |
+|---|---|
+| DOM selection and dynamic content | Home #spider-lab: querySelectorAll rating buttons, textContent feedback; Movies filter count |
+| Dynamic styles / attribute manipulation | Rating classList and aria-pressed; film cards hidden attribute; previous background selector remains |
+| Click event listeners | Rating, reset, web-shot, Next/Back buttons |
+| Keyboard events | Navbar keydown: arrows wrap between links, Home/End jump; Tab remains native |
+| Callback + preserved multi-step state | js/main.js: changeStep(index, onChange), renderStep callback; identity then password; Back preserves inputs |
+| Switch | js/advanced.js: menu key handling and filmLibrary.select(category) |
+| Objects and methods | filmLibrary.films and select(); webSound.play() manages the audio lifecycle |
+| Arrays and loops | Film objects, for...of card visibility loop |
+| Higher-order functions | filter for categories, map for IDs/titles, forEach for stars and listeners |
+| Sound | Fire a web button uses Web Audio oscillator and gain envelope; single playing guard prevents overlap; nodes disconnect on end |
+| Event-triggered animation | Star transitions, web-shot Web Animations transform; reduced-motion respected |
+| Separation | HTML structure, css/advanced.css visuals, js/advanced.js behavior; parallax moved to js/parallax.js; legacy redirects use js/redirect.js |
+
+Demo flow: Home → Spider Lab → rate/reset/fire a web → menu arrow keys → Join Spider Club → Next/Back/validation → Movies → filter eras.
+
+The sound is generated locally and requires a user click. Rating and filters are session/page state. Signup remains a local demo, with no server or password storage. The native dialog preserves keyboard focus and Escape behavior from Assignment 4.
+
+Suggested defense split: Ali — rating, keyboard navigation, film filter; Arlan — multi-step form, sound and animation. Both members should understand every component. This is a proposed study split, not an authorship claim.
+
+Assignment 5 report and submission ZIP have not been generated; previous report files belong to earlier assignments.

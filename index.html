@@ -2,13 +2,13 @@
 
 <html lang="en">
 <head>
-<!-- Team: Ali · Arlan | Assignments 1–4 | Astana IT University -->
+<!-- Team: Ali · Arlan | Assignments 1–5 | Astana IT University -->
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Spider-Man | Home</title>
 <meta content="A fan site about Spider-Man — powers, movies, New York City, and photo gallery." name="description"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
-<link href="css/responsive.css" rel="stylesheet"/><link href="css/interactive.css" rel="stylesheet"/></head>
+<link href="css/responsive.css" rel="stylesheet"/><link href="css/interactive.css" rel="stylesheet"/><link href="css/advanced.css" rel="stylesheet"/></head>
 <body>
 <header id="main-header"><nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark site-navbar" data-bs-theme="dark">
 <div class="container">
@@ -70,7 +70,7 @@
 <img alt="Spider-Man in a battle-worn red and blue suit reaching toward the camera" class="feature-img" src="images/gallery2.jpg"/>
 </figure></div></div>
 </section>
-<section class="section" id="powers" style="background: rgba(225, 29, 46, 0.04)">
+<section class="section legacy-layout-1" id="powers">
 <div class="container">
 <div class="section-head fade-up mq-type">
 <p class="eyebrow">Abilities</p>
@@ -168,7 +168,7 @@
 </div>
 </div>
 </section>
-<section class="section" id="explore" style="background: rgba(225, 29, 46, 0.04)">
+<section class="section legacy-layout-1" id="explore">
 <div class="container">
 <div class="section-head fade-up mq-type">
 <p class="eyebrow">Explore more</p>
@@ -278,7 +278,7 @@
 </button>
 </div>
 </div>
-</section><section class="section" id="gallery" style="background: rgba(30, 58, 138, 0.05)">
+</section><section class="section legacy-layout-2" id="gallery">
 <div class="container">
 <div class="section-head fade-up mq-type">
 <p class="eyebrow">Through the lens</p>
@@ -336,52 +336,27 @@
             From Queens rooftops to Manhattan glass towers — the city is his playground
             and his responsibility.
           </p>
-<div class="cta-row" style="justify-content: center">
+<div class="cta-row legacy-layout-3">
 <a class="btn btn-primary" href="about.html">About the project</a>
 </div>
 </div>
 </section>
-<section class="section" id="faq"><div class="container faq-container"><p class="eyebrow">Your friendly neighborhood answers</p><h2>Behind the mask</h2><p>New to the Spider-Verse? Start here.</p><article class="faq-item"><h3><button aria-controls="faq-answer-0" aria-expanded="false" class="faq-question" id="faq-question-0" type="button">Who is behind the Spider-Man mask?<span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-0" class="faq-answer" id="faq-answer-0" inert="" role="region"><div><p>Peter Parker is the original Spider-Man. Miles Morales is another hero who carries the same responsibility in his own stories.</p></div></div></article><article class="faq-item"><h3><button aria-controls="faq-answer-1" aria-expanded="false" class="faq-question" id="faq-question-1" type="button">Where should I start watching?<span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-1" class="faq-answer" id="faq-answer-1" inert="" role="region"><div><p>Start with Spider-Man (2002) for the classic origin, or Homecoming for the MCU story. Our Movies page introduces the different eras.</p></div></div></article><article class="faq-item"><h3><button aria-controls="faq-answer-2" aria-expanded="false" class="faq-question" id="faq-question-2" type="button">Why does Spider-Man use web-shooters?<span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-2" class="faq-answer" id="faq-answer-2" inert="" role="region"><div><p>In many versions, Peter creates mechanical web-shooters with his science skills. Some film versions give him organic webs instead.</p></div></div></article><article class="faq-item"><h3><button aria-controls="faq-answer-3" aria-expanded="false" class="faq-question" id="faq-question-3" type="button">Does the fan club create a real account?<span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-3" class="faq-answer" id="faq-answer-3" inert="" role="region"><div><p>No. The signup and contact forms demonstrate JavaScript validation. They do not send data, store passwords, or create accounts.</p></div></div></article></div></section></main>
+<section class="section" id="spider-lab"><div class="container"><p class="eyebrow">Your turn behind the mask</p><h2>Spider Lab</h2><div class="lab-grid"><article class="panel"><h3>Rate the web-slinger</h3><div aria-label="Spider-Man rating" class="star-row" role="group"><button aria-label="Rate 1 out of 5" aria-pressed="false" class="rating-star" data-rating="1" type="button">★</button><button aria-label="Rate 2 out of 5" aria-pressed="false" class="rating-star" data-rating="2" type="button">★</button><button aria-label="Rate 3 out of 5" aria-pressed="false" class="rating-star" data-rating="3" type="button">★</button><button aria-label="Rate 4 out of 5" aria-pressed="false" class="rating-star" data-rating="4" type="button">★</button><button aria-label="Rate 5 out of 5" aria-pressed="false" class="rating-star" data-rating="5" type="button">★</button></div><p id="rating-message" role="status">Choose your rating, from 1 to 5 stars.</p><button class="btn btn-outline-secondary btn-sm" id="reset-rating" type="button">Reset rating</button></article><article class="panel"><h3>Test your web-shooter</h3><p>Ready for a rooftop patrol? Tap to hear a short web-shot.</p><div aria-hidden="true" class="web-target"><span id="web-pulse">✳</span></div><button class="btn btn-primary" id="web-shot" type="button">Fire a web</button><p id="sound-status" role="status">Sound plays only when you press the button.</p></article></div></div></section><section class="section" id="faq"><div class="container faq-container"><p class="eyebrow">Your friendly neighborhood answers</p><h2>Behind the mask</h2><p>New to the Spider-Verse? Start here.</p><article class="faq-item"><h3><button aria-controls="faq-answer-0" aria-expanded="false" class="faq-question" id="faq-question-0" type="button">Who is behind the Spider-Man mask?<span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-0" class="faq-answer" id="faq-answer-0" inert="" role="region"><div><p>Peter Parker is the original Spider-Man. Miles Morales is another hero who carries the same responsibility in his own stories.</p></div></div></article><article class="faq-item"><h3><button aria-controls="faq-answer-1" aria-expanded="false" class="faq-question" id="faq-question-1" type="button">Where should I start watching?<span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-1" class="faq-answer" id="faq-answer-1" inert="" role="region"><div><p>Start with Spider-Man (2002) for the classic origin, or Homecoming for the MCU story. Our Movies page introduces the different eras.</p></div></div></article><article class="faq-item"><h3><button aria-controls="faq-answer-2" aria-expanded="false" class="faq-question" id="faq-question-2" type="button">Why does Spider-Man use web-shooters?<span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-2" class="faq-answer" id="faq-answer-2" inert="" role="region"><div><p>In many versions, Peter creates mechanical web-shooters with his science skills. Some film versions give him organic webs instead.</p></div></div></article><article class="faq-item"><h3><button aria-controls="faq-answer-3" aria-expanded="false" class="faq-question" id="faq-question-3" type="button">Does the fan club create a real account?<span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-3" class="faq-answer" id="faq-answer-3" inert="" role="region"><div><p>No. The signup and contact forms demonstrate JavaScript validation. They do not send data, store passwords, or create accounts.</p></div></div></article></div></section></main>
 <footer class="site-footer">
 <p class="names">Team members: Ali · Arlan</p>
-<p>Front-End Assignments 1–4 · Astana IT University</p>
+<p>Front-End Assignments 1–5 · Astana IT University</p>
 <p><a href="contact.html">Contact page</a> · <a href="#main-header">Back to top</a></p>
 </footer>
-<script>
-      (function () {
-        var layer = document.querySelector("[data-parallax]");
-        if (!layer) return;
-        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-
-        var ticking = false;
-        function update() {
-          var y = window.scrollY || 0;
-          var limit = layer.parentElement.offsetHeight;
-          layer.style.transform = y > limit ? "" : "translate3d(0," + y * 0.22 + "px,0)";
-          ticking = false;
-        }
-
-        window.addEventListener(
-          "scroll",
-          function () {
-            if (!ticking) {
-              ticking = true;
-              requestAnimationFrame(update);
-            }
-          },
-          { passive: true }
-        );
-      })();
-    </script>
+<script defer="" src="js/parallax.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><dialog aria-describedby="club-description" aria-labelledby="club-title" class="club-dialog" id="club-dialog">
 <div class="club-panel"><button aria-label="Close fan club form" class="dialog-close" data-close-club="" type="button">×</button>
 <p class="eyebrow">The neighborhood is growing</p><h2 id="club-title">Join the Spider Club</h2>
 <p id="club-description">Try our fan-club signup. This is a demo: no account is created and nothing is sent or stored. Use a sample password.</p>
-<form data-validate="" id="club-form" novalidate="">
-<div class="mb-3"><label for="club-name">Your name</label><input autocomplete="name" class="form-control" id="club-name" maxlength="80" name="name" required=""/></div>
-<div class="mb-3"><label for="club-email">Email</label><input autocomplete="email" class="form-control" id="club-email" maxlength="254" name="email" required="" type="email"/></div>
-<div class="mb-3"><label for="club-password">Demo password</label><input aria-describedby="password-help" autocomplete="new-password" class="form-control" id="club-password" maxlength="128" minlength="8" name="password" required="" type="password"/><small id="password-help">At least 8 characters.</small></div>
-<div class="mb-3"><label for="club-confirm">Confirm password</label><input autocomplete="new-password" class="form-control" id="club-confirm" name="confirm" required="" type="password"/></div>
-<button class="btn btn-primary" type="submit">Join the club</button><p class="form-status mt-3" data-form-status="" role="status"></p>
-</form></div></dialog><script defer="True" src="js/main.js"></script></body>
+<form data-validate="" id="club-form" novalidate=""><p class="step-status" data-step-status="" role="status">Step 1 of 2</p><fieldset data-step="0"><legend class="h5">1. Your identity</legend><div class="mb-3"><label for="club-name">Your name</label><input autocomplete="name" class="form-control" id="club-name" maxlength="80" name="name" required=""/></div><div class="mb-3"><label for="club-email">Email</label><input autocomplete="email" class="form-control" id="club-email" maxlength="254" name="email" required="" type="email"/></div></fieldset><fieldset data-step="1" hidden=""><legend class="h5">2. Secure your demo account</legend><div class="mb-3"><label for="club-password">Demo password</label><input aria-describedby="password-help" autocomplete="new-password" class="form-control" id="club-password" maxlength="128" minlength="8" name="password" required="" type="password"/><small id="password-help">At least 8 characters.</small></div><div class="mb-3"><label for="club-confirm">Confirm password</label><input autocomplete="new-password" class="form-control" id="club-confirm" name="confirm" required="" type="password"/></div></fieldset>
+
+
+
+
+<button class="btn btn-outline-secondary" data-step-back="" hidden="" type="button">Back</button><button class="btn btn-primary" data-step-next="" type="button">Next</button><button class="btn btn-primary" hidden="" type="submit">Join the club</button><p class="form-status mt-3" data-form-status="" role="status"></p>
+</form></div></dialog><script defer="True" src="js/main.js"></script><script defer="" src="js/advanced.js"></script></body>
 </html>

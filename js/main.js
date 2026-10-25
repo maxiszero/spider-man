@@ -32,12 +32,51 @@ document.querySelectorAll('[data-validate]').forEach((form) => {
     return !message;
   }
 
+  // Assignment 5: multi-step state with an explicit render callback.
+  const steps = [...form.querySelectorAll('[data-step]')];
+  let currentStep = 0;
+  function renderStep(index) {
+    steps.forEach((step, position) => { step.hidden = position !== index; });
+    form.querySelector('[data-step-back]').hidden = index === 0;
+    form.querySelector('[data-step-next]').hidden = index === steps.length - 1;
+    form.querySelector('[type="submit"]').hidden = index !== steps.length - 1;
+    form.querySelector('[data-step-status]').textContent = `Step ${index + 1} of ${steps.length}`;
+  }
+  function changeStep(index, onChange) {
+    currentStep = index;
+    onChange(currentStep); // Callback renders the new step without losing input values.
+    steps[index].querySelector('input')?.focus();
+  }
+  function nextStep() {
+    const invalid = [...steps[currentStep].querySelectorAll('[required]')].filter((field) => !validate(field));
+    if (invalid.length) {
+      status.textContent = 'Please correct the highlighted fields before continuing.';
+      invalid[0].focus();
+      return;
+    }
+    status.textContent = '';
+    changeStep(currentStep + 1, renderStep);
+  }
+  if (steps.length) {
+    form.querySelector('[data-step-next]').addEventListener('click', nextStep);
+    form.querySelector('[data-step-back]').addEventListener('click', () => changeStep(currentStep - 1, renderStep));
+    renderStep(0);
+    form.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' && event.target.tagName === 'INPUT' && currentStep < steps.length - 1) {
+        event.preventDefault();
+        nextStep();
+      }
+    });
+  }
+
   form.addEventListener('submit', (event) => {
     event.preventDefault();
+    if (steps.length && currentStep < steps.length - 1) { nextStep(); return; }
     submitted = true;
     const invalid = fields.filter((field) => !validate(field));
     if (invalid.length) {
       status.textContent = `Please correct ${invalid.length} highlighted field${invalid.length === 1 ? '' : 's'}.`;
+      if (steps.length) changeStep(steps.indexOf(invalid[0].closest('[data-step]')), renderStep);
       invalid[0].focus();
       return;
     }
@@ -52,6 +91,7 @@ document.querySelectorAll('[data-validate]').forEach((form) => {
   });
   form.addEventListener('reset', () => {
     submitted = false;
+    if (steps.length) { currentStep = 0; renderStep(0); }
     fields.forEach((field) => {
       field.classList.remove('is-invalid');
       field.removeAttribute('aria-invalid');
