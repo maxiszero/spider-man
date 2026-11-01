@@ -71,6 +71,7 @@ document.querySelectorAll('[data-validate]').forEach((form) => {
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
+    if (form.dataset.busy === 'true') return;
     if (steps.length && currentStep < steps.length - 1) { nextStep(); return; }
     submitted = true;
     const invalid = fields.filter((field) => !validate(field));
@@ -80,10 +81,16 @@ document.querySelectorAll('[data-validate]').forEach((form) => {
       invalid[0].focus();
       return;
     }
-    form.reset();
-    status.textContent = form.id === 'club-form'
-      ? 'All checks passed! Demo signup complete. No account was created or data stored.'
-      : 'All checks passed! Demo message complete. Nothing was sent or stored.';
+    const complete = () => {
+      form.reset();
+      status.textContent = form.id === 'club-form'
+        ? 'All checks passed! Demo signup complete. No account was created or data stored.'
+        : 'All checks passed! Demo message complete. Nothing was sent or stored.';
+      form.dispatchEvent(new CustomEvent('demo:success', { bubbles: true }));
+    };
+    // jQuery handles the optional simulated request; validation stays reusable.
+    const request = new CustomEvent('demo:submit', { bubbles: true, cancelable: true, detail: { complete } });
+    if (form.dispatchEvent(request)) complete();
   });
   form.addEventListener('input', () => {
     if (submitted) fields.forEach(validate);

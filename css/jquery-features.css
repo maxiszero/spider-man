@@ -1,0 +1,24 @@
+/* Assignment 6: jQuery search and feedback components. */
+.reading-track { position: fixed; inset: 0 0 auto; height: 5px; z-index: 1200; background: #15223a; }
+#reading-progress { width: 0; height: 100%; background: linear-gradient(90deg,#e11d2e,#ffb84d,#60a5fa); box-shadow: 0 0 12px #e11d2e; }
+.faq-search { position: relative; margin: 1.5rem 0; }
+.faq-search label { display: block; font-weight: 700; margin-bottom: .5rem; }
+#faq-suggestions { position: absolute; top: 88px; left: 0; right: 0; z-index: 5; padding: .4rem; list-style: none; background: white; border: 1px solid var(--line); border-radius: 8px; box-shadow: var(--shadow); }
+#faq-suggestions li { padding: .7rem; cursor: pointer; border-radius: 4px; }
+#faq-suggestions li:hover, #faq-suggestions li[aria-selected=true] { background: #e6effc; color: #0f172a; }
+.faq-question .faq-label { color: inherit; font: inherit; transform: none; }
+.faq-question[aria-expanded=true] .faq-label { transform: none; }
+mark { background: #ffe394; color: #192235; padding: 0 .1em; }
+#search-status { margin-top: .65rem; }
+.stats-section { background: #0f172a; color: #fff; }
+.stats-section h2 { color: #fff; }
+.stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; margin-top: 2rem; text-align: center; }
+.number-counter { display: block; font-size: 3rem; font-family: var(--font-display); color: #fca5a5; }
+.site-notice { display: none; position: fixed; right: 1rem; bottom: 1rem; z-index: 1300; max-width: min(420px,calc(100vw - 2rem)); padding: 1rem 1.25rem; background: #14233b; color: #fff; border-left: 4px solid #f87171; border-radius: 8px; box-shadow: var(--shadow); }
+.submit-spinner { display: inline-block; width: 1rem; height: 1rem; border: 2px solid #ffffff66; border-top-color: white; border-radius: 50%; animation: submit-spin .65s linear infinite; margin-right: .4rem; }
+@keyframes submit-spin { to { transform: rotate(360deg); } }
+.copy-block { margin: 1.5rem auto 0; max-width: 550px; padding: 1rem; border-top: 1px solid #ffffff33; }
+.copy-feedback { display: block; min-height: 1.6em; margin-top: .5rem; color: #fca5a5; }
+.lazy-image { background: #e6eaf0; }
+@media (max-width: 575px) { .stats-grid { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .submit-spinner { animation: none; } }

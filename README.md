@@ -2,7 +2,7 @@
 
 Team: Ali and Arlan. Astana IT University.
 
-Assignments 1, 2, 3, 4 and 5 are integrated into the same four root pages. Each assignment improves the existing website.
+Assignments 1, 2, 3, 4, 5 and 6 are integrated into the same four root pages. Each assignment improves the existing website.
 
 Live site: https://spider-man-front.netlify.app/
 
@@ -80,3 +80,29 @@ The sound is generated locally and requires a user click. Rating and filters are
 Suggested defense split: Ali — rating, keyboard navigation, film filter; Arlan — multi-step form, sound and animation. Both members should understand every component. This is a proposed study split, not an authorship claim.
 
 Assignment 5 report and submission ZIP have not been generated; previous report files belong to earlier assignments.
+
+
+## Assignment 6 — jQuery
+
+jQuery 4.0.0 loads from the required CDN in each root page head, before `js/jquery-features.js`. Both scripts use defer. Existing vanilla JavaScript components continue to work.
+
+| Task | Where / implementation |
+|---|---|
+| 0 Setup | `$(document).ready()` and console message `jQuery is ready!` |
+| 1 Live filter | Home FAQ search: `.on('input')`, filtering question + answer text, `.prop('hidden')`; empty and no-result states |
+| 2 Autocomplete | Matching question dropdown; click or ArrowUp/Down + Enter; Escape dismisses; combobox/listbox ARIA |
+| 3 Highlighting | All literal matches inside FAQ questions/answers become mark elements; safe text nodes, not user HTML; clearing restores text |
+| 4 Scroll progress | Gradient top bar; jQuery `.css()` updates width and `.attr()` updates ARIA; rAF throttling and ResizeObserver |
+| 5 Counters | Home statistics: 4 film eras, 9 frames, 5 rating stars; jQuery `.animate()` once when visible |
+| 6 Submit spinner | Contact and club forms: after validation only, controls disable for 1.1 seconds; simulated request; close/reset cancels timer |
+| 7 Notifications | Form success and copy confirmation; `.stop()`, `.fadeIn()`, `.fadeOut()`; no queue buildup |
+| 8 Clipboard | Quote in every footer; Clipboard API promise; checkmark, title tooltip and inline feedback; failure message if denied |
+| 9 Lazy images | Images below hero use data-src, placeholder and noscript fallback; IntersectionObserver + jQuery `.attr('src')` when near viewport |
+
+The stats describe real site content, not invented visitor numbers. Forms are demos: no network submission. Existing validation, step state, menu, rating and movie filtering remain. Animations respect reduced-motion preferences.
+
+Official reference: https://api.jquery.com/ready/
+
+Suggested defense split: Ali — search, suggestions, highlighting, progress and counters; Arlan — spinner, notices, clipboard and lazy images. This is a suggested study split, not an authorship claim.
+
+Assignment 6 report/ZIP are not generated yet. Do not submit an older assignment report for this version.
