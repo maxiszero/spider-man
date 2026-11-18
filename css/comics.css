@@ -101,8 +101,19 @@
   .guide-tools,.guide-search {width:100%}
   .guide-grid {grid-template-columns:1fr}
   .guide-card {grid-template-columns:minmax(84px,23%) minmax(0,1fr)}
-  .detail-layout {display:flex;flex-direction:column;gap:1.7rem}
-  .detail-art {width:min(60%,250px)}
+  .detail-layout {
+    grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:0 1.2rem;
+    grid-template-areas:"world world" "title title" "deck deck" "art facts" "context context" "order order" "next next";
+  }
+  .detail-writing {display:contents}
+  .detail-writing>.kicker {grid-area:world}
+  .detail-writing h1 {grid-area:title}
+  .detail-deck {grid-area:deck;margin:.5rem 0 1.3rem}
+  .detail-art {grid-area:art}
+  .detail-facts {grid-area:facts;display:grid;gap:.65rem;margin:0;padding:.65rem 0}
+  .detail-context {grid-area:context;margin:1.4rem 0 0}
+  .detail-order {grid-area:order;margin-top:1.5rem}
+  .detail-next {grid-area:next}
 }
 @media (max-width:380px) {.shelf-left {left:18%}.shelf-right {right:18%}}
 @media (prefers-reduced-motion:reduce) {

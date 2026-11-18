@@ -50,11 +50,17 @@
 
     function refresh(updateUrl) {
       const normalize = text => text.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, ' ');
-      const words = normalize(search.value).trim().split(/\s+/).filter(Boolean);
+      const typedIssues = Array.from(search.value.matchAll(/#\s*(\d+)/g), match => Number(match[1]));
+      const words = normalize(search.value.replace(/#\s*\d+/g, '')).trim().split(/\s+/).filter(Boolean);
       const matches = guides.filter(guide => {
+        // A search for #4 also finds a route covering issues #3–5.
+        const hasIssues = typedIssues.every(number => guide.steps.some(([title]) => {
+          const range = title.match(/#(\d+)(?:[–-](\d+))?/);
+          return range && number >= Number(range[1]) && number <= Number(range[2] || range[1]);
+        }));
         const searchable = normalize([guide.title, guide.pitch, guide.context, guide.team, guide.world,
           guide.date, guide.coverTitle, ...guide.steps.map(step => step[0])].join(' '));
-        return (shelf === shelfNames[0] || guide.shelf.includes(shelf)) && words.every(word => searchable.includes(word));
+        return (shelf === shelfNames[0] || guide.shelf.includes(shelf)) && hasIssues && words.every(word => searchable.includes(word));
       });
       document.getElementById('guide-grid').replaceChildren(...matches.map(card));
       document.getElementById('guide-count').textContent = matches.length + (matches.length === 1 ? ' reading guide' : ' reading guides');

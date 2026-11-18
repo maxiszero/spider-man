@@ -54,7 +54,7 @@
     },
     {
       id: 'spider-man-no-more', title: 'Spider-Man No More!', date: '1967', count: 3, level: 'First read',
-      shelf: ['Classic Peter'], world: 'Main Marvel universe', team: 'Stan Lee & John Romita Sr.',
+      shelf: ['First reads', 'Classic Peter'], world: 'Main Marvel universe', team: 'Stan Lee & John Romita Sr.',
       coverTitle: 'The Amazing Spider-Man (1963) #50', issue: 6869,
       pitch: 'Peter puts the costume in the trash just as a new crime boss sees an opening.',
       context: 'Spider-Man costs Peter time with his family and gives him a city full of critics. This three-issue stretch follows his attempt to take his life back and introduces Wilson Fisk, the Kingpin.',
@@ -77,7 +77,7 @@
     },
     {
       id: 'black-costume', title: 'Inside the black costume', date: '1984–85', count: 3, level: 'First read',
-      shelf: ['Classic Peter', 'Villains'], world: 'Main Marvel universe', team: 'Tom DeFalco, Roger Stern & Ron Frenz in #252',
+      shelf: ['First reads', 'Classic Peter', 'Villains'], world: 'Main Marvel universe', team: 'Tom DeFalco, Roger Stern & Ron Frenz in #252',
       coverTitle: 'The Amazing Spider-Man (1963) #252', issue: 6652,
       pitch: 'Three milestones trace the alien suit from an apparent upgrade to a problem Peter cannot take off.',
       context: 'Peter returns from Battleworld wearing a new costume. This short route selects the return, the examination and the confrontation from a longer saga that crossed several series.',
