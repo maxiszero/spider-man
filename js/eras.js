@@ -31,9 +31,11 @@
 
   const byId = id => document.getElementById(id);
   const selector = document.querySelector('.era-selector');
+  const feature = document.querySelector('.era-feature');
   const cache = new Map();
   let selectedEra;
   let activeRequest;
+  let panelAnimation;
 
   async function wikidataEntities(ids, props, signal) {
     const params = new URLSearchParams({
@@ -123,6 +125,7 @@
   }
 
   function showEra(key) {
+    const previous = selectedEra;
     selectedEra = Object.hasOwn(guides, key) ? key : 'raimi';
     const guide = guides[selectedEra];
     const series = films.filter(film => film.era === selectedEra);
@@ -149,6 +152,15 @@
     catalogLink.firstChild.textContent = 'See all ' + series.length + ' films ';
     byId('credits-source').href = 'https://www.wikidata.org/wiki/' + guide.entity;
     loadCredits(guide, film);
+    if (previous && previous !== selectedEra) {
+      panelAnimation?.cancel();
+      if (matchMedia('(prefers-reduced-motion: no-preference)').matches && feature.animate) {
+        panelAnimation = feature.animate([
+          { opacity: .78, transform: 'translateY(6px)' },
+          { opacity: 1, transform: 'translateY(0)' }
+        ], { duration: 240, easing: 'cubic-bezier(.2,.75,.25,1)' });
+      }
+    }
   }
 
   function showEraFromUrl() {

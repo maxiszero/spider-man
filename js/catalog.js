@@ -84,7 +84,7 @@
       updateSaveButtons();
     }
 
-    function applyFilters() {
+    function applyFilters(revealCards = false) {
       const address = new URL(location.href);
       const query = search.value.trim();
       if (query) address.searchParams.set('q', query);
@@ -93,23 +93,24 @@
       else address.searchParams.delete('era');
       // Filtering is one navigation step, including after many individual keystrokes.
       if (location.protocol !== 'file:') history.replaceState(null, '', address);
+      archive.classList.toggle('reveal-results', revealCards);
       filterFilms();
     }
 
     filters.addEventListener('click', event => {
       const button = event.target.closest('[data-era]');
-      if (!button) return;
+      if (!button || button.dataset.era === era) return;
       era = button.dataset.era;
-      applyFilters();
+      applyFilters(true);
     });
     archive.addEventListener('click', event => {
       if (!event.target.closest('#clear-filters')) return;
       era = '';
       search.value = '';
-      applyFilters();
+      applyFilters(true);
       search.focus();
     });
-    search.addEventListener('input', applyFilters);
+    search.addEventListener('input', () => applyFilters());
     filterFilms();
   }
 
@@ -190,7 +191,12 @@
       if (watchlist) {
         const remaining = watchlist.querySelectorAll('button[data-save]');
         const next = remaining[Math.min(position, remaining.length - 1)] || document.getElementById('empty-browse');
-        if (next) next.focus();
+        if (next) {
+          next.closest('.film-tile, .catalog-empty').classList.add('shelf-settle');
+          next.focus();
+        }
+      } else {
+        button.querySelector('svg').classList.add('bookmark-changed');
       }
     } catch {
       status.textContent = 'Your browser could not save this change. Allow local storage for this site and try again.';

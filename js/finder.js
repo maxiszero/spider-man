@@ -26,6 +26,7 @@
   const save = document.getElementById('finder-save');
   const feedback = document.getElementById('finder-feedback');
   const announcement = document.getElementById('finder-announcement');
+  const recommendation = document.querySelector('.finder-pick');
   let pick;
 
   function showSavedState() {
@@ -46,7 +47,14 @@
     document.getElementById('finder-guide').href = 'film.html?id=' + pick.id;
     feedback.textContent = '';
     showSavedState();
-    if (announce) announcement.textContent = 'Your pick: ' + pick.title + '. ' + reason;
+    if (announce) {
+      announcement.textContent = 'Your pick: ' + pick.title + '. ' + reason;
+      if (!matchMedia('(prefers-reduced-motion: reduce)').matches && recommendation.animate) {
+        recommendation.getAnimations().forEach(animation => animation.cancel());
+        recommendation.animate([{ opacity: .6, transform: 'translateY(4px)' }, { opacity: 1, transform: 'none' }],
+          { duration: 240, easing: 'ease-out' });
+      }
+    }
   }
 
   mood.addEventListener('change', () => showPick(true));

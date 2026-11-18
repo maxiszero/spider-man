@@ -15,11 +15,25 @@
 
 .era-selector a {
   display: block;
+  position: relative;
   min-width: 0;
   color: var(--ink);
   text-decoration: none;
   border-inline-start: 1px solid var(--line);
   transition: background-color .18s ease, color .18s ease;
+}
+.era-selector a::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 4px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .era-selector a::after { transition: transform .24s cubic-bezier(.2,.75,.25,1); }
 }
 
 .era-selector img {
@@ -48,8 +62,8 @@
 .era-selector a[aria-current] {
   color: var(--paper);
   background: var(--ink);
-  box-shadow: inset 0 -4px var(--red);
 }
+.era-selector a[aria-current]::after { transform: scaleX(1); }
 
 .era-choice strong {
   font-family: var(--display);

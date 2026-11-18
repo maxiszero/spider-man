@@ -17,16 +17,28 @@
   <header data-site-header></header>
   <main class="wrap home-main" id="main-content">
     <section class="spotlight" aria-label="Featured films" aria-roledescription="carousel">
-      <img class="spotlight-art" id="spotlight-art" src="images/stills/into-the-spider-verse.webp" alt="Miles Morales swings between cars on a neon-lit Brooklyn street." fetchpriority="high" width="1800" height="770">
+      <div class="spotlight-screen">
+        <div class="spotlight-frame">
+          <img class="spotlight-art" src="images/stills/into-the-spider-verse.webp" alt="Miles Morales swings between cars on a neon-lit Brooklyn street." fetchpriority="high" width="1800" height="770">
+        </div>
+      </div>
       <div class="spotlight-shade"></div>
       <div class="spotlight-copy">
         <p class="spotlight-label"><span aria-hidden="true">★</span> Film spotlight</p>
         <h1 id="spotlight-title"><span>Into the</span><em>Spider-Verse.</em></h1>
         <p class="spotlight-facts" id="spotlight-facts">2018 <i></i> Animation <i></i> 117 min</p>
         <p class="spotlight-blurb" id="spotlight-blurb">One Brooklyn kid. A handful of borrowed masks. Miles Morales gets his own origin story in a city drawn like a living comic book.</p>
-        <a class="button spotlight-action" id="spotlight-link" href="film.html?id=into-the-spider-verse">Explore film <span aria-hidden="true">→</span></a>
+        <div class="spotlight-actions">
+          <a class="button spotlight-action" id="spotlight-link" href="film.html?id=into-the-spider-verse">Explore film <span aria-hidden="true">→</span></a>
+          <a id="spotlight-store" href="https://itunes.apple.com/us/movie/spider-man-into-the-spider-verse/id1444695454?uo=4"><img src="images/itunes-badge.svg" width="117" height="39" alt="Get it on iTunes"></a>
+        </div>
       </div>
       <div class="spotlight-controls">
+        <span class="clip-note" hidden>Preview unavailable</span>
+        <button class="clip-toggle" type="button" aria-label="Play film clip" title="Play film clip" hidden>
+          <svg class="clip-icon-play" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="m6 3 11 7-11 7z"/></svg>
+          <svg class="clip-icon-pause" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M5 3h3.5v14H5zm6.5 0H15v14h-3.5z"/></svg>
+        </button>
         <span id="spotlight-count" aria-hidden="true">01 / 04</span>
         <button type="button" data-direction="-1" aria-label="Previous featured film">←</button>
         <button type="button" data-direction="1" aria-label="Next featured film">→</button>

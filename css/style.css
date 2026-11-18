@@ -77,6 +77,15 @@ button,a,input,select,textarea {touch-action:manipulation}
   .account-link svg {display:none}
   .footer-inner {display:grid;gap:.8rem}
 }
+@media(prefers-reduced-motion:no-preference){
+  @view-transition { navigation:auto }
+  ::view-transition-group(root) { animation-duration:.19s }
+  .button>span[aria-hidden="true"],.era-card .card-arrow {transition:transform .22s ease-out}
+  .button:is(:hover,:focus-visible)>span[aria-hidden="true"] {transform:translateX(3px)}
+  .era-card:is(:hover,:focus-visible) .card-arrow {transform:translate(2px,-2px)}
+  .nav-open #main-nav {animation:unfold-nav .2s ease-out}
+  @keyframes unfold-nav {from {opacity:.65;transform:translateY(-5px)} to {opacity:1;transform:none}}
+}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after {scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }

@@ -11,6 +11,7 @@ From this directory run `python -m http.server 5173` and open [localhost:5173](h
 ## Explore the site
 
 - **Index** features four films, links to their screen eras and offers a film finder. Choosing a mood and an opener or sequel gives eight possible recommendations, each with a reason and a watchlist button.
+- The spotlight plays a muted six- to seven-second scene from each film’s iTunes preview. Only the selected preview is loaded. Playback pauses outside the viewport and in background tabs. The controls support manual pause and replay. Reduced-motion and data-saving preferences start with a still. The film guide and navigation also work if the external preview is unavailable.
 - **Film archive** searches the eleven films by title, performer or year and filters by series.
 - **Film detail** gives each title a shareable URL, synopsis, credits and series viewing order.
 - **Screen eras** offers a first film for each series and fetches credits from the public Wikidata Action API. It handles loading, timeouts, errors, local fallback credits and retry.

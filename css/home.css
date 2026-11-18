@@ -1,6 +1,10 @@
 .home-main {padding-top:clamp(1.1rem,2.3vw,2.1rem)}
 .spotlight {isolation:isolate;position:relative;display:grid;align-items:center;overflow:hidden;background:#101419;color:#fffaf1;border-radius:4px;min-height:clamp(420px,32.5vw,490px)}
-.spotlight-art {position:absolute;z-index:-3;inset:0 0 0 auto;width:81%;height:100%;object-fit:cover;object-position:50% 50%}
+.spotlight-screen {position:absolute;z-index:-3;inset:0 0 0 auto;width:81%;overflow:hidden;pointer-events:none}
+.spotlight-frame,.spotlight-art,.spotlight-video {position:absolute;inset:0;width:100%;height:100%}
+.spotlight-art,.spotlight-video {object-fit:cover;object-position:center}
+.spotlight-video {opacity:0;transition:opacity .42s ease}
+.spotlight-video.has-picture {opacity:1}
 .spotlight-shade {position:absolute;z-index:-2;inset:0;background:linear-gradient(90deg,#101319 5%,rgba(14,17,23,.98) 19%,rgba(14,17,23,.93) 30%,rgba(14,17,23,.60) 44%,rgba(14,17,23,.06) 64%),linear-gradient(0deg,rgba(8,12,18,.38),transparent 32%)}
 .spotlight-copy {position:relative;max-width:54%;padding:clamp(2rem,3.4vw,3.1rem) 0 clamp(2rem,3.4vw,3.1rem) clamp(1.8rem,4.4vw,4.6rem)}
 .spotlight-label {width:fit-content;display:flex;align-items:center;gap:.53rem;background:#c22436;color:white;font:700 .72rem/1 var(--mono);letter-spacing:.11em;text-transform:uppercase;padding:.43rem .68rem .4rem;margin:0 0 .95rem;transform:skewX(-6deg)}
@@ -13,10 +17,18 @@
 .spotlight-blurb {max-width:39ch;font-size:1.025rem;line-height:1.5;margin:0 0 1.25rem;color:#eeeff0}
 .spotlight-action {background:#c72236}
 .spotlight-action span {font-size:1.25em}
+.spotlight-actions {display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+#spotlight-store {display:inline-flex;align-items:center;min-height:44px}
+#spotlight-store img {width:auto;height:38px}
 .spotlight-controls {display:flex;align-items:center;justify-content:flex-end;gap:6px;position:absolute;bottom:1.4rem;right:1.6rem}
 .spotlight-controls button {border:1px solid #888991;border-radius:50%;background:#17171cc9;color:white;width:38px;height:38px;font:1.12rem/1 var(--sans);transition:background .18s,border-color .18s}
 .spotlight-controls button:hover {background:#c22436;border-color:#c22436}
 .spotlight-controls>span {font:700 .75rem var(--mono);letter-spacing:.12em;margin-right:6px;color:white;text-shadow:0 1px 5px black;background:#11151bd9;border-radius:2px;padding:.27em .42em}
+.spotlight-controls .clip-toggle {display:grid;place-items:center}
+.clip-toggle svg {width:14px;height:14px}
+.clip-toggle .clip-icon-pause,.clip-toggle.is-playing .clip-icon-play {display:none}
+.clip-toggle.is-playing .clip-icon-pause {display:block}
+.spotlight-controls .clip-note {font:600 .79rem var(--sans);letter-spacing:0}
 .sr-only {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 .home-eras {margin-top:clamp(2.4rem,4.1vw,4rem)}
 .section-kicker {display:flex;align-items:center;gap:.63rem;margin:0 0 .3rem;color:var(--red);text-transform:uppercase;font:700 .69rem/1.4 var(--mono);letter-spacing:.14em}
@@ -67,15 +79,18 @@
 }
 @media(max-width:540px){
   .spotlight {display:block;min-height:0;padding-top:45%}
-  .spotlight-art {width:100%;height:58%;object-position:52% 28%}
+  .spotlight-screen {width:100%;height:58%}
+  .spotlight-art,.spotlight-video {object-position:52% 28%}
   .spotlight-shade {background:linear-gradient(0deg,#101319 36%,rgba(16,19,25,.99) 45%,rgba(16,19,25,.66) 58%,transparent 79%)}
   .spotlight-copy {max-width:100%;padding:0 1.2rem 1.4rem}
   .spotlight-label {font-size:.64rem;margin-bottom:.8rem}
   .spotlight h1 {font-size:clamp(3.5rem,13vw,5.1rem);margin-bottom:.85rem}
   .spotlight-blurb {font-size:.96rem;max-width:38ch}
-  .spotlight-controls {right:1rem;bottom:1.55rem;gap:4px}
-  .spotlight-controls button {width:32px;height:32px}
+  .spotlight-controls {right:.7rem;top:.7rem;bottom:auto;gap:4px}
+  .spotlight-controls button {width:36px;height:36px}
   .spotlight-controls>span {font-size:.62rem;margin-right:2px}
+  .spotlight-actions {gap:.7rem}
+  #spotlight-store img {height:33px}
   .spotlight-action {font-size:.9rem;padding:.65rem .85rem}
   .section-head {align-items:center;gap:.65rem}
   .section-head h2 {font-size:clamp(2rem,8.8vw,2.85rem)}
@@ -99,7 +114,7 @@
   .finder-copy>p:not(.finder-meta),.finder-actions {grid-column:1/-1;margin:0}
 }
 @media(max-width:360px){
-  .spotlight-controls>span {display:none}
+  #spotlight-count {display:none}
   .section-kicker {font-size:.6rem}
   .era-picture span {left:.3rem;bottom:.3rem;font-size:.6rem}
 }
