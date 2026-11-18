@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View your Spider Index account details and open your personal film watchlist.">
+  <title>Your profile — Spider Index</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/account.css">
+  <script src="js/site.js" defer></script>
+  <script src="js/films.js" defer></script>
+  <script src="js/account.js" defer></script>
+</head>
+<body data-page="account">
+  <header data-site-header></header>
+  <main id="main-content" class="wrap account-layout" data-profile>
+    <section class="account-panel">
+      <p class="kicker">Your account</p>
+      <h1 class="account-title">Your profile<span>.</span></h1>
+      <div data-profile-details hidden>
+        <dl class="profile-details">
+          <div><dt>Name</dt><dd data-detail="name"></dd></div>
+          <div><dt>Email</dt><dd data-detail="email"></dd></div>
+          <div><dt>Phone</dt><dd data-detail="phone"></dd></div>
+        </dl>
+        <a class="button account-submit" href="watchlist.html">View my watchlist <span data-saved-count></span><span aria-hidden="true">→</span></a>
+        <button class="account-signout" type="button" data-signout>Sign out</button>
+      </div>
+      <p data-form-status class="form-status" role="alert"></p>
+      <noscript><p>Enable JavaScript to open your local profile.</p></noscript>
+    </section>
+    <figure class="account-art account-art-portrait">
+      <img src="images/hero.jpg" alt="A Spider-Man mask emerging from the shadows.">
+    </figure>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

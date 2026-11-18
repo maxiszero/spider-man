@@ -1,358 +1,67 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<!-- Team: Ali · Arlan | Assignments 1–6 | Astana IT University -->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Spider-Man | Home</title>
-<meta content="A fan site about Spider-Man — powers, movies, New York City, and photo gallery." name="description"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
-<link href="css/responsive.css" rel="stylesheet"/><link href="css/interactive.css" rel="stylesheet"/><link href="css/advanced.css" rel="stylesheet"/><script defer="" src="https://code.jquery.com/jquery-4.0.0.min.js"></script><script defer="" src="js/jquery-features.js"></script><link href="css/jquery-features.css" rel="stylesheet"/></head>
-<body><div aria-label="Page reading progress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="reading-track" role="progressbar"><div id="reading-progress"></div></div>
-<header id="main-header"><nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark site-navbar" data-bs-theme="dark">
-<div class="container">
-<a class="navbar-brand logo" href="index.html">Spider<span>-Man</span></a>
-<button aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="mainNav">
-<ul class="navbar-nav nav-menu ms-auto">
-<li class="nav-item"><a aria-current="page" class="nav-link active" href="index.html">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="movies.html">Movies</a></li>
-<li class="nav-item"><a class="nav-link" href="about.html">About Team</a></li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-</ul>
-</div>
-</div>
-</nav></header>
-<main>
-<section aria-label="Hero" class="hero hero--home">
-<div class="hero__parallax" data-parallax="">
-<img alt="Close-up of Spider-Man in the red Stark suit against a dark background" class="hero__media" src="images/hero.jpg"/>
-</div>
-<div aria-hidden="true" class="hero__veil"></div>
-<div class="hero__content mq-type">
-<p class="eyebrow">Friendly neighborhood hero</p>
-<h1>Spider-Man</h1>
-<p class="lede">
-            With great power comes great responsibility. Explore the story, powers,
-            films, and photos of Marvel’s web-slinger.
-          </p>
-<div aria-label="Explore Spider-Man" class="btn-group hero-actions" role="group">
-<a class="btn btn-primary btn-lg" href="#powers">See his powers</a>
-<a class="btn btn-ghost btn-lg btn-outline-light" href="about.html">Meet the team</a>
-</div>
-</div>
-</section><div class="neighborhood-bar"><div class="container neighborhood-tools"><div><span class="clock-label">Your local time</span><time id="live-clock">Loading time…</time></div><div class="neighborhood-actions"><button class="btn btn-sm theme-button" id="change-background" type="button">Background: Classic</button><button class="btn btn-primary btn-sm" data-open-club="" type="button">Join Spider Club</button></div></div></div>
-<section class="section" id="story">
-<div class="container mq-type">
-<div class="row g-4 align-items-center"><div class="fade-up col-12 col-md-6 col-lg-6">
-<p class="eyebrow">Origin</p>
-<h2>Who is Spider-Man?</h2>
-<p class="lede">
-              Peter Parker is a student from Queens who was bitten by a radioactive
-              spider. That bite gave him the strength, speed, and senses of a spider —
-              and a duty to protect New York City.
-            </p>
-<p>
-              Behind the mask he is still a kid with homework, rent, and a sense of
-              humor. On the rooftops he becomes the hero who swings between skyscrapers
-              and stops crime before the city even knows it started.
-            </p>
-<h3>What makes him different</h3>
-<ul>
-<li>Science nerd who builds his own web-shooters</li>
-<li>Protects ordinary people, not just famous landmarks</li>
-<li>Never gives up — even when the suit is torn</li>
-</ul>
-</div><figure class="fade-up delay-1 col-12 col-md-6 col-lg-6">
-<img alt="Spider-Man in a battle-worn red and blue suit reaching toward the camera" class="feature-img lazy-image" data-src="images/gallery2.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Spider-Man in a battle-worn red and blue suit reaching toward the camera" class="feature-img lazy-image" decoding="async" src="images/gallery2.jpg"/></noscript>
-</figure></div></div>
-</section>
-<section class="section legacy-layout-1" id="powers">
-<div class="container">
-<div class="section-head fade-up mq-type">
-<p class="eyebrow">Abilities</p>
-<h2>Powers &amp; toolkit</h2>
-<p class="lede">
-              Classic spider abilities plus homemade gadgets. Here is a quick list of
-              what he brings to a fight.
-            </p>
-</div>
-<div class="split">
-<ul class="power-list fade-up">
-<li><strong>Super strength</strong> — lifts cars and punches above his weight</li>
-<li><strong>Wall-crawling</strong> — sticks to glass, brick, and steel</li>
-<li><strong>Spider-sense</strong> — danger warning before the hit lands</li>
-<li><strong>Web-shooters</strong> — swing, trap, and zip across the city</li>
-</ul>
-<div class="panel fade-up delay-1">
-<h3>Story timeline</h3>
-<ol class="timeline">
-<li>Radioactive spider bite changes everything</li>
-<li>Uncle Ben’s lesson: great power, great responsibility</li>
-<li>First nights as a masked crime-fighter in Queens</li>
-<li>Facing villains like Green Goblin and Doc Ock</li>
-<li>Becoming New York’s most trusted street-level hero</li>
-</ol>
-</div>
-</div>
-</div>
-</section><section aria-label="Spider-Man abilities" class="section"><div class="container"><h2>Built for the neighborhood</h2><div class="row g-3">
-<div class="col-12 col-sm-6 col-lg-4">
-<div class="p-3 bg-spidey-navy text-white rounded h-100">
-<h3 class="h6 text-danger">Super strength</h3>
-<p class="small mb-0">Lifts cars and punches above his weight class.</p>
-</div>
-</div>
-<div class="col-12 col-sm-6 col-lg-4">
-<div class="p-3 bg-spidey-navy text-white rounded h-100">
-<h3 class="h6 text-danger">Spider-sense</h3>
-<p class="small mb-0">Danger warning before the hit lands.</p>
-</div>
-</div>
-<div class="col-12 col-sm-12 col-lg-4">
-<div class="p-3 bg-spidey-navy text-white rounded h-100">
-<h3 class="h6 text-danger">Web-shooters</h3>
-<p class="small mb-0">Swing, trap, and zip across Manhattan.</p>
-</div>
-</div>
-</div></div></section>
-<section class="section" id="movies">
-<div class="container">
-<div class="section-head fade-up mq-type">
-<p class="eyebrow">On screen</p>
-<h2>Spider-Man film highlights</h2>
-<p class="lede">
-              A simple table of popular film eras — title, year, and main actor.
-            </p>
-</div>
-<div class="table-wrap fade-up delay-1">
-<table>
-<thead>
-<tr>
-<th>Film / Era</th>
-<th>Year</th>
-<th>Spider-Man Actor</th>
-<th>Tone</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Spider-Man (Sam Raimi)</td>
-<td>2002</td>
-<td>Tobey Maguire</td>
-<td>Classic origin drama</td>
-</tr>
-<tr>
-<td>The Amazing Spider-Man</td>
-<td>2012</td>
-<td>Andrew Garfield</td>
-<td>Gritty &amp; emotional</td>
-</tr>
-<tr>
-<td><span class="highlight">Spider-Man: Homecoming</span></td>
-<td>2017</td>
-<td>Tom Holland</td>
-<td>MCU high-school hero</td>
-</tr>
-<tr>
-<td>Spider-Man: Across the Spider-Verse</td>
-<td>2023</td>
-<td>Shameik Moore (voice)</td>
-<td>Animated multiverse</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section class="section legacy-layout-1" id="explore">
-<div class="container">
-<div class="section-head fade-up mq-type">
-<p class="eyebrow">Explore more</p>
-<h2>Pick your next swing</h2>
-<p class="lede">
-              Explore the films, meet our team, or send a signal.
-            </p>
-</div>
-<div class="card-row fade-up delay-1 mq-card-row">
-<article class="flex-card mq-card">
-<img alt="Poster for Spider-Man 2002" class="lazy-image" data-src="images/spider-tobey.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Poster for Spider-Man 2002" class="lazy-image" decoding="async" src="images/spider-tobey.jpg"/></noscript>
-<div class="flex-card__body">
-<h3>Classic films</h3>
-<p>
-                  Start with Tobey’s first swing and see how the Raimi era built the
-                  friendly neighborhood hero.
-                </p>
-<a class="btn btn-primary" href="movies.html">Browse movies</a>
-</div>
-</article>
-<article class="flex-card mq-card">
-<img alt="Spider-Man cosplay in a red and blue suit" class="lazy-image" data-src="images/gallery2.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Spider-Man cosplay in a red and blue suit" class="lazy-image" decoding="async" src="images/gallery2.jpg"/></noscript>
-<div class="flex-card__body">
-<h3>Meet the team</h3>
-<p>
-                  Ali and Arlan built this fan site — bios, hobbies, and how we split
-                  the Assignment pages.
-                </p>
-<a class="btn btn-primary" href="about.html">About team</a>
-</div>
-</article>
-<article class="flex-card mq-card">
-<img alt="New York City street at dusk" class="lazy-image" data-src="images/city.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="New York City street at dusk" class="lazy-image" decoding="async" src="images/city.jpg"/></noscript>
-<div class="flex-card__body">
-<h3>Send a signal</h3>
-<p>
-                  Drop a note about a favorite suit, a missing film, or a gallery
-                  photo idea for the next update.
-                </p>
-<a class="btn btn-primary" href="contact.html">Contact us</a>
-</div>
-</article>
-</div>
-</div>
-</section>
-<section class="section carousel-section" id="carousel">
-<div class="container">
-<p class="text-danger fw-bold text-uppercase small mb-2">Scenes from the neighborhood</p>
-<h2 class="text-white mb-3 mb-lg-4">Across the Spider-Verse</h2>
-<div class="carousel slide" id="spideyCarousel">
-<div class="carousel-indicators">
-<button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#spideyCarousel" type="button"></button>
-<button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#spideyCarousel" type="button"></button>
-<button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#spideyCarousel" type="button"></button>
-<button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#spideyCarousel" type="button"></button>
-<button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#spideyCarousel" type="button"></button>
-<button aria-label="Slide 6" data-bs-slide-to="5" data-bs-target="#spideyCarousel" type="button"></button>
-<button aria-label="Slide 7" data-bs-slide-to="6" data-bs-target="#spideyCarousel" type="button"></button>
-<button aria-label="Slide 8" data-bs-slide-to="7" data-bs-target="#spideyCarousel" type="button"></button>
-<button aria-label="Slide 9" data-bs-slide-to="8" data-bs-target="#spideyCarousel" type="button"></button>
-</div>
-<div class="carousel-inner rounded">
-<div class="carousel-item active">
-<img alt="Stark suit mask" class="d-block w-100 lazy-image" data-src="images/hero.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Stark suit mask" class="d-block w-100 lazy-image" decoding="async" src="images/hero.jpg"/></noscript>
-<div class="carousel-caption"><h5>Stark suit</h5></div>
-</div>
-<div class="carousel-item">
-<img alt="Comic covers" class="d-block w-100 lazy-image" data-src="images/comics.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Comic covers" class="d-block w-100 lazy-image" decoding="async" src="images/comics.jpg"/></noscript>
-<div class="carousel-caption"><h5>Comic stack</h5></div>
-</div>
-<div class="carousel-item">
-<img alt="Fans in costumes" class="d-block w-100 lazy-image" data-src="images/swing.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Fans in costumes" class="d-block w-100 lazy-image" decoding="async" src="images/swing.jpg"/></noscript>
-<div class="carousel-caption"><h5>Next-gen fans</h5></div>
-</div>
-<div class="carousel-item">
-<img alt="Spider-Man 2099 comics" class="d-block w-100 lazy-image" data-src="images/gallery1.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Spider-Man 2099 comics" class="d-block w-100 lazy-image" decoding="async" src="images/gallery1.jpg"/></noscript>
-<div class="carousel-caption"><h5>2099 era</h5></div>
-</div>
-<div class="carousel-item">
-<img alt="Street-level Spidey" class="d-block w-100 lazy-image" data-src="images/gallery2.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Street-level Spidey" class="d-block w-100 lazy-image" decoding="async" src="images/gallery2.jpg"/></noscript>
-<div class="carousel-caption"><h5>Street level</h5></div>
-</div>
-<div class="carousel-item">
-<img alt="New York City" class="d-block w-100 lazy-image" data-src="images/city.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="New York City" class="d-block w-100 lazy-image" decoding="async" src="images/city.jpg"/></noscript>
-<div class="carousel-caption"><h5>New York</h5></div>
-</div>
-<div class="carousel-item">
-<img alt="Tobey Maguire poster" class="d-block w-100 lazy-image" data-src="images/spider-tobey.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Tobey Maguire poster" class="d-block w-100 lazy-image" decoding="async" src="images/spider-tobey.jpg"/></noscript>
-<div class="carousel-caption"><h5>Tobey · 2002</h5></div>
-</div>
-<div class="carousel-item">
-<img alt="Miles Morales poster" class="d-block w-100 lazy-image" data-src="images/spider-miles.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Miles Morales poster" class="d-block w-100 lazy-image" decoding="async" src="images/spider-miles.jpg"/></noscript>
-<div class="carousel-caption"><h5>Miles · Spider-Verse</h5></div>
-</div>
-<div class="carousel-item">
-<img alt="Tom Holland poster" class="d-block w-100 lazy-image" data-src="images/spider-tom.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Tom Holland poster" class="d-block w-100 lazy-image" decoding="async" src="images/spider-tom.jpg"/></noscript>
-<div class="carousel-caption"><h5>Tom · Brand New Day</h5></div>
-</div>
-</div>
-<button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#spideyCarousel" type="button">
-<span aria-hidden="true" class="carousel-control-prev-icon"></span>
-<span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" data-bs-slide="next" data-bs-target="#spideyCarousel" type="button">
-<span aria-hidden="true" class="carousel-control-next-icon"></span>
-<span class="visually-hidden">Next</span>
-</button>
-</div>
-</div>
-</section><section class="section legacy-layout-2" id="gallery">
-<div class="container">
-<div class="section-head fade-up mq-type">
-<p class="eyebrow">Through the lens</p>
-<h2>Web gallery · 9 frames</h2>
-<p class="lede">
-              Nine images in equal Grid columns. Hover a tile to reveal the caption
-              overlay.
-            </p>
-</div>
-<div class="gallery-grid gallery-grid--nine">
-<figure class="gallery-item" tabindex="0">
-<img alt="Spider-Man mask close-up" class="lazy-image" data-src="images/hero.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Spider-Man mask close-up" class="lazy-image" decoding="async" src="images/hero.jpg"/></noscript>
-<figcaption>Stark suit mask</figcaption>
-</figure>
-<figure class="gallery-item" tabindex="0">
-<img alt="Vintage Marvel comic covers" class="lazy-image" data-src="images/comics.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Vintage Marvel comic covers" class="lazy-image" decoding="async" src="images/comics.jpg"/></noscript>
-<figcaption>Comic stack</figcaption>
-</figure>
-<figure class="gallery-item" tabindex="0">
-<img alt="Kids in Spider-Man costumes" class="lazy-image" data-src="images/swing.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Kids in Spider-Man costumes" class="lazy-image" decoding="async" src="images/swing.jpg"/></noscript>
-<figcaption>Next-gen fans</figcaption>
-</figure>
-<figure class="gallery-item" tabindex="0">
-<img alt="Spider-Man 2099 comic cover collage" class="lazy-image" data-src="images/gallery1.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Spider-Man 2099 comic cover collage" class="lazy-image" decoding="async" src="images/gallery1.jpg"/></noscript>
-<figcaption>Spider-Man 2099</figcaption>
-</figure>
-<figure class="gallery-item" tabindex="0">
-<img alt="Spider-Man cosplay reaching forward" class="lazy-image" data-src="images/gallery2.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Spider-Man cosplay reaching forward" class="lazy-image" decoding="async" src="images/gallery2.jpg"/></noscript>
-<figcaption>Street-level Spidey</figcaption>
-</figure>
-<figure class="gallery-item" tabindex="0">
-<img alt="Times Square New York City" class="lazy-image" data-src="images/city.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Times Square New York City" class="lazy-image" decoding="async" src="images/city.jpg"/></noscript>
-<figcaption>New York playground</figcaption>
-</figure>
-<figure class="gallery-item" tabindex="0">
-<img alt="Spider-Man 2002 movie poster" class="lazy-image" data-src="images/spider-tobey.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Spider-Man 2002 movie poster" class="lazy-image" decoding="async" src="images/spider-tobey.jpg"/></noscript>
-<figcaption>Tobey · 2002</figcaption>
-</figure>
-<figure class="gallery-item" tabindex="0">
-<img alt="Across the Spider-Verse poster" class="lazy-image" data-src="images/spider-miles.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Across the Spider-Verse poster" class="lazy-image" decoding="async" src="images/spider-miles.jpg"/></noscript>
-<figcaption>Miles · Spider-Verse</figcaption>
-</figure>
-<figure class="gallery-item" tabindex="0">
-<img alt="Spider-Man Brand New Day poster" class="lazy-image" data-src="images/spider-tom.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Spider-Man Brand New Day poster" class="lazy-image" decoding="async" src="images/spider-tom.jpg"/></noscript>
-<figcaption>Tom · Brand New Day</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section aria-label="New York City" class="city-band">
-<img alt="Times Square in New York City at dusk with tall buildings and bright billboards" class="lazy-image" data-src="images/city.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Times Square in New York City at dusk with tall buildings and bright billboards" class="lazy-image" decoding="async" src="images/city.jpg"/></noscript>
-<div class="container">
-<h2>Home turf: New York City</h2>
-<p>
-            From Queens rooftops to Manhattan glass towers — the city is his playground
-            and his responsibility.
-          </p>
-<div class="cta-row legacy-layout-3">
-<a class="btn btn-primary" href="about.html">About the project</a>
-</div>
-</div>
-</section>
-<section aria-label="Explore the site in numbers" class="section stats-section"><div class="container"><p class="eyebrow">One neighborhood, many stories</p><h2>The Spider-Verse at a glance</h2><div class="stats-grid"><div><strong class="number-counter" data-count="4">4</strong><p>Featured film eras</p></div><div><strong class="number-counter" data-count="9">9</strong><p>Gallery frames</p></div><div><strong class="number-counter" data-count="5">5</strong><p>Stars in your rating</p></div></div></div></section><section class="section" id="spider-lab"><div class="container"><p class="eyebrow">Your turn behind the mask</p><h2>Spider Lab</h2><div class="lab-grid"><article class="panel"><h3>Rate the web-slinger</h3><div aria-label="Spider-Man rating" class="star-row" role="group"><button aria-label="Rate 1 out of 5" aria-pressed="false" class="rating-star" data-rating="1" type="button">★</button><button aria-label="Rate 2 out of 5" aria-pressed="false" class="rating-star" data-rating="2" type="button">★</button><button aria-label="Rate 3 out of 5" aria-pressed="false" class="rating-star" data-rating="3" type="button">★</button><button aria-label="Rate 4 out of 5" aria-pressed="false" class="rating-star" data-rating="4" type="button">★</button><button aria-label="Rate 5 out of 5" aria-pressed="false" class="rating-star" data-rating="5" type="button">★</button></div><p id="rating-message" role="status">Choose your rating, from 1 to 5 stars.</p><button class="btn btn-outline-secondary btn-sm" id="reset-rating" type="button">Reset rating</button></article><article class="panel"><h3>Test your web-shooter</h3><p>Ready for a rooftop patrol? Tap to hear a short web-shot.</p><div aria-hidden="true" class="web-target"><span id="web-pulse">✳</span></div><button class="btn btn-primary" id="web-shot" type="button">Fire a web</button><p id="sound-status" role="status">Sound plays only when you press the button.</p></article></div></div></section><section class="section" id="faq"><div class="container faq-container"><p class="eyebrow">Your friendly neighborhood answers</p><h2>Behind the mask</h2><p>New to the Spider-Verse? Start here.</p><div class="faq-search"><label for="faq-search">Search the Spider-Verse FAQ</label><input aria-autocomplete="list" aria-controls="faq-suggestions" aria-expanded="false" autocomplete="off" class="form-control" id="faq-search" placeholder="Try Peter, movies, or web" role="combobox" type="search"/><ul hidden="" id="faq-suggestions" role="listbox"></ul><p id="search-status" role="status">4 questions to explore.</p></div><article class="faq-item"><h3><button aria-controls="faq-answer-0" aria-expanded="false" class="faq-question" id="faq-question-0" type="button"><span class="faq-label">Who is behind the Spider-Man mask?</span><span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-0" class="faq-answer" id="faq-answer-0" inert="" role="region"><div><p>Peter Parker is the original Spider-Man. Miles Morales is another hero who carries the same responsibility in his own stories.</p></div></div></article><article class="faq-item"><h3><button aria-controls="faq-answer-1" aria-expanded="false" class="faq-question" id="faq-question-1" type="button"><span class="faq-label">Where should I start watching?</span><span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-1" class="faq-answer" id="faq-answer-1" inert="" role="region"><div><p>Start with Spider-Man (2002) for the classic origin, or Homecoming for the MCU story. Our Movies page introduces the different eras.</p></div></div></article><article class="faq-item"><h3><button aria-controls="faq-answer-2" aria-expanded="false" class="faq-question" id="faq-question-2" type="button"><span class="faq-label">Why does Spider-Man use web-shooters?</span><span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-2" class="faq-answer" id="faq-answer-2" inert="" role="region"><div><p>In many versions, Peter creates mechanical web-shooters with his science skills. Some film versions give him organic webs instead.</p></div></div></article><article class="faq-item"><h3><button aria-controls="faq-answer-3" aria-expanded="false" class="faq-question" id="faq-question-3" type="button"><span class="faq-label">Does the fan club create a real account?</span><span aria-hidden="true">+</span></button></h3><div aria-hidden="true" aria-labelledby="faq-question-3" class="faq-answer" id="faq-answer-3" inert="" role="region"><div><p>No. The signup and contact forms demonstrate JavaScript validation. They do not send data, store passwords, or create accounts.</p></div></div></article></div></section></main>
-<footer class="site-footer">
-<p class="names">Team members: Ali · Arlan</p>
-<p>Front-End Assignments 1–6 · Astana IT University</p>
-<p><a href="contact.html">Contact page</a> · <a href="#main-header">Back to top</a></p>
-<div class="copy-block"><p id="hero-quote">With great power comes great responsibility.</p><button class="btn btn-outline-light btn-sm" data-copy="#hero-quote" type="button">Copy quote</button><span class="copy-feedback" role="status"></span></div></footer>
-<script defer="" src="js/parallax.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><dialog aria-describedby="club-description" aria-labelledby="club-title" class="club-dialog" id="club-dialog">
-<div class="club-panel"><button aria-label="Close fan club form" class="dialog-close" data-close-club="" type="button">×</button>
-<p class="eyebrow">The neighborhood is growing</p><h2 id="club-title">Join the Spider Club</h2>
-<p id="club-description">Try our fan-club signup. This is a demo: no account is created and nothing is sent or stored. Use a sample password.</p>
-<form data-validate="" id="club-form" novalidate=""><p class="step-status" data-step-status="" role="status">Step 1 of 2</p><fieldset data-step="0"><legend class="h5">1. Your identity</legend><div class="mb-3"><label for="club-name">Your name</label><input autocomplete="name" class="form-control" id="club-name" maxlength="80" name="name" required=""/></div><div class="mb-3"><label for="club-email">Email</label><input autocomplete="email" class="form-control" id="club-email" maxlength="254" name="email" required="" type="email"/></div></fieldset><fieldset data-step="1" hidden=""><legend class="h5">2. Secure your demo account</legend><div class="mb-3"><label for="club-password">Demo password</label><input aria-describedby="password-help" autocomplete="new-password" class="form-control" id="club-password" maxlength="128" minlength="8" name="password" required="" type="password"/><small id="password-help">At least 8 characters.</small></div><div class="mb-3"><label for="club-confirm">Confirm password</label><input autocomplete="new-password" class="form-control" id="club-confirm" name="confirm" required="" type="password"/></div></fieldset>
-<button class="btn btn-outline-secondary" data-step-back="" hidden="" type="button">Back</button><button class="btn btn-primary" data-step-next="" type="button">Next</button><button class="btn btn-primary" hidden="" type="submit">Join the club</button><p class="form-status mt-3" data-form-status="" role="status"></p>
-</form></div></dialog><script defer="True" src="js/main.js"></script><script defer="" src="js/advanced.js"></script><div aria-live="polite" class="site-notice" id="site-notice" role="status"></div></body>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore four screen eras of Spider-Man, browse films and build your own watchlist.">
+  <title>Spider Index — A Spider-Man film guide</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/site.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body data-page="home">
+  <header data-site-header></header>
+  <main class="wrap home-main" id="main-content">
+    <section class="spotlight" aria-label="Featured films" aria-roledescription="carousel">
+      <img class="spotlight-art" id="spotlight-art" src="images/stills/into-the-spider-verse.webp" alt="Miles Morales swings between cars on a neon-lit Brooklyn street." fetchpriority="high" width="1800" height="770">
+      <div class="spotlight-shade"></div>
+      <div class="spotlight-copy">
+        <p class="spotlight-label"><span aria-hidden="true">★</span> Film spotlight</p>
+        <h1 id="spotlight-title"><span>Into the</span><em>Spider-Verse.</em></h1>
+        <p class="spotlight-facts" id="spotlight-facts">2018 <i></i> Animation <i></i> 117 min</p>
+        <p class="spotlight-blurb" id="spotlight-blurb">One Brooklyn kid. A handful of borrowed masks. Miles Morales gets his own origin story in a city drawn like a living comic book.</p>
+        <a class="button spotlight-action" id="spotlight-link" href="film.html?id=into-the-spider-verse">Explore film <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="spotlight-controls">
+        <span id="spotlight-count" aria-hidden="true">01 / 04</span>
+        <button type="button" data-direction="-1" aria-label="Previous featured film">←</button>
+        <button type="button" data-direction="1" aria-label="Next featured film">→</button>
+      </div>
+      <span class="sr-only" data-spotlight-status aria-live="polite"></span>
+    </section>
+    <section class="home-eras" aria-labelledby="eras-heading">
+      <div class="section-head"><div><p class="section-kicker"><span aria-hidden="true"></span> The field guide</p><h2 id="eras-heading">Explore the eras<span>.</span></h2></div>
+      <a class="text-link" href="eras.html">View era guide <span aria-hidden="true">↗</span></a></div>
+      <div class="era-grid">
+          <a class="era-card" href="eras.html?era=raimi">
+            <div class="era-picture"><img src="images/stills/spider-man-2.webp" alt="Peter Parker reaching forward in a New York alley" loading="lazy"><span>2002–2007</span></div>
+            <div class="era-card-line"><h3>The Raimi trilogy</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
+            <p>Tobey Maguire</p>
+          </a>
+          <a class="era-card" href="eras.html?era=webb">
+            <div class="era-picture"><img src="images/stills/amazing-spider-man.webp" alt="Spider-Man above the city at sunset" loading="lazy"><span>2012–2014</span></div>
+            <div class="era-card-line"><h3>The Amazing Spider-Man</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
+            <p>Andrew Garfield</p>
+          </a>
+          <a class="era-card" href="eras.html?era=mcu">
+            <div class="era-picture"><img src="images/stills/mcu.webp" alt="Peter Parker alongside Nick Fury and MJ" loading="lazy"><span>2017–2026</span></div>
+            <div class="era-card-line"><h3>The MCU years</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
+            <p>Tom Holland</p>
+          </a>
+          <a class="era-card" href="eras.html?era=verse">
+            <div class="era-picture"><img src="images/stills/verse.webp" alt="Miles Morales swinging over an illustrated city" loading="lazy"><span>2018–2023</span></div>
+            <div class="era-card-line"><h3>The Spider-Verse</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
+            <p>Shameik Moore</p>
+          </a>
+      </div>
+    </section>
+    <section class="archive-band" aria-labelledby="archive-heading">
+      <div><p class="section-kicker"><span aria-hidden="true"></span> The collection</p><h2 id="archive-heading">Find your next film<span>.</span></h2><p>Browse all eleven films, filter by series and save your picks for movie night.</p></div>
+      <a class="button secondary" href="movies.html">Open film archive <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+  <footer data-site-footer></footer>
+</body>
 </html>

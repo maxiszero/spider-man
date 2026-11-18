@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create your local Spider Index profile and start a personal watchlist.">
+  <title>Create an account — Spider Index</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/account.css">
+  <script src="js/site.js" defer></script>
+  <script src="js/account.js" defer></script>
+</head>
+<body data-page="account">
+  <header data-site-header></header>
+  <main id="main-content" class="wrap account-layout">
+    <section class="account-panel">
+      <p class="kicker">Your account</p>
+      <h1 class="account-title">Create an account<span>.</span></h1>
+      <p class="account-lead">Keep a personal list of films to watch. This demo stores your account in this browser.</p>
+      <noscript><p>Enable JavaScript to create a browser-local account.</p></noscript>
+      <form class="account-form" data-auth="signup" method="post" novalidate>
+        <div class="account-field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" aria-required="true" aria-describedby="name-error">
+          <p id="name-error" class="field-error"></p>
+        </div>
+        <div class="account-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" inputmode="email" autocomplete="username" autocapitalize="none" spellcheck="false" aria-required="true" aria-describedby="email-error">
+          <p id="email-error" class="field-error"></p>
+        </div>
+        <div class="account-field">
+          <label for="phone">Phone number</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" aria-required="true" aria-describedby="phone-hint phone-error">
+          <p id="phone-hint" class="field-hint">For example, +7 701 234 5678.</p>
+          <p id="phone-error" class="field-error"></p>
+        </div>
+        <div class="account-field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="new-password" aria-required="true" aria-describedby="password-hint password-error">
+          <p id="password-hint" class="field-hint">Use at least 8 characters with an uppercase letter, a lowercase letter and a number.</p>
+          <p id="password-error" class="field-error"></p>
+        </div>
+        <div class="account-field">
+          <label for="confirm">Confirm password</label>
+          <input id="confirm" name="confirm" type="password" autocomplete="new-password" aria-required="true" aria-describedby="confirm-error">
+          <p id="confirm-error" class="field-error"></p>
+        </div>
+        <p data-form-status class="form-status" role="alert"></p>
+        <button class="button account-submit" type="submit" disabled>Create account <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="account-alternative">Already registered? <a href="login.html">Sign in</a></p>
+    </section>
+    <figure class="account-art account-art-wall">
+      <img src="images/gallery2.jpg" alt="Spider-Man in a red and blue suit beside a city wall.">
+    </figure>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

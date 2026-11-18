@@ -1,0 +1,205 @@
+.account-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .92fr);
+  align-items: start;
+  gap: clamp(2.5rem, 7vw, 7rem);
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+
+.account-panel {
+  min-width: 0;
+  align-self: center;
+}
+
+.account-panel .kicker {
+  margin: 0 0 .9rem;
+}
+
+.account-title {
+  max-width: 12ch;
+  margin: 0 0 1.2rem;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-weight: 800;
+  line-height: .94;
+  letter-spacing: -.045em;
+  text-transform: uppercase;
+}
+
+.account-title span {
+  color: var(--red);
+}
+
+.account-lead {
+  max-width: 39ch;
+  margin: 0 0 1.8rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.account-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.account-field {
+  display: grid;
+  gap: .4rem;
+}
+
+.account-field label {
+  color: var(--ink);
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+.account-field input {
+  width: 100%;
+  min-width: 0;
+  min-height: 3rem;
+  padding: .65rem .85rem;
+  border: 1px solid var(--muted);
+  border-radius: 2px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+.account-field input:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.account-field input[aria-invalid="true"] {
+  border: 2px solid var(--red);
+}
+
+.account-field p,
+.account-form .form-status {
+  margin: 0;
+  font-size: .875rem;
+  line-height: 1.4;
+}
+
+.field-hint {
+  color: var(--muted);
+}
+
+.field-error,
+.form-status {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.field-error:empty,
+.form-status:empty,
+.account-panel [hidden] {
+  display: none;
+}
+
+.account-panel .button.account-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem;
+  width: 100%;
+  margin-top: .4rem;
+}
+
+.account-submit [aria-hidden] {
+  margin-left: auto;
+  font-size: 1.2rem;
+}
+
+.account-submit:disabled {
+  opacity: .7;
+  cursor: progress;
+}
+
+.account-alternative {
+  margin: 1.2rem 0 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+.account-alternative a,
+.account-signout {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
+.account-alternative a:hover,
+.account-signout:hover {
+  text-decoration-thickness: 2px;
+}
+
+.account-signout {
+  display: block;
+  min-height: 44px;
+  margin-top: .65rem;
+  padding: .5rem 0;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: .95rem;
+  cursor: pointer;
+}
+
+.account-art {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #121111;
+}
+
+.account-art img {
+  display: block;
+  width: 100%;
+  height: clamp(29rem, 41vw, 39rem);
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.account-art-wall img {
+  height: clamp(35rem, 53vw, 48rem);
+  object-position: 48% 35%;
+}
+
+.profile-details {
+  margin: 1.8rem 0;
+}
+
+.profile-details > div {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: .9rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-details dt {
+  color: var(--muted);
+}
+
+.profile-details dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  .account-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .account-art img {
+    height: clamp(12rem, 46vw, 19rem);
+    object-position: center 36%;
+  }
+}

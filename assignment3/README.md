@@ -1,3 +1,3 @@
-# Unified website
+# Earlier assignment links
 
-Assignment 3 is integrated into the root website. These HTML files redirect old links to the current pages. See the root README for the task map.
+The HTML files in this directory redirect older assignment links to their matching pages in the current Spider Index site. Earlier versions are available in the repository history.

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sign in to Spider Index to open your film watchlist.">
+  <title>Sign in — Spider Index</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/account.css">
+  <script src="js/site.js" defer></script>
+  <script src="js/account.js" defer></script>
+</head>
+<body data-page="account">
+  <header data-site-header></header>
+  <main id="main-content" class="wrap account-layout">
+    <section class="account-panel">
+      <p class="kicker">Your account</p>
+      <h1 class="account-title">Sign in<span>.</span></h1>
+      <p class="account-lead">Pick up where you left off with your Spider-Man watchlist.</p>
+      <noscript><p>Enable JavaScript to sign in to this browser-local account.</p></noscript>
+      <form class="account-form" data-auth="login" method="post" novalidate>
+        <div class="account-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="text" inputmode="email" autocomplete="username" autocapitalize="none" spellcheck="false" aria-required="true" aria-describedby="email-error">
+          <p id="email-error" class="field-error"></p>
+        </div>
+        <div class="account-field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" aria-required="true" aria-describedby="password-error">
+          <p id="password-error" class="field-error"></p>
+        </div>
+        <p data-form-status class="form-status" role="alert"></p>
+        <button class="button account-submit" type="submit" disabled>Sign in <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="account-alternative">New to the index? <a href="signup.html">Create an account</a></p>
+    </section>
+    <figure class="account-art account-art-portrait">
+      <img src="images/hero.jpg" alt="A Spider-Man mask emerging from the shadows.">
+    </figure>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

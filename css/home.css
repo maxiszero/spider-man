@@ -1,0 +1,75 @@
+.home-main {padding-top:clamp(1.1rem,2.3vw,2.1rem)}
+.spotlight {isolation:isolate;position:relative;display:grid;align-items:center;overflow:hidden;background:#101419;color:#fffaf1;border-radius:4px;min-height:clamp(420px,32.5vw,490px)}
+.spotlight-art {position:absolute;z-index:-3;inset:0 0 0 auto;width:81%;height:100%;object-fit:cover;object-position:50% 50%}
+.spotlight-shade {position:absolute;z-index:-2;inset:0;background:linear-gradient(90deg,#101319 5%,rgba(14,17,23,.98) 19%,rgba(14,17,23,.93) 30%,rgba(14,17,23,.60) 44%,rgba(14,17,23,.06) 64%),linear-gradient(0deg,rgba(8,12,18,.38),transparent 32%)}
+.spotlight-copy {position:relative;max-width:54%;padding:clamp(2rem,3.4vw,3.1rem) 0 clamp(2rem,3.4vw,3.1rem) clamp(1.8rem,4.4vw,4.6rem)}
+.spotlight-label {width:fit-content;display:flex;align-items:center;gap:.53rem;background:#c22436;color:white;font:700 .72rem/1 var(--mono);letter-spacing:.11em;text-transform:uppercase;padding:.43rem .68rem .4rem;margin:0 0 .95rem;transform:skewX(-6deg)}
+.spotlight-label span {font-size:.86rem}
+.spotlight h1 {font:900 italic clamp(4.65rem,6.9vw,7.2rem)/.84 var(--display);letter-spacing:-.035em;text-transform:uppercase;margin:0 0 1rem}
+.spotlight h1 span,.spotlight h1 em {display:block}
+.spotlight h1 em {color:#ff4757}
+.spotlight-facts {display:flex;align-items:center;gap:.7rem;margin:0 0 .7rem;color:#ecebe8;text-transform:uppercase;font:700 .71rem/1.4 var(--mono);letter-spacing:.075em}
+.spotlight-facts i {width:3px;height:3px;border-radius:50%;background:#ee6c75}
+.spotlight-blurb {max-width:39ch;font-size:1.025rem;line-height:1.5;margin:0 0 1.25rem;color:#eeeff0}
+.spotlight-action {background:#c72236}
+.spotlight-action span {font-size:1.25em}
+.spotlight-controls {display:flex;align-items:center;justify-content:flex-end;gap:6px;position:absolute;bottom:1.4rem;right:1.6rem}
+.spotlight-controls button {border:1px solid #888991;border-radius:50%;background:#17171cc9;color:white;width:38px;height:38px;font:1.12rem/1 var(--sans);transition:background .18s,border-color .18s}
+.spotlight-controls button:hover {background:#c22436;border-color:#c22436}
+.spotlight-controls>span {font:700 .75rem var(--mono);letter-spacing:.12em;margin-right:6px;color:white;text-shadow:0 1px 5px black;background:#11151bd9;border-radius:2px;padding:.27em .42em}
+.sr-only {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.home-eras {margin-top:clamp(2.4rem,4.1vw,4rem)}
+.section-kicker {display:flex;align-items:center;gap:.63rem;margin:0 0 .3rem;color:var(--red);text-transform:uppercase;font:700 .69rem/1.4 var(--mono);letter-spacing:.14em}
+.section-kicker>span {background:var(--red);width:24px;height:2px}
+.section-head {display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:1.25rem}
+.section-head h2,.archive-band h2 {font:800 clamp(2.6rem,4.1vw,4rem)/.98 var(--display);letter-spacing:-.035em;text-transform:uppercase;margin:0}
+.section-head h2 span,.archive-band h2 span {color:var(--red)}
+.text-link {display:inline-flex;align-items:center;gap:.55rem;font-weight:700;text-decoration:none;border-bottom:1px solid var(--ink);padding:.15rem 0 .18rem;white-space:nowrap}
+.text-link:hover {color:var(--red);border-color:var(--red)}
+.era-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.85rem,1.65vw,1.6rem)}
+.era-card {min-width:0;display:block;text-decoration:none}
+.era-picture {position:relative;aspect-ratio:1.72;background:#26262a;overflow:hidden;border-radius:3px}
+.era-picture img {width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.era-picture span {position:absolute;left:.65rem;bottom:.58rem;background:#141519e8;color:#fffaf1;padding:.23rem .4rem;font:700 .66rem/1.1 var(--mono);letter-spacing:.05em}
+.era-card:hover img {transform:scale(1.045)}
+.era-card-line {margin-top:.65rem;display:flex;align-items:center;justify-content:space-between;gap:.28rem}
+.era-card h3 {font:700 clamp(1.3rem,1.9vw,1.9rem)/1.1 var(--display);letter-spacing:-.01em;margin:0}
+.card-arrow {font:1.2rem/1 var(--sans);color:var(--muted)}
+.era-card:hover h3,.era-card:hover .card-arrow {color:var(--red)}
+.era-card p {margin:.12rem 0 0;color:var(--muted);font-size:.95rem}
+.archive-band {display:flex;justify-content:space-between;align-items:center;gap:1.5rem;margin-top:clamp(2.2rem,4vw,4rem);padding:clamp(1.3rem,3.3vw,3rem);border-block:1px solid var(--line);background:var(--surface)}
+.archive-band h2 {font-size:clamp(2rem,3vw,3rem)}
+.archive-band p:last-child {margin:.5rem 0 0;color:var(--muted)}
+.archive-band .button {white-space:nowrap}
+@media(max-width:1000px){
+  .spotlight-copy {max-width:61%}
+  .era-grid {gap:.85rem}
+}
+@media(max-width:740px){
+  .era-grid {grid-template-columns:repeat(2,minmax(0,1fr));row-gap:1.4rem}
+  .spotlight {min-height:410px}
+  .spotlight-copy {max-width:75%;padding-left:1.65rem}
+  .spotlight-shade {background:linear-gradient(90deg,rgba(14,17,23,.96),rgba(14,17,23,.77) 36%,rgba(14,17,23,.18) 88%),linear-gradient(0deg,rgba(10,11,20,.4),transparent)}
+}
+@media(max-width:540px){
+  .spotlight {display:block;min-height:0;padding-top:45%}
+  .spotlight-art {width:100%;height:58%;object-position:52% 28%}
+  .spotlight-shade {background:linear-gradient(0deg,#101319 36%,rgba(16,19,25,.99) 45%,rgba(16,19,25,.66) 58%,transparent 79%)}
+  .spotlight-copy {max-width:100%;padding:0 1.2rem 1.4rem}
+  .spotlight-label {font-size:.64rem;margin-bottom:.8rem}
+  .spotlight h1 {font-size:clamp(3.5rem,13vw,5.1rem);margin-bottom:.85rem}
+  .spotlight-blurb {font-size:.96rem;max-width:38ch}
+  .spotlight-controls {right:1rem;bottom:1.55rem;gap:4px}
+  .spotlight-controls button {width:32px;height:32px}
+  .spotlight-controls>span {font-size:.62rem;margin-right:2px}
+  .spotlight-action {font-size:.9rem;padding:.65rem .85rem}
+  .section-head {align-items:center;gap:.65rem}
+  .section-head h2 {font-size:clamp(2rem,8.8vw,2.85rem)}
+  .text-link {font-size:.82rem}
+  .archive-band {display:grid;justify-items:start}
+}
+@media(max-width:360px){
+  .spotlight-controls>span {display:none}
+  .section-kicker {font-size:.6rem}
+  .era-picture span {left:.3rem;bottom:.3rem;font-size:.6rem}
+}

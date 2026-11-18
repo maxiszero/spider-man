@@ -1,205 +1,41 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<!-- Team: Ali · Arlan | Assignments 1–6 | Astana IT University -->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Spider-Man | Movies</title>
-<meta content="Spider-Man movies across the Raimi, Amazing, MCU, and Spider-Verse eras." name="description"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/><link href="css/style.css" rel="stylesheet"/>
-<link href="css/responsive.css" rel="stylesheet"/><link href="css/interactive.css" rel="stylesheet"/><link href="css/advanced.css" rel="stylesheet"/><script defer="" src="https://code.jquery.com/jquery-4.0.0.min.js"></script><script defer="" src="js/jquery-features.js"></script><link href="css/jquery-features.css" rel="stylesheet"/></head>
-<body><div aria-label="Page reading progress" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="reading-track" role="progressbar"><div id="reading-progress"></div></div>
-<header id="main-header"><nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark site-navbar" data-bs-theme="dark">
-<div class="container">
-<a class="navbar-brand logo" href="index.html">Spider<span>-Man</span></a>
-<button aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="mainNav">
-<ul class="navbar-nav nav-menu ms-auto">
-<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-<li class="nav-item"><a aria-current="page" class="nav-link active" href="movies.html">Movies</a></li>
-<li class="nav-item"><a class="nav-link" href="about.html">About Team</a></li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-</ul>
-</div>
-</div>
-</nav></header>
-<main>
-<section aria-label="Movies hero" class="hero hero--page">
-<img alt="Stack of vintage Marvel comic covers with Spider-Man 2099 in the center" class="hero__media" src="images/comics.jpg"/>
-<div aria-hidden="true" class="hero__veil"></div>
-<div class="hero__content mq-type">
-<p class="eyebrow">On the big screen</p>
-<h1>Every Spider, one web</h1>
-<p class="lede">
-            From Raimi’s first swing to the animated multiverse — four eras, one
-            neighborhood hero.
-          </p>
-<div aria-label="Explore Spider-Man" class="btn-group hero-actions" role="group">
-<a class="btn btn-primary btn-lg" href="#filmography">Open the film table</a>
-<a class="btn btn-ghost btn-lg btn-outline-light" href="contact.html">Pick a favorite suit</a>
-</div>
-</div>
-</section><div class="neighborhood-bar"><div class="container neighborhood-tools"><div><span class="clock-label">Your local time</span><time id="live-clock">Loading time…</time></div><div class="neighborhood-actions"><button class="btn btn-sm theme-button" id="change-background" type="button">Background: Classic</button><button class="btn btn-primary btn-sm" data-open-club="" type="button">Join Spider Club</button></div></div></div>
-<section class="section" id="eras">
-<div class="container">
-<div class="section-head fade-up mq-type">
-<p class="eyebrow">Flexbox film cards</p>
-<h2>Featured filmography</h2>
-<p class="lede">
-              Four equal-height Explore more — poster, title, text, and a button on
-              each. Gap and hover lift included.
-            </p>
-</div>
-<div class="film-tools"><label for="film-filter">Explore an era</label><select class="form-select" id="film-filter"><option value="all">All eras</option><option value="live">Live action</option><option value="verse">Spider-Verse animation</option><option value="classic">Classic origins</option></select><p id="film-count" role="status"></p></div><div class="movie-grid">
-<article class="movie-card fade-up card" data-era="raimi">
-<img alt="Theatrical poster for Sam Raimi's Spider-Man, 2002" class="card-img-top lazy-image" data-src="images/spider-tobey.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Theatrical poster for Sam Raimi's Spider-Man, 2002" class="card-img-top lazy-image" decoding="async" src="images/spider-tobey.jpg"/></noscript>
-<div class="movie-card__body card-body">
-<span class="year-badge">2002</span>
-<h3 class="card-title">Spider-Man</h3>
-<p>
-                  Tobey Maguire hangs above the city in Sam Raimi’s origin — the
-                  poster that taught a generation to look up.
-                </p>
-<a class="btn btn-primary btn-sm" href="#filmography">See credits</a>
-</div>
-</article>
-<article class="movie-card fade-up delay-1 card" data-era="amazing">
-<img alt="Poster for The Amazing Spider-Man 2 with Andrew Garfield" class="card-img-top lazy-image" data-src="images/spider-andrew.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Poster for The Amazing Spider-Man 2 with Andrew Garfield" class="card-img-top lazy-image" decoding="async" src="images/spider-andrew.jpg"/></noscript>
-<div class="movie-card__body card-body">
-<span class="year-badge">2014</span>
-<h3 class="card-title">The Amazing Spider-Man 2</h3>
-<p>
-                  Andrew Garfield between Gwen and Electro. Marc Webb’s sequel
-                  turns the suit electric blue and the fight personal.
-                </p>
-<a class="btn btn-primary btn-sm" href="#filmography">See credits</a>
-</div>
-</article>
-<article class="movie-card fade-up card" data-era="mcu">
-<img alt="Poster for Spider-Man: Brand New Day with Tom Holland" class="card-img-top lazy-image" data-src="images/spider-tom.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Poster for Spider-Man: Brand New Day with Tom Holland" class="card-img-top lazy-image" decoding="async" src="images/spider-tom.jpg"/></noscript>
-<div class="movie-card__body card-body">
-<span class="year-badge">2026</span>
-<h3 class="card-title">Spider-Man: Brand New Day</h3>
-<p>
-                  Tom Holland’s mask fills the frame. A new day in the MCU — same
-                  Queens kid, a heavier city behind the lenses.
-                </p>
-<a class="btn btn-primary btn-sm" href="#watch">Watch order</a>
-</div>
-</article>
-<article class="movie-card fade-up delay-1 card" data-era="verse">
-<img alt="Poster for Spider-Man: Across the Spider-Verse featuring Miles Morales" class="card-img-top lazy-image" data-src="images/spider-miles.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Poster for Spider-Man: Across the Spider-Verse featuring Miles Morales" class="card-img-top lazy-image" decoding="async" src="images/spider-miles.jpg"/></noscript>
-<div class="movie-card__body card-body">
-<span class="year-badge">2023</span>
-<h3 class="card-title">Across the Spider-Verse</h3>
-<p>
-                  Miles Morales painted into a crowd of Spider-people. Shameik
-                  Moore’s Brooklyn hero has to choose his own path.
-                </p>
-<a class="btn btn-primary btn-sm" href="contact.html">Pick a favorite</a>
-</div>
-</article>
-</div>
-</div>
-</section>
-<section class="section legacy-layout-1" id="filmography">
-<div class="container">
-<div class="section-head fade-up mq-type">
-<p class="eyebrow">Data</p>
-<h2>Film credits</h2>
-<p class="lede">Title, year, lead, and director — one table, three generations of the suit.</p>
-</div>
-<div class="table-wrap fade-up delay-1">
-<table>
-<thead>
-<tr>
-<th>Movie Title</th>
-<th>Release Year</th>
-<th>Lead Actor</th>
-<th>Director</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Spider-Man</td>
-<td>2002</td>
-<td>Tobey Maguire</td>
-<td>Sam Raimi</td>
-</tr>
-<tr>
-<td>The Amazing Spider-Man 2</td>
-<td>2014</td>
-<td>Andrew Garfield</td>
-<td>Marc Webb</td>
-</tr>
-<tr>
-<td><span class="highlight">Spider-Man: Brand New Day</span></td>
-<td>2026</td>
-<td>Tom Holland</td>
-<td>Destin Daniel Cretton</td>
-</tr>
-<tr>
-<td>Spider-Man: Across the Spider-Verse</td>
-<td>2023</td>
-<td>Shameik Moore (voice)</td>
-<td>Joaquim Dos Santos</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section>
-<section class="section" id="watch">
-<div class="container split">
-<div class="fade-up">
-<p class="eyebrow">How to watch</p>
-<h2>A clean starting order</h2>
-<p class="lede">
-              You do not need every sequel on night one. Start with an origin, then
-              jump universes.
-            </p>
-<ol class="timeline">
-<li>Spider-Man (2002) — the responsibility lesson</li>
-<li>The Amazing Spider-Man 2 (2014) — a different Peter, same city</li>
-<li>Across the Spider-Verse (2023) — Miles and the multiverse</li>
-<li>Brand New Day (2026) — Tom Holland’s next swing</li>
-</ol>
-</div>
-<ul class="power-list fade-up delay-1">
-<li><strong>Raimi era</strong> — classic drama, practical New York</li>
-<li><strong>Amazing era</strong> — romance, science, and a lonely hero</li>
-<li><strong>MCU era</strong> — team-ups, high school, Iron Spider tech</li>
-<li><strong>Spider-Verse</strong> — animation that looks like printed comics</li>
-</ul>
-</div>
-</section>
-<section aria-label="New York City" class="city-band">
-<img alt="Times Square in New York City at dusk" class="lazy-image" data-src="images/city.jpg" decoding="async" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="/><noscript><img alt="Times Square in New York City at dusk" class="lazy-image" decoding="async" src="images/city.jpg"/></noscript>
-<div class="container">
-<h2>Same city. Different masks.</h2>
-<p>
-            Every version still swings through New York. Tell us which Spider-Man you
-            grew up with.
-          </p>
-<div class="cta-row cta-row--center">
-<a class="btn btn-primary" href="contact.html">Send a signal</a>
-</div>
-</div>
-</section>
-</main>
-<footer class="site-footer">
-<p class="names">Team members: Ali · Arlan</p>
-<p>Front-End Assignments 1–6 · Astana IT University</p>
-<p><a href="index.html">Back to Home</a> · <a href="#main-header">Back to top</a></p>
-<div class="copy-block"><p id="hero-quote">With great power comes great responsibility.</p><button class="btn btn-outline-light btn-sm" data-copy="#hero-quote" type="button">Copy quote</button><span class="copy-feedback" role="status"></span></div></footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><dialog aria-describedby="club-description" aria-labelledby="club-title" class="club-dialog" id="club-dialog">
-<div class="club-panel"><button aria-label="Close fan club form" class="dialog-close" data-close-club="" type="button">×</button>
-<p class="eyebrow">The neighborhood is growing</p><h2 id="club-title">Join the Spider Club</h2>
-<p id="club-description">Try our fan-club signup. This is a demo: no account is created and nothing is sent or stored. Use a sample password.</p>
-<form data-validate="" id="club-form" novalidate=""><p class="step-status" data-step-status="" role="status">Step 1 of 2</p><fieldset data-step="0"><legend class="h5">1. Your identity</legend><div class="mb-3"><label for="club-name">Your name</label><input autocomplete="name" class="form-control" id="club-name" maxlength="80" name="name" required=""/></div><div class="mb-3"><label for="club-email">Email</label><input autocomplete="email" class="form-control" id="club-email" maxlength="254" name="email" required="" type="email"/></div></fieldset><fieldset data-step="1" hidden=""><legend class="h5">2. Secure your demo account</legend><div class="mb-3"><label for="club-password">Demo password</label><input aria-describedby="password-help" autocomplete="new-password" class="form-control" id="club-password" maxlength="128" minlength="8" name="password" required="" type="password"/><small id="password-help">At least 8 characters.</small></div><div class="mb-3"><label for="club-confirm">Confirm password</label><input autocomplete="new-password" class="form-control" id="club-confirm" name="confirm" required="" type="password"/></div></fieldset>
-<button class="btn btn-outline-secondary" data-step-back="" hidden="" type="button">Back</button><button class="btn btn-primary" data-step-next="" type="button">Next</button><button class="btn btn-primary" hidden="" type="submit">Join the club</button><p class="form-status mt-3" data-form-status="" role="status"></p>
-</form></div></dialog><script defer="True" src="js/main.js"></script><script defer="" src="js/advanced.js"></script><div aria-live="polite" class="site-notice" id="site-notice" role="status"></div></body>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find your next Spider-Man film by title, actor, release year or series.">
+  <title>Film archive · Spider Index</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <script src="js/site.js" defer></script>
+  <script src="js/films.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+</head>
+<body data-page="films">
+  <header data-site-header></header>
+  <main id="main" class="wrap collection-page">
+    <div class="page-intro collection-intro">
+      <p class="kicker">The collection</p>
+      <h1>Film archive</h1>
+      <p>From Queens to the Spider-Verse. Find a film by name, actor or year, or follow one series from the beginning.</p>
+    </div>
+    <section aria-label="Browse the film archive">
+      <div class="catalog-tools">
+        <div class="era-filters" aria-label="Filter by film series" role="group" id="era-filters"></div>
+        <label class="film-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
+          <span class="catalog-sr">Search films by title, actor or year</span>
+          <input type="search" id="film-search" placeholder="Search films…" autocomplete="off">
+        </label>
+      </div>
+      <p class="catalog-counter" id="result-count" role="status"></p>
+      <div id="film-results" class="film-grid"></div>
+    </section>
+    <p class="catalog-feedback" id="save-message" role="status"></p>
+    <noscript><p>Enable JavaScript to search the archive and save films to your watchlist.</p></noscript>
+  </main>
+  <footer data-site-footer></footer>
+</body>
 </html>

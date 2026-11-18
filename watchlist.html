@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Revisit the Spider-Man films you saved for later.">
+  <title>Watchlist · Spider Index</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <script src="js/site.js" defer></script>
+  <script src="js/films.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+</head>
+<body data-page="watchlist">
+  <header data-site-header></header>
+  <main id="main" class="wrap collection-page">
+    <div class="page-intro collection-intro">
+      <p class="kicker">Your collection</p>
+      <h1>Watchlist</h1>
+      <p id="watchlist-description">Films you save on this device appear here, most recently added first.</p>
+    </div>
+    <section id="watchlist" aria-label="Your saved films">
+      <div class="watchlist-tools">
+        <p class="catalog-counter" id="saved-count" role="status"></p>
+        <a class="catalog-back" href="movies.html">Browse the archive <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="film-grid" id="saved-results"></div>
+    </section>
+    <p class="catalog-feedback" id="save-message" role="status"></p>
+    <noscript><p>Enable JavaScript to use the watchlist.</p></noscript>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

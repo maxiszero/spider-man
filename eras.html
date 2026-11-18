@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find your way into four Spider-Man film series, from Sam Raimi’s original trilogy to Miles Morales and the Spider-Verse.">
+  <title>Screen eras — Spider Index</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/eras.css">
+  <script defer src="js/site.js"></script>
+  <script defer src="js/films.js"></script>
+  <script defer src="js/eras.js"></script>
+</head>
+<body data-page="eras">
+  <header data-site-header></header>
+  <main id="main-content" class="wrap eras-main">
+    <header class="page-intro eras-intro">
+      <p class="kicker">Viewing guide</p>
+      <h1>Screen eras</h1>
+      <p>Meet the people behind the mask and find the first film in each series.</p>
+    </header>
+
+    <nav class="era-selector" aria-label="Choose a film series">
+      <a href="eras.html?era=raimi" data-era="raimi" aria-current="true">
+        <img src="images/stills/spider-man-2.webp" width="360" height="144" alt="">
+        <span class="era-choice"><strong>Raimi trilogy</strong><small>2002–2007</small></span>
+      </a>
+      <a href="eras.html?era=webb" data-era="webb">
+        <img src="images/stills/amazing-spider-man.webp" width="360" height="144" alt="">
+        <span class="era-choice"><strong>Webb films</strong><small>2012–2014</small></span>
+      </a>
+      <a href="eras.html?era=mcu" data-era="mcu">
+        <img src="images/stills/mcu.webp" width="360" height="144" alt="">
+        <span class="era-choice"><strong>MCU films</strong><small>From 2017</small></span>
+      </a>
+      <a href="eras.html?era=verse" data-era="verse">
+        <img src="images/stills/verse.webp" width="360" height="144" alt="">
+        <span class="era-choice"><strong>Spider-Verse</strong><small>From 2018</small></span>
+      </a>
+    </nav>
+
+    <article class="era-feature" aria-labelledby="era-title">
+      <figure class="era-poster">
+        <img id="era-poster" src="images/films/spider-man.webp" alt="Spider-Man (2002) film poster" width="500" height="750">
+        <figcaption><span>Opening film</span><span id="era-year">2002</span></figcaption>
+      </figure>
+      <div class="era-story">
+        <div class="era-heading">
+          <p id="era-format" class="kicker">Live action · Peter Parker</p>
+          <h2 id="era-title">The Raimi trilogy</h2>
+          <p class="era-performer" id="era-performer">Tobey Maguire as Peter Parker</p>
+        </div>
+        <p id="era-guide" class="era-guide">Sam Raimi follows Peter from a high-school field trip to his first cramped apartment. The price of a missed shift or a broken promise weighs as heavily as any fight above the city.</p>
+
+        <section class="era-entry" aria-labelledby="era-film">
+          <p class="kicker">Start with</p>
+          <h3 id="era-film">Spider-Man (2002)</h3>
+          <p id="era-start">Begin with the spider bite, Uncle Ben and the Green Goblin. The two sequels follow this Peter in release order.</p>
+          <div class="era-actions">
+            <a class="button" id="era-film-link" href="film.html?id=spider-man">Open film <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" id="era-films-link" href="movies.html?era=raimi">See all 3 films <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+
+        <section class="era-credits" aria-labelledby="credits-title">
+          <div class="credits-heading">
+            <h3 id="credits-title">Opening film credits</h3>
+            <a id="credits-source" href="https://www.wikidata.org/wiki/Q484442">Wikidata <span aria-hidden="true">↗</span></a>
+          </div>
+          <dl id="era-facts" class="credits-list">
+            <div><dt id="director-heading">Director</dt><dd id="credit-director">Sam Raimi</dd></div>
+            <div><dt>Original score</dt><dd id="credit-composer">Danny Elfman</dd></div>
+            <div><dt>Runtime</dt><dd id="credit-runtime">121 min</dd></div>
+          </dl>
+          <div class="credits-feedback">
+            <span id="credits-status" role="status"></span>
+            <button type="button" id="credits-retry" hidden>Try again</button>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>
