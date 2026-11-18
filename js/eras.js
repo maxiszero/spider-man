@@ -6,24 +6,28 @@
     raimi: {
       entity: 'Q484442', composer: 'Danny Elfman', character: 'Peter Parker',
       title: 'The Raimi trilogy',
+      comic: ['master-planner', 'The Master Planner', 'Read how Stan Lee and Steve Ditko put Peter under pressure when Aunt May needs him most.'],
       guide: 'Sam Raimi follows Peter from a high-school field trip to his first cramped apartment. The price of a missed shift or a broken promise weighs as heavily as any fight above the city.',
       start: 'Begin with the spider bite, Uncle Ben and the Green Goblin. The two sequels follow this Peter in release order.'
     },
     webb: {
       entity: 'Q229808', composer: 'James Horner', character: 'Peter Parker',
       title: 'The Webb films',
+      comic: ['spider-man-blue', 'Spider-Man: Blue', 'Stay with Peter and Gwen in a story told through Peter’s memories of falling in love.'],
       guide: 'Andrew Garfield gives Peter a skateboard, a camera and a quick tongue. Marc Webb builds his two films around Peter’s search for his parents and his growing attachment to Gwen Stacy.',
       start: 'This film introduces its own Peter and Gwen. Follow their story directly into The Amazing Spider-Man 2.'
     },
     mcu: {
       entity: 'Q23010088', composer: 'Michael Giacchino', character: 'Peter Parker',
       title: 'The MCU films',
+      comic: ['ultimate-peter', 'Ultimate Spider-Man', 'Start with another teenage Peter balancing high school and the first days of his secret identity.'],
       guide: 'Tom Holland’s Peter lives in a Queens where the Avengers already make the news. He juggles the school decathlon and a secret identity while trying to convince Tony Stark he can handle a bigger assignment.',
       start: 'Homecoming introduces Peter’s life at school and at home. For his first encounter with the Avengers, watch Captain America: Civil War first.'
     },
     verse: {
       entity: 'Q29588607', composer: 'Daniel Pemberton', character: 'Miles Morales',
       title: 'The Spider-Verse',
+      comic: ['miles-morales', 'Miles Morales’s first issues', 'Meet the original comics version of Miles and see how he decides to carry the name Spider-Man.'],
       guide: 'Miles sketches in his notebook and slips out with his uncle to paint a mural under Brooklyn. Halftone dots, hand-drawn marks and shifting color give each visiting Spider-Person a world of their own.',
       start: 'Meet Miles in Brooklyn before following him into Across the Spider-Verse. His first film introduces the other Spider-People as he meets them.'
     }
@@ -147,6 +151,10 @@
     byId('era-film').textContent = title;
     byId('era-start').textContent = guide.start;
     byId('era-film-link').href = 'film.html?id=' + film.id;
+    const [guideId, comicTitle, recommendation] = guide.comic;
+    byId('era-comic-link').href = 'comic-guide.html?id=' + guideId;
+    byId('era-comic-link').textContent = comicTitle;
+    byId('era-comic-reason').textContent = recommendation;
     const catalogLink = byId('era-films-link');
     catalogLink.href = 'movies.html?era=' + selectedEra;
     catalogLink.firstChild.textContent = 'See all ' + series.length + ' films ';

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore four screen eras of Spider-Man, browse films and build your own watchlist.">
-  <title>Spider Index — A Spider-Man film guide</title>
+  <meta name="description" content="Meet the people behind Spider-Man, find your first comic and choose a film from four screen eras.">
+  <title>Spider Index — Spider-Man in comics and film</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <script src="js/theme.js"></script>
   <link rel="stylesheet" href="css/style.css">
@@ -18,11 +18,9 @@
   <main class="wrap home-main" id="main-content">
     <section class="spotlight" aria-label="Featured films" aria-roledescription="carousel">
       <div class="spotlight-screen">
-        <div class="spotlight-frame">
-          <img class="spotlight-art" src="images/stills/into-the-spider-verse.webp" alt="Miles Morales swings between cars on a neon-lit Brooklyn street." fetchpriority="high" width="1800" height="770">
-        </div>
+        <img class="spotlight-art" src="images/stills/into-the-spider-verse.webp" alt="Miles Morales swings between cars on a neon-lit Brooklyn street." fetchpriority="high" width="1800" height="770">
+        <div class="spotlight-player"></div>
       </div>
-      <div class="spotlight-shade"></div>
       <div class="spotlight-copy">
         <p class="spotlight-label"><span aria-hidden="true">★</span> Film spotlight</p>
         <h1 id="spotlight-title"><span>Into the</span><em>Spider-Verse.</em></h1>
@@ -30,10 +28,10 @@
         <p class="spotlight-blurb" id="spotlight-blurb">One Brooklyn kid. A handful of borrowed masks. Miles Morales gets his own origin story in a city drawn like a living comic book.</p>
         <div class="spotlight-actions">
           <a class="button spotlight-action" id="spotlight-link" href="film.html?id=into-the-spider-verse">Explore film <span aria-hidden="true">→</span></a>
-          <a id="spotlight-store" href="https://itunes.apple.com/us/movie/spider-man-into-the-spider-verse/id1444695454?uo=4"><img src="images/itunes-badge.svg" width="117" height="39" alt="Get it on iTunes"></a>
         </div>
       </div>
       <div class="spotlight-controls">
+        <a id="spotlight-trailer" href="https://www.youtube.com/watch?v=g4Hbz2jLxvQ">Full trailer <span aria-hidden="true">↗</span></a>
         <span class="clip-note" hidden>Preview unavailable</span>
         <button class="clip-toggle" type="button" aria-label="Play film clip" title="Play film clip" hidden>
           <svg class="clip-icon-play" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="m6 3 11 7-11 7z"/></svg>
@@ -44,6 +42,22 @@
         <button type="button" data-direction="1" aria-label="Next featured film">→</button>
       </div>
       <span class="sr-only" data-spotlight-status aria-live="polite"></span>
+    </section>
+    <section class="home-comics" aria-labelledby="home-comics-title">
+      <div class="home-comics-copy">
+        <p class="section-kicker"><span aria-hidden="true"></span> Comics</p>
+        <h2 id="home-comics-title">Before the films<span>.</span></h2>
+        <p>Peter Parker’s story began in <cite>Amazing Fantasy</cite> #15 in 1962. Meet the teenager from Queens, then pick a reading route for Peter, Miles or Gwen.</p>
+        <div class="home-comics-actions">
+          <a class="button" href="origins.html">How Spider-Man began <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="comics.html">Browse reading guides <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="home-issues">
+        <a href="comic-guide.html?id=first-steps"><img src="images/origins/amazing-fantasy-15.webp" width="160" height="240" alt="Amazing Fantasy issue 15" loading="lazy"><span>Peter Parker</span></a>
+        <a href="comic-guide.html?id=miles-morales"><img src="images/origins/ultimate-fallout-4.webp" width="160" height="240" alt="Ultimate Fallout issue 4" loading="lazy"><span>Miles Morales</span></a>
+        <a href="comic-guide.html?id=spider-gwen"><img src="images/comics/spider-gwen.webp" width="160" height="240" alt="Edge of Spider-Verse issue 2" loading="lazy"><span>Gwen Stacy</span></a>
+      </div>
     </section>
     <section class="home-eras" aria-labelledby="eras-heading">
       <div class="section-head"><div><p class="section-kicker"><span aria-hidden="true"></span> The field guide</p><h2 id="eras-heading">Explore the eras<span>.</span></h2></div>

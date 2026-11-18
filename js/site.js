@@ -15,7 +15,14 @@
   const icon = name => '<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' + paths[name] + '</svg>';
   const brand = '<a class="wordmark" href="index.html" aria-label="Spider Index home"><img src="images/favicon.svg" width="34" height="34" alt=""><span>SPIDER<span class="brand-index">INDEX</span></span></a>';
   const page = document.body.dataset.page;
-  const nav = [["home", "Index", "index.html"], ["films", "Film archive", "movies.html"], ["eras", "Screen eras", "eras.html"], ["watchlist", "Watchlist", "watchlist.html"]];
+  const nav = [
+    ["home", "Index", "index.html"],
+    ["origins", "Origins", "origins.html"],
+    ["comics", "Comics", "comics.html"],
+    ["films", "Film archive", "movies.html"],
+    ["eras", "Screen eras", "eras.html"],
+    ["watchlist", "Watchlist", "watchlist.html"]
+  ];
   const links = nav.map(([key, label, href]) => '<a href="' + href + '"' + (page === key ? ' aria-current="page"' : '') + '>' + (key === "watchlist" ? icon("bookmark") : "") + label + '</a>').join("");
   let signedIn = false;
   try { signedIn = Boolean(localStorage.getItem("spider-index.session")); } catch { /* Local-only demo. */ }
@@ -24,7 +31,7 @@
     '<nav aria-label="Main" id="main-nav">' + links + '</nav><div class="header-tools"><button type="button" class="tool-button" data-theme-toggle></button>' +
     '<a class="account-link" href="' + (signedIn ? 'profile.html' : 'login.html') + '"' + (page === "account" ? ' aria-current="page"' : '') + '>' + icon("user") + '<span>' + (signedIn ? 'Profile' : 'Sign in') + '</span></a>' +
     '<button class="tool-button mobile-menu" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation" type="button">' + icon("menu") + '</button></div></div>';
-  footer.innerHTML = '<div class="wrap footer-inner">' + brand + '<p>An independent Spider-Man film guide.</p><nav aria-label="Footer"><a href="about.html">About the index</a><a href="movies.html">Film archive</a><a href="watchlist.html">Watchlist</a></nav></div>';
+  footer.innerHTML = '<div class="wrap footer-inner">' + brand + '<p>An independent guide to Spider-Man in comics and film.</p><nav aria-label="Footer"><a href="about.html">About the index</a><a href="comics.html">Reading guides</a><a href="movies.html">Film archive</a></nav></div>';
   const main = document.querySelector("main");
   if (main && !main.id) main.id = "main-content";
   if (main) header.querySelector(".skip-link").href = "#" + main.id;
@@ -69,5 +76,5 @@
       openMenu(false);
     }
   });
-  matchMedia("(min-width: 861px)").addEventListener("change", e => { if (e.matches) openMenu(false); });
+  matchMedia("(min-width: 961px)").addEventListener("change", e => { if (e.matches) openMenu(false); });
 })();

@@ -1,6 +1,6 @@
 # Spider Index
 
-An English-language guide to the Spider-Man films by Ali and Arlan, group SE-2515, at Astana IT University. Explore four screen series, find a starting film and save titles for a movie night.
+An English-language Spider-Man guide by Ali and Arlan, group SE-2515, at Astana IT University. Follow the character’s origins, find a first comic and explore four screen series.
 
 [Open the live website](https://spider-man-front.netlify.app/)
 
@@ -11,7 +11,9 @@ From this directory run `python -m http.server 5173` and open [localhost:5173](h
 ## Explore the site
 
 - **Index** features four films, links to their screen eras and offers a film finder. Choosing a mood and an opener or sequel gives eight possible recommendations, each with a reason and a watchlist button.
-- The spotlight plays a muted six- to seven-second scene from each film’s iTunes preview. Only the selected preview is loaded. Playback pauses outside the viewport and in background tabs. The controls support manual pause and replay. Reduced-motion and data-saving preferences start with a still. The film guide and navigation also work if the external preview is unavailable.
+- The spotlight shows short scenes from official Sony trailers. Reduced-motion and data-saving preferences start with a still. The film guide and navigation also work if the external player is unavailable.
+- **Origins** follows the creation of Spider-Man, the choices that shape Peter Parker and the later debut of Miles Morales.
+- **Comics** offers twelve spoiler-light reading guides. Each guide identifies the series and year, gives an issue order and links to the publisher. The screen-era pages also recommend a comic for fans of each film series.
 - **Film archive** searches the eleven films by title, performer or year and filters by series.
 - **Film detail** gives each title a shareable URL, synopsis, credits and series viewing order.
 - **Screen eras** offers a first film for each series and fetches credits from the public Wikidata Action API. It handles loading, timeouts, errors, local fallback credits and retry.
@@ -25,4 +27,4 @@ Root HTML files are the page entry points. Shared typography, layout, theme and 
 
 ## Credits
 
-Film artwork and catalog references come from [Sony Pictures](https://www.sonypictures.com/movies). The era guide links to the [Wikidata](https://www.wikidata.org/) records used for its live credits. Barlow and Barlow Condensed are distributed with their OFL license texts in `fonts/`. Spider Index is an independent student project.
+Comic covers and publication details come from [Marvel Comics](https://www.marvel.com/comics). Film artwork and trailer references come from [Sony Pictures](https://www.sonypictures.com/movies). The era guide links to the [Wikidata](https://www.wikidata.org/) records used for its live credits. Barlow and Barlow Condensed are distributed with their OFL license texts in `fonts/`. Spider Index is an independent student project.

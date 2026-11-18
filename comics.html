@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find a Spider-Man comic to start with. Explore twelve reading guides with exact issue orders for Peter Parker, Miles Morales, Spider-Gwen and Venom.">
+  <title>Comic reading guides · Spider Index</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/comics.css">
+  <script src="js/site.js" defer></script>
+  <script src="js/comics.js" defer></script>
+  <script src="js/comic-guides.js" defer></script>
+</head>
+<body data-page="comics">
+  <header data-site-header></header>
+  <main class="wrap comics-page" id="main">
+    <div class="comic-intro">
+      <div>
+        <p class="kicker">The reading room</p>
+        <h1>Comic reading <br>guides<span>.</span></h1>
+        <p class="comic-intro-copy">Pick a story and get the exact issues in order. Start with Peter in Queens, follow Miles through Brooklyn, or cross into Gwen’s world.</p>
+        <a class="comic-primer" href="origins.html">New to Spider-Man? <strong>Read his origin <span aria-hidden="true">→</span></strong></a>
+      </div>
+      <div class="cover-shelf" aria-hidden="true">
+        <img class="shelf-left" src="images/comics/spider-gwen.webp" alt="" width="480" height="735">
+        <img class="shelf-right" src="images/comics/life-story.webp" alt="" width="480" height="735">
+        <img class="shelf-center" src="images/origins/amazing-fantasy-15.webp" alt="" width="480" height="735">
+      </div>
+    </div>
+    <section class="guide-catalog" aria-label="Choose a comic reading guide">
+      <div class="guide-tools">
+        <div id="guide-shelves" class="guide-shelves" role="group" aria-label="Filter reading guides"></div>
+        <label class="guide-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg>
+          <span class="comic-sr">Search by character, story, issue or creator</span>
+          <input type="search" id="guide-search" placeholder="Search the guides…" autocomplete="off">
+        </label>
+      </div>
+      <p class="guide-count" id="guide-count" role="status"></p>
+      <div id="guide-grid" class="guide-grid"></div>
+      <div class="guide-empty" id="guide-empty" hidden>
+        <h2>No matching guides</h2><p>Try a character, story title or issue number, or browse the full collection.</p>
+        <button class="button secondary" type="button" id="guide-reset">Show all guides</button>
+      </div>
+      <noscript><p>Enable JavaScript to filter the reading guides. You can also <a href="origins.html">read Spider-Man’s origin</a>.</p></noscript>
+    </section>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>

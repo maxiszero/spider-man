@@ -191,6 +191,11 @@
   text-underline-offset: .22em;
 }
 
+.era-reading {margin-top:1.6rem;border-left:3px solid var(--red);padding-left:1rem}
+.era-reading h3 {font-size:1.45rem}
+.era-reading a {display:inline-block;margin:.5rem 0 .3rem;color:var(--red);font-weight:600;text-underline-offset:.18em}
+.era-reading p {margin:0;max-width:58ch;color:var(--muted)}
+
 .credits-list {
   display: grid;
   grid-template-columns: 1.1fr 1.1fr .8fr;
@@ -225,7 +230,7 @@
 @media (max-width: 700px) {
   .era-feature {
     grid-template-columns: minmax(0, 1fr) minmax(5.9rem, 26%);
-    grid-template-areas: "heading poster" "guide guide" "entry entry" "credits credits";
+    grid-template-areas: "heading poster" "guide guide" "entry entry" "credits credits" "reading reading";
     gap: 1.2rem;
     align-items: center;
   }
@@ -260,6 +265,7 @@
     grid-area: credits;
     margin: 0;
   }
+  .era-reading {grid-area:reading;margin:0}
 
   .era-selector {
     grid-template-columns: repeat(2, minmax(0, 1fr));
