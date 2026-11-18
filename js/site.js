@@ -49,11 +49,13 @@
     if (event.key === "spider-index.session") location.reload();
   });
   const menu = header.querySelector(".mobile-menu");
+  const navigation = header.querySelector("#main-nav");
   function openMenu(open) {
     header.classList.toggle("nav-open", open);
     menu.setAttribute("aria-expanded", String(open));
     menu.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
     menu.innerHTML = icon(open ? "close" : "menu");
+    if (open) navigation.querySelector("a").focus({ preventScroll: true });
   }
   menu.addEventListener("click", () => openMenu(menu.getAttribute("aria-expanded") !== "true"));
   document.addEventListener("keydown", event => {
@@ -61,6 +63,11 @@
   });
   document.addEventListener("click", event => {
     if (!event.composedPath().includes(header) && header.classList.contains("nav-open")) openMenu(false);
+  });
+  document.addEventListener("focusin", event => {
+    if (header.classList.contains("nav-open") && event.target !== menu && !navigation.contains(event.target)) {
+      openMenu(false);
+    }
   });
   matchMedia("(min-width: 861px)").addEventListener("change", e => { if (e.matches) openMenu(false); });
 })();

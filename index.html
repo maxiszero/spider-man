@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
   <script src="js/site.js" defer></script>
+  <script src="js/films.js" defer></script>
   <script src="js/home.js" defer></script>
+  <script src="js/finder.js" defer></script>
 </head>
 <body data-page="home">
   <header data-site-header></header>
@@ -33,7 +35,7 @@
     </section>
     <section class="home-eras" aria-labelledby="eras-heading">
       <div class="section-head"><div><p class="section-kicker"><span aria-hidden="true"></span> The field guide</p><h2 id="eras-heading">Explore the eras<span>.</span></h2></div>
-      <a class="text-link" href="eras.html">View era guide <span aria-hidden="true">↗</span></a></div>
+      <a class="text-link" href="#film-finder">Help me choose <span aria-hidden="true">↓</span></a></div>
       <div class="era-grid">
           <a class="era-card" href="eras.html?era=raimi">
             <div class="era-picture"><img src="images/stills/spider-man-2.webp" alt="Peter Parker reaching forward in a New York alley" loading="lazy"><span>2002–2007</span></div>
@@ -57,9 +59,41 @@
           </a>
       </div>
     </section>
-    <section class="archive-band" aria-labelledby="archive-heading">
-      <div><p class="section-kicker"><span aria-hidden="true"></span> The collection</p><h2 id="archive-heading">Find your next film<span>.</span></h2><p>Browse all eleven films, filter by series and save your picks for movie night.</p></div>
-      <a class="button secondary" href="movies.html">Open film archive <span aria-hidden="true">→</span></a>
+    <section class="film-finder" id="film-finder" aria-labelledby="finder-title">
+      <div class="finder-options">
+        <p class="section-kicker"><span aria-hidden="true"></span> Film finder</p>
+        <h2 id="finder-title">What should I watch<span>?</span></h2>
+        <div class="finder-field">
+          <label for="finder-mood">What are you in the mood for?</label>
+          <select id="finder-mood">
+            <option value="verse">Comic-book animation</option>
+            <option value="raimi">A classic superhero drama</option>
+            <option value="webb">Mystery and romance</option>
+            <option value="mcu">A high-school adventure</option>
+          </select>
+        </div>
+        <div class="finder-field">
+          <label for="finder-history">Have you seen this series?</label>
+          <select id="finder-history">
+            <option value="0">I’m new to it</option>
+            <option value="1">I’ve seen the first film</option>
+          </select>
+        </div>
+      </div>
+      <article class="finder-pick" aria-labelledby="finder-film">
+        <img id="finder-poster" src="images/films/into-the-spider-verse.webp" width="650" height="975" loading="lazy" alt="">
+        <div class="finder-copy">
+          <p class="finder-meta" id="finder-meta">2018 · 117 min</p>
+          <h3 id="finder-film">Spider-Man: Into the Spider-Verse</h3>
+          <p id="finder-reason">Follow Miles through his first days with the mask. His sketchbook, a Brooklyn mural and a leap between skyscrapers tell you who he is.</p>
+          <div class="finder-actions">
+            <a class="button" id="finder-guide" href="film.html?id=into-the-spider-verse">Open film guide <span aria-hidden="true">→</span></a>
+            <button type="button" class="button secondary" id="finder-save" aria-pressed="false">Save to watchlist</button>
+          </div>
+          <p id="finder-feedback" role="status"></p>
+        </div>
+      </article>
+      <p class="sr-only" id="finder-announcement" aria-live="polite"></p>
     </section>
   </main>
   <footer data-site-footer></footer>

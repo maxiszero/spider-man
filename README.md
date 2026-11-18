@@ -10,12 +10,12 @@ From this directory run `python -m http.server 5173` and open [localhost:5173](h
 
 ## Explore the site
 
-- **Index** features four films and links into the four screen eras.
+- **Index** features four films, links to their screen eras and offers a film finder. Choosing a mood and an opener or sequel gives eight possible recommendations, each with a reason and a watchlist button.
 - **Film archive** searches the eleven films by title, performer or year and filters by series.
 - **Film detail** gives each title a shareable URL, synopsis, credits and series viewing order.
 - **Screen eras** offers a first film for each series and fetches credits from the public Wikidata Action API. It handles loading, timeouts, errors, local fallback credits and retry.
 - **Watchlist** saves picks across visits. Guests and local profiles have separate lists.
-- **Sign up, sign in and profile** demonstrate browser-local authentication. Forms use JavaScript validation and inline feedback. Passwords are verified using a salted derivation. These profiles only exist in the browser that created them.
+- **Sign up, sign in and profile** demonstrate browser-local authentication with an email address or phone number. Forms use JavaScript validation and inline feedback. Passwords are verified using a salted derivation. These profiles only exist in the browser that created them.
 - **About** introduces the guide, team and sources. Earlier assignment URLs remain accessible through redirects.
 
 ## Organization

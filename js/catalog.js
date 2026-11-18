@@ -40,7 +40,7 @@
   }
 
   function normalize(value) {
-    return value.toLowerCase().replace(/[^a-z0-9]/g, '');
+    return value.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
   }
 
   function initArchive() {
@@ -57,12 +57,23 @@
     ).join('');
 
     function filterFilms() {
-      const query = normalize(search.value);
+      const input = search.value.trim().toLowerCase();
+      const query = normalize(input);
+      const terms = input.match(/[\p{L}\p{N}]+/gu) || [];
       const matches = films.filter(film => {
+        if (era && film.era !== era) return false;
+        if (!input) return true;
+        if (!query) return false;
         const series = eras[film.era];
-        const keywords = [film.title, film.year, film.director, series.shortName, series.name, series.lead,
+        const keywords = [film.title, String(film.year), film.director, series.shortName, series.name, series.lead,
           film.era === 'verse' ? 'Miles Morales' : 'Peter Parker'];
-        return (!era || film.era === era) && keywords.some(keyword => normalize(String(keyword)).includes(query));
+        if (keywords.some(keyword => normalize(keyword).includes(query))) return true;
+        // A combined query such as "Holland 2017" can match more than one field.
+        // Match individual numbers as whole words so a sequel number does not match a year.
+        const words = keywords.join(' ').toLowerCase().match(/[\p{L}\p{N}]+/gu);
+        return terms.length > 1 && terms.every(term => words.some(word =>
+          /^\d+$/.test(term) ? word === term : word.startsWith(term)
+        ));
       });
       for (const button of filters.querySelectorAll('button')) {
         button.setAttribute('aria-pressed', String(button.dataset.era === era));
